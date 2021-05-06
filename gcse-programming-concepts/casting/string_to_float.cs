@@ -14,6 +14,7 @@ namespace isaac_code_samples
 
         public void DoubleIt(){
             /// Asks the user for a number and doubles it
+            Console.WriteLine("Enter a number");
             string number = Console.ReadLine();
             float floatNumber = float.Parse(number);
             float answer = floatNumber * 2.0f;

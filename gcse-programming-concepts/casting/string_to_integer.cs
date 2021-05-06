@@ -14,9 +14,10 @@ namespace string_to_integer
 
         public void DoubleIt(){
             /// Asks the user for a number and doubles it
+            Console.WriteLine("Enter a number");
             string number = Console.ReadLine();
             int intNumber = int.Parse(number);
-            float answer = intNumber * 2;
+            int answer = intNumber * 2;
             Console.WriteLine(answer);
 
         }
