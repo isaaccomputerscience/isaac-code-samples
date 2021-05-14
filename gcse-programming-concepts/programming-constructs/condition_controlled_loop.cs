@@ -4,7 +4,7 @@ namespace isaac_code_samples
 {
     class WhileLoop
     {
-        static void Main(string[] args){
+        void Main(string[] args){
             /// A name guessing game, user inputs guesses until they get the right answer
             Console.WriteLine("Please enter your name");
             string name = Console.ReadLine();
