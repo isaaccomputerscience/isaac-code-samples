@@ -4,7 +4,7 @@ namespace isaac_code_samples
 {
     class BinarySearchRecursive
     {
-        static void Main(string[] args){
+        void Main(string[] args){
            test(); 
         }
 
