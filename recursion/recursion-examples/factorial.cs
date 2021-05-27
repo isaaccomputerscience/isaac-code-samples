@@ -13,20 +13,20 @@ using System;
 
 namespace isaac_code_samples
 {
-    class NthTermRecursive
+    class FactorialRecursive
     {
         static void Main(string[] args){
-            int n = 6;
-            int result = NthTerm(n);
-            Console.WriteLine(String.Format("Term {0} is {1}", n.ToString(), result.ToString()));
+            int n = 5;
+            int result = Factorial(n);
+            Console.WriteLine(String.Format("{0}! is {1}", n.ToString(), result.ToString()));
         }
 
-        public static int NthTerm(int n){
-            //returns the nth term of a numerical sequence
+        public static int Factorial(int n){
+            //returns the value of n!
             if (n == 1){
                 return 1;
             }else{
-                return 3 + NthTerm(n-1);
+                return n * Factorial(n-1);
             }
         }
     }
