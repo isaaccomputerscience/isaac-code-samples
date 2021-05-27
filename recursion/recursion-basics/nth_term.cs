@@ -13,20 +13,20 @@ using System;
 
 namespace isaac_code_samples
 {
-    class SumToNRecursion
+    class NthTermRecursive
     {
-        void Main(string[] args){
+        static void Main(string[] args){
             int n = 6;
-            int result = SumToN(n);
-            Console.WriteLine(String.Format("The sum of 1 to {0} is: {1}", n.ToString(), result.ToString()));
+            int result = NthTerm(n);
+            Console.WriteLine(String.Format("Term {0} is {1}", n.ToString(), result.ToString()));
         }
 
-        public static int SumToN(int n){
-            //returns the sum of all natural numbers from 1 to n inclusive
+        public static int NthTerm(int n){
+            //returns the nth term of a numerical sequence
             if (n == 1){
                 return 1;
             }else{
-                return n + SumToN(n-1);
+                return 3 + NthTerm(n-1);
             }
         }
     }
