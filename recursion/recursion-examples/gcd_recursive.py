@@ -7,4 +7,7 @@ def gcd(x, y):
     
 
 if __name__ == '__main__':
-    print (gcd (259, 111))
+    x = 259
+    y = 111
+    answer = gcd (x, y)
+    print ('The lowest common denominator of {} and {} is {}'.format(x, y, answer))
