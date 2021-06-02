@@ -15,27 +15,27 @@ namespace isaac_code_samples
 {
     class BSTSearchExample
     {
-        static void Main(string[] args){
+        void Main(string[] args){
             BST myBST = new BST();
             TestData(myBST); // Create some test data
             Test(myBST); // Run test script
         }
 
+         // A recursive search of a binary search tree
         static bool BSTSearch(Node node, string searchItem){
-            // A recursive search of a binary search tree
             int compare = String.Compare(searchItem, node.data, StringComparison.OrdinalIgnoreCase);
             if (searchItem == node.data){
                 return true;
-            }else if (compare > 0 && node.right != null){
+            } else if (compare > 0 && node.right != null){
                     return BSTSearch(node.right, searchItem);
-            }else if (compare < 0 && node.left != null){
+            } else if (compare < 0 && node.left != null){
                 return BSTSearch(node.left, searchItem);
             }
             return false;
         }
-
+        
+        // Inserts some data into tree
         static void TestData(BST bst){
-            // Inserts some data into tree
             bst.Insert("fred");
             bst.Insert("elaine");
             bst.Insert("george");
