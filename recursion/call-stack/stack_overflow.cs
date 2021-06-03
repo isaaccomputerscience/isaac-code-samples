@@ -16,12 +16,16 @@ namespace isaac_code_samples
     class StackOverflowExample
     {
         static void Main(string[] args){
+
             StackOverflow();
+
         }
 
+        // Will force a stack overflow
         static void StackOverflow(){
-            // Will force a stack overflow
+
             StackOverflow();
+            
         }
     }
 

@@ -21,13 +21,15 @@ namespace isaac_code_samples
             Console.WriteLine(String.Format("{0}! is {1}", n.ToString(), result.ToString()));
         }
 
+        // Returns the value of n!
         public static int Factorial(int n){
-            //returns the value of n!
+            
             if (n == 1){
                 return 1;
             }else{
                 return n * Factorial(n-1);
             }
+
         }
     }
 }

@@ -13,25 +13,21 @@ using System;
 
 namespace isaac_code_samples
 {
-    class SumToNRecursion
+    class PrintBackwardsRecursive
     {
         static void Main(string[] args){
-
-            int n = 6;
-            int result = SumToN(n);
-            Console.WriteLine(String.Format("The sum of 1 to {0} is: {1}", n.ToString(), result.ToString()));
-
+            PrintBackwards("I am a computer scientist");
         }
 
-        // Returns the sum of all natural numbers from 1 to n inclusive
-        public static int SumToN(int n){
-
-            if (n == 1){
-                return 1;
+        // Prints a given string backwards
+        public static void PrintBackwards(string phrase){
+            if (phrase.Length == 1){
+                Console.Write(phrase);
             } else {
-                return n + SumToN(n-1);
+                string new_phrase = phrase.Substring(1, phrase.Length - 1);
+                PrintBackwards(new_phrase);
+                Console.Write(phrase.Substring(0, 1));
             }
-
         }
     }
 }

@@ -13,25 +13,22 @@ using System;
 
 namespace isaac_code_samples
 {
-    class SumToNRecursion
+    class GCDRecursive
     {
         static void Main(string[] args){
-
-            int n = 6;
-            int result = SumToN(n);
-            Console.WriteLine(String.Format("The sum of 1 to {0} is: {1}", n.ToString(), result.ToString()));
-
+            int x = 259;
+            int y = 111;
+            int answer = GCD(x, y);
+            Console.WriteLine(String.Format("The lowest common denominator of {0} and {1} is {2}", x.ToString(), y.ToString(), answer.ToString()));
         }
 
-        // Returns the sum of all natural numbers from 1 to n inclusive
-        public static int SumToN(int n){
-
-            if (n == 1){
-                return 1;
+        // Euclidian algorithm to find greatest common denominator
+        public static int GCD(int x, int y){
+            if (y == 0){
+                return x;
             } else {
-                return n + SumToN(n-1);
+                return GCD(y, x % y);
             }
-
         }
     }
 }

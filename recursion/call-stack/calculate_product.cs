@@ -15,8 +15,9 @@ namespace isaac_code_samples
 {
     class CallStackExample
     {
+        // Simple program to demonstrate the use of call stacks
         static void Main(string[] args){
-            // Simple program to demonstrate the use of call stacks
+            
             Console.WriteLine("Please enter a number");
             string num1_input = Console.ReadLine();
             int num1 = Convert.ToInt32(num1_input);
@@ -27,10 +28,12 @@ namespace isaac_code_samples
 
         }
 
+        // Calculates the product of two numbers
         static void CalculateProduct(int n1, int n2){
-            // Calculates the product of two numbers
+
             int product = n1 * n2;
             Console.WriteLine(product);
+
         }
     }
 }

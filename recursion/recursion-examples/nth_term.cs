@@ -15,18 +15,18 @@ namespace isaac_code_samples
 {
     class NthTermRecursive
     {
-        void Main(string[] args){
+        static void Main(string[] args){
             int n = 6;
             int increment = 3;
             int result = NthTerm(n, increment);
             Console.WriteLine(String.Format("Term {0} is {1}", n.ToString(), result.ToString()));
         }
 
+        // Returns the nth term of a numerical sequence
         public static int NthTerm(int n, int increment){
-            //returns the nth term of a numerical sequence
-            if (n == 1){
+            if (n == 1) {
                 return 1;
-            }else{
+            } else {
                 return increment + NthTerm(n-1, increment);
             }
         }

@@ -21,8 +21,9 @@ namespace isaac_code_samples
             Console.WriteLine(String.Format("{0}: {1}", test_word, is_palindrome.ToString()));
         }
 
+        // Returns True if string is a palindrome
         public static bool Palindrome(string phrase){
-            //Returns True if string is a palindrome
+
             int length = phrase.Length;
             if (length == 0 || length == 1){
                 return true;

@@ -15,13 +15,13 @@ namespace isaac_code_samples
 {
     class BinarySearchIterative
     {
-        void Main(string[] args){
+        static void Main(string[] args){
            test(); 
         }
 
+        // Binary search iterative version
         public static int BinarySearch(int[] items, int search_item){
-            // Binary search iterative version
-            //Initialise variables
+            // Initialise variables
             int index = -1;
             bool found = false;
             int first = 0;
@@ -45,17 +45,17 @@ namespace isaac_code_samples
         private static void test(){
             int[] items = new int[]{5, 12, 24, 56, 68, 72, 81, 95};
 
-            //Search for first item in array
+            // Search for first item in array
             Console.WriteLine("Searching for first item in array...");
             int result = BinarySearch(items, 5);
             Console.WriteLine("The search result was: " + result.ToString());
 
-            //Search for last item in array
+            // Search for last item in array
             Console.WriteLine("Searching for last item in array...");
             result = BinarySearch(items, 95);
             Console.WriteLine("The search result was: " + result.ToString());
 
-            //Search for an item that is not in the array
+            // Search for an item that is not in the array
             Console.WriteLine("Searching for last item in array...");
             result = BinarySearch(items, 36);
             Console.WriteLine("The search result was: " + result.ToString());
