@@ -5,7 +5,7 @@ def palindrome(word):
         return True
     elif word[0] == word[length - 1]:
         new_word = word[1 : length - 1]
-        return palindrome (new_word)
+        return palindrome(new_word)
     else:
         return False
 
