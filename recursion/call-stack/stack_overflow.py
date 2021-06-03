@@ -1,5 +1,5 @@
 def stack_overflow():
-    ''' will force a stack overflow'''
+    ""Simple program to force stack overflow."""
     stack_overflow()
 
     
