@@ -9,4 +9,4 @@ def sum_to_n_iterative(n):
 if __name__ =='__main__':
     n = 6
     result = sum_to_n_iterative(n)
-    print('The sum of 1 to {} is: {}'.format(n, result))
+    print("The sum of 1 to {} is: {}".format(n, result))
