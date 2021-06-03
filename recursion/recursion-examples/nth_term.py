@@ -1,5 +1,5 @@
 def nth_term(n, increment):
-    ''' Returns the nth term of a sequence of integers'''
+    """Returns the nth term of a sequence of integers."""
     if n == 1:
         return 1
     else:
@@ -8,4 +8,4 @@ def nth_term(n, increment):
 if __name__ == '__main__':
     increment = 6
     n = 10
-    print (nth_term (n, increment))
+    print(nth_term (n, increment))
