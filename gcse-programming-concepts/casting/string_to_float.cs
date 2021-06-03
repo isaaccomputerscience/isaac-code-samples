@@ -13,18 +13,18 @@ using System;
 
 namespace isaac_code_samples
 {
-    class Program
+    class StrToFloat
     {
 
-        void Main(string[] args){
+        static void Main(string[] args){
 
-            var strToFloat = new Program();
-            strToFloat.DoubleIt();
+            DoubleIt();
 
         }
 
-        public void DoubleIt(){
-            /// Asks the user for a number and doubles it
+        // Asks the user for a number and doubles it
+        static void DoubleIt(){
+
             Console.WriteLine("Enter a number");
             string number = Console.ReadLine();
             float floatNumber = float.Parse(number);
