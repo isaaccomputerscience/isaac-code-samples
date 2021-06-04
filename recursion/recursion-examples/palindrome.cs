@@ -22,15 +22,15 @@ namespace isaac_code_samples
         }
 
         // Returns True if string is a palindrome
-        public static bool Palindrome(string phrase){
+        public static bool Palindrome(string word){
 
-            int length = phrase.Length;
+            int length = word.Length;
             if (length == 0 || length == 1){
                 return true;
-            }else if(phrase[0] == phrase[length - 1]){
-                string new_phrase = phrase.Substring(1, length - 2);
-                return Palindrome(new_phrase);
-            }else {
+            } else if (word[0] == word[length - 1]){
+                string new_word = word.Substring(1, length - 2);
+                return Palindrome(new_word);
+            } else {
                 return false;
             }
         }
