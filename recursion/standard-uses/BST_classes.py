@@ -3,7 +3,7 @@
 
 
 class Node:
-    '''node in a binary search tree'''
+    """Node for a binary search tree."""
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -11,15 +11,16 @@ class Node:
     
 
 class BST:
-    '''binary search tree'''
+    """Binary search tree."""
     def __init__(self):
         self.root = None
 
     def get_root(self):
+        """Returns value of root node."""
         return self.root
 
     def insert (self, data):
-        '''insert new node'''
+        """Insert new node."""
         new_node = Node(data)
         if self.root == None: # new root node
             self.root = new_node
@@ -27,13 +28,13 @@ class BST:
             placed = False
             current = self.root
             while placed == False:
-                if current.data > data:#go left
+                if current.data > data:  # Go left
                     if current.left == None:
                         current.left = new_node
                         placed = True
                     else:
                         current = current.left
-                else: #go right
+                else:  # Go right
                     if current.right == None:
                         current.right = new_node
                         placed = True
@@ -42,7 +43,7 @@ class BST:
                     
                    
 if __name__ == '__main__':
-    #just for testing
+    # Just for testing
     bst = BST()
     bst.insert('fred')
     bst.insert('elaine')

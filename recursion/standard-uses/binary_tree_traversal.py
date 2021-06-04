@@ -1,10 +1,10 @@
 from BST_classes import BST, Node # Uses a binary search tree
 
 def traverse_in_order(node):
-    ''' In-order binary tree traversal '''
+    """In-order binary tree traversal."""
     if node != None:
         traverse_in_order(node.left)
-        print (node.data)
+        print(node.data)
         traverse_in_order(node.right)
 
 
@@ -18,6 +18,6 @@ def test_data(bst):
        
 if __name__ == '__main__':
     my_tree = BST()
-    test_data(my_tree) # Create some test data
-    start = my_tree.get_root() # Get start node
+    test_data(my_tree)  # Create some test data
+    start = my_tree.get_root()  # Get start node
     traverse_in_order(start) 

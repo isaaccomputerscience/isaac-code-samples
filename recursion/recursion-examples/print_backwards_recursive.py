@@ -1,11 +1,11 @@
-def print_backwards (string):
-    ''' Prints a given string backwards '''
-    if len (string) == 1:
-        print (string , end = '')
+def print_backwards(phrase):
+    """Prints a given word or phrase backwards."""
+    if len(phrase) == 1:
+        print(phrase, end = "")
     else:
-        new_string = string[1:]
-        print_backwards (new_string)
-        print (string[0], end = '')
+        new_string = phrase[1:]
+        print_backwards (new_phrase)
+        print(phrase[0], end = "")
 
 if __name__ == '__main__':
-    print_backwards ('I am a computer scientist')
+    print_backwards("I am a computer scientist")
