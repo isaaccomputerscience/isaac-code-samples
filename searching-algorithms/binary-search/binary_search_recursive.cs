@@ -19,17 +19,18 @@ namespace isaac_code_samples
            test(); 
         }
 
+        // Performs a binary search recursively
         public static int BinarySearch(int[] items, int search_item, int first, int last){
             if (first > last){
                 return -1;
-            }else{
+            } else {
                 int midpoint = (first + last) / 2;
                 if (items[midpoint] == search_item){
                     return midpoint;
-                }else if (search_item > items[midpoint]){
+                } else if (search_item > items[midpoint]){
                     first = midpoint + 1;
                     return BinarySearch(items, search_item, first, last);
-                }else{
+                } else {
                     last = midpoint - 1;
                     return BinarySearch(items, search_item, first, last);
                 }
