@@ -7,7 +7,7 @@ def add(a, b):
 
 
 def find_y(x, m, c):
-    print("x=" + STR(x) + "y=")
+    print("x=" + str(x) + " y=", end="")
     print(add(multiply(m, x), c))
 
 
