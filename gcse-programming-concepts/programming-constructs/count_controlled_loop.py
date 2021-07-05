@@ -1,5 +1,5 @@
 def loop_three_times():
-    '''example of count controlled loop'''
+    """An example of count controlled loop."""
     for i in range(3):
         print ("Hip hip hooray!")
 
