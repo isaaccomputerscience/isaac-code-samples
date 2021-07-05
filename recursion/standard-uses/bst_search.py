@@ -1,7 +1,7 @@
 from BST_classes import Node, BST
                  
 def bst_search(node, search_item):
-    """A recursive search of a binary search tree."""
+    """Recursively searches a binary search tree. Returns a Boolean."""
     if search_item == node.data: 
         return True
     elif search_item > node.data and node.right != None:
