@@ -1,5 +1,5 @@
 def factorial (n):
-    """Returns the value of n!"""
+    """Recursively calculates and returns the value of n!"""
     if n == 1:
         return 1
     else:
