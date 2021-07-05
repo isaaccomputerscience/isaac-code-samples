@@ -1,12 +1,5 @@
-'''
-
-version: 1.0
-date: April 2021
-
-'''
-
 def double_it():
-    '''prompts user for a number and doubles it'''
+    """prompts user for a number and doubles it"""
     number = input("Please enter a number ")
     float_number = float(number)
     answer = float_number * 2
