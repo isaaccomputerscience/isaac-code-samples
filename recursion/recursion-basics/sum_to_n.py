@@ -1,5 +1,5 @@
 def sum_to_n(n):
-    """Returns the sum of all natural numbers from 1 to n inclusive."""
+    """Recursively calculates and returns the sum of all natural numbers from 1 to n inclusive."""
     if n == 1:
         return 1
     else:
