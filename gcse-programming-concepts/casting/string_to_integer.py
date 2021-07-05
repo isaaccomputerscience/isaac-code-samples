@@ -1,15 +1,5 @@
-'''
-
-version: 1.0
-date: April 2021
-
-
-'''
-
-
-
 def double_it():
-    '''prompts user for number and doubles it'''
+    """prompts user for number and doubles it"""
     number = input("Please enter a number ")
     int_number = int(number)
     answer = int_number * 2
