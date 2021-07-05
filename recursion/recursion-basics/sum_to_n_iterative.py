@@ -1,5 +1,5 @@
 def sum_to_n_iterative(n):
-    """Returns the sum of all natural numbers from 1 to n inclusive."""
+    """Calculates and returns the sum of all natural numbers from 1 to n inclusive."""
     total = 0
     for i in range(1, n + 1):
         total = total + i
