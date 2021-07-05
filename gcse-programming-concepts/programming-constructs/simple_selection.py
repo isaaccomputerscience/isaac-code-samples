@@ -1,5 +1,5 @@
 def guess_the_animal():
-    '''example of a simple selection statement'''
+    """An example of a simple selection statement"""
     animal = input ("Which animal has a long bendy trunk? ")
     if animal == "elephant":
         print ("You are correct")
