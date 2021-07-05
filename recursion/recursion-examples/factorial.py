@@ -7,4 +7,6 @@ def factorial (n):
 
 
 if __name__ == '__main__':
-    print(factorial (5))
+    n = 5
+    result = factorial (n)
+    print("{}! is {}".format(n, result))
