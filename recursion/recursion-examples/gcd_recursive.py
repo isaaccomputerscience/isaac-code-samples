@@ -1,5 +1,5 @@
 def gcd(x, y):
-    """Euclidian algorithm to find greatest common denominator."""
+    """Euclidian algorithm to find and return the greatest common denominator of two numbers."""
     if y == 0:
         return x
     else:
