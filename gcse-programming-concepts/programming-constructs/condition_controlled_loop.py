@@ -1,5 +1,5 @@
 def loop_until_correct():
-    '''example of a condition controlled loop'''
+    """An example of a condition controlled loop."""
     name = input ("Please enter your name ")
     while name != "Fergus":
        name = input ("Please enter your name ")
