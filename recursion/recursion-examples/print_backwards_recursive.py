@@ -4,7 +4,7 @@ def print_backwards(phrase):
         print(phrase, end = "")
     else:
         new_string = phrase[1:]
-        print_backwards (new_phrase)
+        print_backwards(new_phrase)
         print(phrase[0], end = "")
 
 if __name__ == '__main__':
