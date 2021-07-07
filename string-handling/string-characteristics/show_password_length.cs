@@ -19,7 +19,7 @@ namespace isaac_code_samples
             ShowPasswordLength();
          }
 
-        // Returns the sum of all natural numbers from 1 to n inclusive
+        // Prompts for a password and displays length
         public static void ShowPasswordLength()
         {
             Console.Write("Please enter a password ");
