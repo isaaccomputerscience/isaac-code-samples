@@ -8,4 +8,4 @@ def sum_to_n(n):
 if __name__ =='__main__':
     n = 6
     result = sum_to_n(n)
-    print("The sum of 1 to {} is: {}".format(n, result))
+    print(f"The sum of 1 to {n} is: {result}")
