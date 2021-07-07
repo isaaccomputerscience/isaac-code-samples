@@ -10,4 +10,4 @@ if __name__ == '__main__':
     x = 259
     y = 111
     answer = gcd(x, y)
-    print("The lowest common denominator of {} and {} is {}".format(x, y, answer))
+    print(f"The lowest common denominator of {x} and {y} is {answer}")
