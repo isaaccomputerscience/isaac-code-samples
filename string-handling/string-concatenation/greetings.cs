@@ -16,15 +16,13 @@ namespace isaac_code_samples
     {
         static void Main(string[] args)
         {
-
             Greetings();           
-
         }
 
-        // Returns the sum of all natural numbers from 1 to n inclusive
+        
+        // Demonstration of string concatenation
         public static void Greetings()
         {
-
             Console.Write("Please enter your first name ");
             string firstName = Console.ReadLine();
             Console.WriteLine("Greetings " + firstName);
@@ -32,7 +30,6 @@ namespace isaac_code_samples
             string surname = Console.ReadLine();
             string userName = firstName + " " + surname;
             Console.WriteLine("Greetings " + userName);
-
         }
     }
 }
