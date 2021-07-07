@@ -9,4 +9,4 @@ def factorial (n):
 if __name__ == '__main__':
     n = 5
     result = factorial (n)
-    print("{}! is {}".format(n, result))
+    print(f"{n}! is {result}")
