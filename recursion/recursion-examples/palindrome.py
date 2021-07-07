@@ -13,4 +13,4 @@ def palindrome(word):
 if __name__ == '__main__':
     test_word = 'kayak'
     is_palindrome = palindrome(test_word)
-    print ("{}: {}".format(test_word, is_palindrome))
+    print (f"{test_word}: {is_palindrome}")
