@@ -1,11 +1,16 @@
+# Isaac Computer Science
+# Iterative version of binary search
+# Usage licensed under the Open Government Licence v3.0
+
+
 def calculate_product(n1, n2):
-    """Calculates the product of two numbers."""
+    """Calculates the product of two numbers"""
     product = n1 * n2
     print(product)
 
 
 def main():
-    """Simple program to demonstrate use of call stack."""
+    """Simple program to demonstrate use of call stack"""
     num1 = input("Enter a number ")
     num2 = input("Enter another number ")
     num1_int = int(num1)
