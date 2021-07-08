@@ -15,11 +15,13 @@ namespace isaac_code_samples
 {
     class SumToNIterative
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
 
             int n = 6;
             int result = SumToN(n);
-            Console.WriteLine(String.Format("The sum of 1 to {0} is: {1}", n.ToString(), result.ToString()));
+            string output = $"The sum of 1 to {n.ToString()} is: {result.ToString()}";
+            Console.WriteLine(output);
             
         }
 

@@ -15,6 +15,7 @@ namespace isaac_code_samples
 {
     class BSTSearchExample
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
             BST myBST = new BST();
             TestData(myBST); // Create some test data
