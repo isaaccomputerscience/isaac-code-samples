@@ -1,8 +1,8 @@
 def loop_three_times():
-    """An example of count controlled loop."""
+    """Example of count controlled loop"""
     for i in range(3):
-        print ("Hip hip hooray!")
+        print("Hip hip hooray!")
 
 if __name__ == '__main__':
-    loop_it()
+    loop_three_times()
         
