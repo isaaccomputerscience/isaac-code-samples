@@ -1,5 +1,4 @@
-# in this example, a class is defined for a Node
-# however, it used as a Record (no methods are defined)
+# in this example, a class is defined for a Node. However, it used as a Record (i.e. no methods are defined)
 
 
 class Node:
