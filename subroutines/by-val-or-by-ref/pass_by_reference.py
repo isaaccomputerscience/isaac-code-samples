@@ -1,6 +1,6 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-# https://isaaccomputerscience.org/concepts/prog_sub_parameters 
+# https://isaaccomputerscience.org/concepts/prog_sub_value_reference
 
 
 # Python does not use pure pass by reference so we have simulated this using a list

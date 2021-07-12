@@ -1,7 +1,6 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-# https://isaaccomputerscience.org/concepts/prog_sub_parameters 
-
+# https://isaaccomputerscience.org/concepts/prog_sub_value_reference
 
 # Python does not strictly use pass by value
 # However, arguments passed to a function become local variables inside that function
