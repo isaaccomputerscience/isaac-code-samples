@@ -13,7 +13,7 @@ using System;
 
 namespace isaac_code_samples
 {
-    class Program
+    class SubQuestion13
     {
         static void Main(string[] args)
         {

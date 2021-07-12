@@ -1,4 +1,4 @@
-﻿/*
+/*
 Note: This file is designed to be copied out and compiled on your machine. 
 In order for it to compile properly you need to ensure that the project name is the same as the "namespace" in this file. 
 
@@ -13,14 +13,10 @@ using System;
 
 namespace isaac_code_samples
 {
-    class Program
+    class Basics
     {
         static void Main(string[] args){
-            stack_overflow();
-        }
-
-        static void stack_overflow(){
-            stack_overflow();
+           Console.WriteLine("Blaah");
         }
     }
 }

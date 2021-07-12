@@ -13,7 +13,7 @@ using System;
 
 namespace isaac_code_samples
 {
-    class Program
+    class SubQuestion14
     {
         static void Main(string[] args){
             find_y(5, 2, 3);
