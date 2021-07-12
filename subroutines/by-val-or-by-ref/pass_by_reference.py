@@ -21,7 +21,7 @@ def main():
 
     double(x)
 
-    # The value of x within main has not been altered
+    # The value of x has been altered within the double() procedure
     print(f"x in main() after procedure call: {x}")
 
 
