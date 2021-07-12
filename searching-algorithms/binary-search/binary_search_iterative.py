@@ -1,5 +1,9 @@
-def binary_search (items, search_item):
-    '''ICS iterative version'''
+# Isaac Computer Science
+# Iterative version of binary search
+# Usage licensed under the Open Government Licence v3.0
+
+def binary_search(items, search_item):
+    """Returns index or -1 if not found"""
     index = -1
     found = False
     first = 0
@@ -13,28 +17,31 @@ def binary_search (items, search_item):
         elif items[midpoint] < search_item: 
             first = midpoint + 1 
         else: 
-            last = midpoint - 1       
+            last = midpoint - 1
+            
     return index
 
-def test():
-    '''test script for binary search'''
-    # Create a list containing some names
-    items = ['Albie', 'Byron', 'Divya', 'Hari', 'Joanne', 'Kim', 'Wilbur', 'Zoe'] 
-    
-    # Search for first item in the list
-    print ('Searching for first name in the list')
-    result = binary_search(items, 'Albie')
-    print ('Result of search was {}'.format(result))
-    
-    # Search for last item in the list
-    print ('Searching for the last name in the list')
-    result = binary_search(items, 'Zoe')
-    print ('Result of search was {}'.format(result))
-    
-    # Search for an item that is not in the list
-    print ('Searching for a name that is not in the list')
-    result = binary_search(items, 'Boris')
-    print ('Result of search was {}'.format(result))
 
-if __name__ == '__main__':
-    test()
+def run_test():
+    """Test script for binary search"""
+    # Ordered list of names
+    items = ["Albie", "Byron", "Divya", "Hari", "Joanne", "Kim", "Wilbur", "Zoe"] 
+    
+    # Search for first item in list.
+    print("Searching for name at start of list")
+    result = binary_search(items, "Albie")
+    print(f"Result of search was {result}")
+    
+    # Search for last item in list.
+    print("Searching for name at end of list")
+    result = binary_search(items, "Zoe")
+    print(f"Result of search was {result}")
+    
+    # Search for an item not in list.
+    print("Searching for name that is not in list")
+    result = binary_search(items, "Boris")
+    print(f"Result of search was {result}")
+    
+
+if __name__ == "__main__":
+    run_test()

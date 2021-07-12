@@ -15,10 +15,12 @@ namespace isaac_code_samples
 {
     class FactorialRecursive
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
             int n = 5;
             int result = Factorial(n);
-            Console.WriteLine(String.Format("{0}! is {1}", n.ToString(), result.ToString()));
+            string output = $"{n}! is: {result}";
+            Console.WriteLine(output);
         }
 
         // Returns the value of n!

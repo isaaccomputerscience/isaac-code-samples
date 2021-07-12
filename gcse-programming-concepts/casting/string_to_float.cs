@@ -13,27 +13,25 @@ using System;
 
 namespace isaac_code_samples
 {
-    class SumToNRecursion
+    class StrToFloat
     {
-        // The Main method is the entry point for all C# programs
+
         static void Main(string[] args){
 
-            int n = 6;
-            int result = SumToN(n);
-            string output = $"The sum of 1 to {n} is: {result}";
-            Console.WriteLine(output);
+            DoubleIt();
 
         }
 
-        // Returns the sum of all natural numbers from 1 to n inclusive
-        public static int SumToN(int n){
+        // Asks the user for a number and doubles it
+        static void DoubleIt(){
 
-            if (n == 1){
-                return 1;
-            } else {
-                return n + SumToN(n-1);
-            }
+            Console.WriteLine("Enter a number");
+            string number = Console.ReadLine();
+            float floatNumber = float.Parse(number);
+            float answer = floatNumber * 2.0f;
+            Console.WriteLine(answer);
 
         }
+
     }
 }

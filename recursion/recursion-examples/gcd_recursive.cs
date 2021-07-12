@@ -15,11 +15,13 @@ namespace isaac_code_samples
 {
     class GCDRecursive
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
             int x = 259;
             int y = 111;
             int answer = GCD(x, y);
-            Console.WriteLine(String.Format("The lowest common denominator of {0} and {1} is {2}", x.ToString(), y.ToString(), answer.ToString()));
+            string output = $"The lowest common denominator of {x} and {y} is {answer}";
+            Console.WriteLine(output);
         }
 
         // Euclidian algorithm to find greatest common denominator

@@ -15,10 +15,12 @@ namespace isaac_code_samples
 {
     class PalindromeRecursive
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
             string test_word = "kayak";
             bool is_palindrome = Palindrome(test_word);
-            Console.WriteLine(String.Format("{0}: {1}", test_word, is_palindrome.ToString()));
+            string result = $"{test_word}: {is_palindrome}";
+            Console.WriteLine(result);
         }
 
         // Returns True if string is a palindrome

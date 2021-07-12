@@ -15,6 +15,7 @@ namespace isaac_code_samples
 {
     class BinarySearchRecursive
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
            test(); 
         }

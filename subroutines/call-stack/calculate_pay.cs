@@ -1,6 +1,8 @@
 /*
+
 Note: This file is designed to be copied out and compiled on your machine.
 In order for it to compile properly you need to ensure that the project name is the same as the "namespace" in this file.
+
 To run this file you need to:
 1. Copy the contents
 2. Paste them into the C# IDE of your choice (Visual Studio, for example)
@@ -26,7 +28,7 @@ namespace isaac_code_samples
             int pay = CalculatePay(hours_float, rate_float);
             Console.WriteLine(pay);
 
-           }
+        }
 
         // A simple pay calculation program
         static float CalculatePay(float h, float r){
@@ -37,4 +39,4 @@ namespace isaac_code_samples
         }
     }
 }
-© 2021 GitHub, Inc.
+
