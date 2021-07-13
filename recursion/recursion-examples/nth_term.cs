@@ -15,11 +15,13 @@ namespace isaac_code_samples
 {
     class NthTermRecursive
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
             int n = 6;
             int increment = 3;
             int result = NthTerm(n, increment);
-            Console.WriteLine(String.Format("Term {0} is {1}", n.ToString(), result.ToString()));
+            string output = $"Term {n} is {result}";
+            Console.WriteLine(output);
         }
 
         // Returns the nth term of a numerical sequence

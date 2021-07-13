@@ -15,6 +15,7 @@ namespace isaac_code_samples
 {
     class BinaryTreeTraversal
     {
+        // The Main method is the entry point for all C# programs
         static void Main(string[] args){
             BST myTree = new BST();
             TestData(myTree); // Create some test data

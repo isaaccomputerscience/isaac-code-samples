@@ -1,5 +1,5 @@
 def nth_term(n, increment):
-    """Returns the nth term of a sequence of integers."""
+    """Recursively calclates and returns the nth term of a sequence of integers."""
     if n == 1:
         return 1
     else:

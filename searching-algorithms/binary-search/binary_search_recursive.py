@@ -1,5 +1,10 @@
-def binary_search (items, search_item, first, last):
-    """Binary search - recursive version."""
+# Isaac Computer Science
+# Iterative version of binary search
+# Usage licensed under the Open Government Licence v3.0
+
+
+def binary_search(items, search_item, first, last):
+    """Binary search recursive version"""
     if first > last:
         return -1
     else:
@@ -21,19 +26,19 @@ def test():
     last = 7
     
     # Search for first item in the list
-    print ("Searching for first name in the list")
+    print("Searching for first name in the list")
     result = binary_search(items, "Albie", first, last)
-    print ('Result of search was {}'.format(result))
+    print(f"Result of search was {result}")
     
     # Search for last item in the list
-    print ('Searching for the last name in the list')
+    print("Searching for last name in list")
     result = binary_search(items, "Zoe", first, last)
-    print ('Result of search was {}'.format(result))
+    print(f"Result of search was {result}")
     
     # Search for an item that is not in the list
-    print ('Searching for a name that is not in the list')
+    print("Searching for a name that is not in the list")
     result = binary_search(items, "Boris", first, last)
-    print ('Result of search was {}'.format(result))
+    print(f"Result of search was {result}")
 
 if __name__ == '__main__':
     test()

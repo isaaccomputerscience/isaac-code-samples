@@ -1,5 +1,5 @@
 def palindrome(word):
-    """Returns True if word is a palindrome"""
+    """Recursively determines whether a word is a palindrome. Returns a Boolean."""
     length = len(word)
     if length == 0 or length == 1:
         return True
@@ -13,4 +13,4 @@ def palindrome(word):
 if __name__ == '__main__':
     test_word = 'kayak'
     is_palindrome = palindrome(test_word)
-    print ("{}: {}".format(test_word, is_palindrome))
+    print (f"{test_word}: {is_palindrome}")

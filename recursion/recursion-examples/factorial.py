@@ -1,5 +1,5 @@
 def factorial (n):
-    """Returns the value of n!"""
+    """Recursively calculates and returns the value of n!"""
     if n == 1:
         return 1
     else:
@@ -7,4 +7,6 @@ def factorial (n):
 
 
 if __name__ == '__main__':
-    print(factorial (5))
+    n = 5
+    result = factorial (n)
+    print(f"{n}! is {result}")
