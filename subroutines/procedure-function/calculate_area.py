@@ -4,6 +4,7 @@
 
 
 def calculate_area(length):
+    """Calculates the area of a square of a given side length"""
     area = length * length
     return area
 

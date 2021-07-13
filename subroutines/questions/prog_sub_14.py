@@ -1,8 +1,10 @@
 def multiply(a, b):
+    """Multiplies two numbers together and retursn the product"""
     return a * b
 
 
 def add(a, b):
+    """Adds two numbers together and returns the sum"""
     return a + b
 
 

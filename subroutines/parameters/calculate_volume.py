@@ -3,6 +3,7 @@
 # https://isaaccomputerscience.org/concepts/prog_sub_parameters 
 
 def calculate_volume(height, width, depth):
+    """Calculate the volume of a cuboid"""
     volume = height * width * depth
     print(volume)
 

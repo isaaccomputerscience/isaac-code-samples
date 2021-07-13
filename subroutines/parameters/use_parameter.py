@@ -4,6 +4,7 @@
 
 
 def welcome_user(user):
+    """Greets the user by name"""
     print("Greetings " + user)
 
 

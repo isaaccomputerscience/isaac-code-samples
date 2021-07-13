@@ -3,7 +3,9 @@
 # https://isaaccomputerscience.org/concepts/prog_sub_local_and_global
 
 
-def reduced_vat():
+def calculate_reduced_vat():
+
+    """Calculate vat at a reduced rate"""
 
     # Local variable also called vat_rate overrides the vat_rate from global scope
     vat_rate = 0.05 
@@ -18,4 +20,4 @@ if __name__ == '__main__':
 
     # Global variable vat_rate is defined within the global scope
     vat_rate = 0.2
-    reduced_vat()
+    calculate_reduced_vat()

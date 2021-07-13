@@ -3,7 +3,7 @@
 # https://isaaccomputerscience.org/concepts/prog_sub_proc_fun
 
 
-def login_menu():
+def display_menu():
     print("Enter a number of one of the the menu options")
     print("1: Log in")
     print("2: Sign up")
@@ -12,4 +12,4 @@ def login_menu():
 
 
 if __name__ == '__main__':
-    login_menu()
+    display_menu()

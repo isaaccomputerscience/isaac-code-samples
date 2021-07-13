@@ -3,6 +3,7 @@
 # https://isaaccomputerscience.org/concepts/prog_sub_define_and_call
 
 def run_quiz():
+    """Ask a quiz question"""
     print("What is the capital city of Botswana?")
     answer = input()
 
