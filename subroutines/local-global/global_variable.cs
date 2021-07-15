@@ -20,7 +20,7 @@ namespace isaac_code_samples
 
     }
 
-    class subroutines
+    class Orders
     {
 
         // The Main method is the entry point for all C# programs
@@ -29,7 +29,7 @@ namespace isaac_code_samples
             CalculateStandardVat();
         }
 
-        // Calculate basic rate tax
+        // Calculate vat
         public static void CalculateStandardVat()
         {
 
