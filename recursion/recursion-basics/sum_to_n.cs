@@ -17,23 +17,21 @@ namespace recursion
     {
         // The Main method is the entry point for all C# programs
         static void Main(string[] args) {
-
             int n = 6;
             int result = SumToN(n);
             string output = $"The sum of 1 to {n} is: {result}";
             Console.WriteLine(output);
-
         }
+        
 
         // Returns the sum of all natural numbers from 1 to n inclusive
         public static int SumToN(int n) {
-
             if (n == 1) {
                 return 1;
             } else {
                 return n + SumToN(n-1);
             }
-
         }
+                
     }
 }
