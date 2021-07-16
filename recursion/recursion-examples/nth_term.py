@@ -1,5 +1,8 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+
 def nth_term(n, increment):
-    """Recursively calclates and returns the nth term of a sequence of integers."""
+    """Recursively calculates and returns the nth term of a sequence of integers"""
     if n == 1:
         return 1
     else:
@@ -8,4 +11,5 @@ def nth_term(n, increment):
 if __name__ == '__main__':
     increment = 6
     n = 10
-    print(nth_term (n, increment))
+    result = nth_term(n, increment)
+    print(f"The term is {result}")
