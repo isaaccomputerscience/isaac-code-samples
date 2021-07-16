@@ -11,18 +11,19 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Recursion
 {
-    class PrintBackwardsRecursive
+    class RecursionExamples
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args){
+        static void Main(string[] args) {
             PrintBackwards("I am a computer scientist");
         }
 
+        
         // Prints a given string backwards
-        public static void PrintBackwards(string phrase){
-            if (phrase.Length == 1){
+        public static void PrintBackwards(string phrase) {
+            if (phrase.Length == 1) {
                 Console.Write(phrase);
             } else {
                 string new_phrase = phrase.Substring(1, phrase.Length - 1);
@@ -30,5 +31,7 @@ namespace isaac_code_samples
                 Console.Write(phrase.Substring(0, 1));
             }
         }
+        
+        
     }
 }
