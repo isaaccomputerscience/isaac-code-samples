@@ -1,3 +1,6 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+
 from BST_classes import Node, BST
                  
 def bst_search(node, search_item):
@@ -9,8 +12,9 @@ def bst_search(node, search_item):
     elif search_item < node.data and node.left != None:
         return bst_search(node.left, search_item)
     return False
+  
 
-def test_data(bst):
+def insert_test_data(bst):
     """Inserts some test data into tree."""
     bst.insert('fred')
     bst.insert('elaine')
@@ -19,7 +23,7 @@ def test_data(bst):
 
 def test(bst):
     """Carries out some basic tests."""
-    start_node = bst.get_root() # Start search at root
+    start_node = bst.get_root()  # Start search at root
     if bst_search(start_node, "aaron") != False:
         print("aaron - test failed")
     if bst_search(start_node, "harry") != True:
@@ -31,5 +35,5 @@ def test(bst):
        
 if __name__ == '__main__':
     my_bst = BST()
-    test_data(my_bst)  # Create some test data
+    insert_test_data(my_bst)  # Create some test data
     test(my_bst)  # Run test script
