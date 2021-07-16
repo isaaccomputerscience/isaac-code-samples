@@ -11,26 +11,29 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Recursion
 {
-    class GCDRecursive
+    class RecursionExamples
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args){
+        static void Main(string[] args) {
             int x = 259;
             int y = 111;
             int answer = GCD(x, y);
             string output = $"The lowest common denominator of {x} and {y} is {answer}";
             Console.WriteLine(output);
         }
+        
 
         // Euclidian algorithm to find greatest common denominator
         public static int GCD(int x, int y){
-            if (y == 0){
+            if (y == 0) {
                 return x;
             } else {
                 return GCD(y, x % y);
             }
         }
+        
+        
     }
 }
