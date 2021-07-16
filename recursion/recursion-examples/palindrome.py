@@ -1,3 +1,6 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+
 def palindrome(word):
     """Recursively determines whether a word is a palindrome. Returns a Boolean."""
     length = len(word)
