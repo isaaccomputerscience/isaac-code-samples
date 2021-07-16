@@ -11,27 +11,28 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Recursion
 {
-    class FactorialRecursive
+    class RecursionExamples
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args){
+        static void Main(string[] args) {
             int n = 5;
             int result = Factorial(n);
             string output = $"{n}! is: {result}";
             Console.WriteLine(output);
         }
+        
 
         // Returns the value of n!
-        public static int Factorial(int n){
-            
+        public static int Factorial(int n) {            
             if (n == 1){
                 return 1;
-            }else{
+            } else {
                 return n * Factorial(n-1);
             }
-
         }
+        
+        
     }
 }
