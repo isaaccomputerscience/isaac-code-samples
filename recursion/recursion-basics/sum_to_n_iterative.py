@@ -1,5 +1,9 @@
+# Isaac Computer Science
+# Iterative version of sum_to_n
+# Usage licensed under the Open Government Licence v3.0
+
 def sum_to_n_iterative(n):
-    """Calculates and returns the sum of all natural numbers from 1 to n inclusive."""
+    """Calculates and returns the sum of all natural numbers from 1 to n inclusive"""
     total = 0
     for i in range(1, n + 1):
         total = total + i
