@@ -11,33 +11,37 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Recursion
 {
     class BinaryTreeTraversal
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args){
+        static void Main(string[] args) {
             BST myTree = new BST();
-            TestData(myTree); // Create some test data
-            Node start = myTree.GetRoot(); // Get start node
+            TestData(myTree);  // Create some test data
+            Node start = myTree.GetRoot();  // Get start node
             TraverseInOrder(start); 
         }
+        
 
         // Inserts some data into the tree
-        static void TestData(BST bst){
+        static void TestData(BST bst) {
             bst.Insert("Zac");
             bst.Insert("Lucy");
             bst.Insert("Anil");
             bst.Insert("Boris");
         }
 
+        
         // In order binary search traversal
-        static void TraverseInOrder(Node node){    
-            if (node != null){
+        static void TraverseInOrder(Node node) {    
+            if (node != null) {
                 TraverseInOrder(node.left);
                 Console.WriteLine(node.data);
                 TraverseInOrder(node.right);
             }
         }
+        
+        
     }
 }
