@@ -11,51 +11,58 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Recursion
 {
-    class BSTSearchExample
+    
+    class StandardUses
     {
+        
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args){
+        static void Main(string[] args) {
             BST myBST = new BST();
-            TestData(myBST); // Create some test data
-            Test(myBST); // Run test script
+            TestData(myBST);  // Create some test data
+            Test(myBST);  // Run test script
         }
+        
 
         // A recursive search of a binary search tree
-        static bool BSTSearch(Node node, string searchItem){
+        static bool BSTSearch(Node node, string searchItem) {
             int compare = String.Compare(searchItem, node.data, StringComparison.OrdinalIgnoreCase);
-            if (searchItem == node.data){
+            if (searchItem == node.data) {
                 return true;
-            } else if (compare > 0 && node.right != null){
+            } else if (compare > 0 && node.right != null) {
                     return BSTSearch(node.right, searchItem);
-            } else if (compare < 0 && node.left != null){
+            } else if (compare < 0 && node.left != null) {
                 return BSTSearch(node.left, searchItem);
             }
             return false;
         }
+        
 
         // Inserts some data into tree
-        static void TestData(BST bst){
+        static void TestData(BST bst) {
             bst.Insert("fred");
             bst.Insert("elaine");
             bst.Insert("george");
             bst.Insert("harry");
         } 
+        
 
-        static void Test(BST bst){
+        static void Test(BST bst) {
             // Carries out some basic tests
             Node startNode = bst.GetRoot();
-            if (BSTSearch(startNode, "aaron") != false){
+            if (BSTSearch(startNode, "aaron") != false) {
                 Console.WriteLine("aaron - test failed");
             }
-            if (BSTSearch(startNode, "harry") != true){
+            if (BSTSearch(startNode, "harry") != true) {
                 Console.WriteLine("harry - test failed");
             }
-            if (BSTSearch(startNode, "zac") != false){
+            if (BSTSearch(startNode, "zac") != false) {
                 Console.WriteLine("zac - test failed");
             }
             Console.WriteLine("Test complete");
-        }        
+        }  
+        
+        
     }
 }
