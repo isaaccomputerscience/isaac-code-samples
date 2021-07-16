@@ -11,12 +11,12 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace recursion
 {
-    class SumToNRecursion
+    class RecursionBasics
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args){
+        static void Main(string[] args) {
 
             int n = 6;
             int result = SumToN(n);
@@ -26,9 +26,9 @@ namespace isaac_code_samples
         }
 
         // Returns the sum of all natural numbers from 1 to n inclusive
-        public static int SumToN(int n){
+        public static int SumToN(int n) {
 
-            if (n == 1){
+            if (n == 1) {
                 return 1;
             } else {
                 return n + SumToN(n-1);
