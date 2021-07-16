@@ -11,54 +11,61 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Recursion
 {
+    
+    // Node in a binary search tree (BST)
     class Node
     {
-        // Node in a Binary search tree
+        
         public string data;
         public Node left;
         public Node right;
 
-        public Node(string new_data){
+        public Node(string new_data) {
             data = new_data;
         }
+        
     }
 
+    // Binary search tree
     class BST
     {
         public Node root;
 
-        public Node GetRoot(){
+        public Node GetRoot() {
             return root;
         }
+        
 
-        public void Insert(string data){
-            // Insert a new node
+        // Insert a new node
+        public void Insert(string data) {            
             Node newNode = new Node(data);
-            if (root == null){
+            if (root == null) {
                 root = newNode;
-            }else {
+            } else {
                 bool placed = false;
                 Node current = root;
-                while (placed == false){
-                    if (current.data[0] > data[0]){ // Go left
-                        if (current.left == null){
+                while (placed == false) {
+                    if (current.data[0] > data[0]) {  // Go left
+                        if (current.left == null) {
                             current.left = newNode;
                             placed = true;
-                        }else {
+                        } else {
                             current = current.left;
                         }
-                    }else { //Go right
-                        if (current.right == null){
+                    } else {  // Go right
+                        if (current.right == null) {
                             current.right = newNode;
                             placed = true;
-                        }else {
+                        } else {
                             current = current.right;
                         }
                     }
                 }
             }
         }
+        
+        
     }
 }
