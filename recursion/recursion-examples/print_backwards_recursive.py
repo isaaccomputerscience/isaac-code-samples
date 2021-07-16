@@ -1,5 +1,8 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+
 def print_backwards(phrase):
-    """Prints a given word or phrase backwards."""
+    """Prints a given word or phrase backwards"""
     if len(phrase) == 1:
         print(phrase, end = "")
     else:
