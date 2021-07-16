@@ -1,5 +1,8 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+
 def gcd(x, y):
-    """Euclidian algorithm to find and return the greatest common denominator of two numbers."""
+    """Euclidian algorithm to find and return the greatest common denominator of two numbers"""
     if y == 0:
         return x
     else:
