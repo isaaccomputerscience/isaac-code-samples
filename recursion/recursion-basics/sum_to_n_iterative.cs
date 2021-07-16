@@ -11,29 +11,27 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Recursion
 {
-    class SumToNIterative
+    class RecursionBasics
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args){
-
+        static void Main(string[] args) {
             int n = 6;
             int result = SumToN(n);
             string output = $"The sum of 1 to {n.ToString()} is: {result.ToString()}";
-            Console.WriteLine(output);
-            
+            Console.WriteLine(output);            
         }
+        
 
         // Returns the sum of all natural numbers from 1 to n inclusive
-        public static int SumToN(int n){
-
+        public static int SumToN(int n) {
             int total = 0;
-            for (int i = 1; i < n + 1; i++){
+            for (int i = 1; i < n + 1; i++) {
                 total = total + i;
             }
             return total;
-
         }
+        
     }
 }
