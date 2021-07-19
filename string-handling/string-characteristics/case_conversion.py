@@ -2,7 +2,7 @@
 # Usage licensed under the Open Government Licence v3.0
 
 def convert_to_lower(letter):
-    """Demonstrates how to extract a file extension"""
+    """Demonstrates how to use ASCII codes to convert letter case"""
     letter_code = ord(letter)
     new_letter_code = letter_code + 32
     lower_case = chr(new_letter_code)
