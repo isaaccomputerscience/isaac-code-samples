@@ -11,29 +11,23 @@ To run this file you need to:
 using System;
 
 
-namespace isaac_code_samples
+namespace Subroutines
 {
-    class subroutines
+    class DefineAndCall
     {
         // The Main method is the entry point for all C# programs
-        public static void Main(string[] args)
-        {
-
+        public static void Main(string[] args) {
             Console.Write("What is your name? ");
             string name = Console.ReadLine();
             RunQuiz();
             Console.WriteLine("End of the quiz");
-
         }
         
 
         // Simulates a quiz
-        public static void RunQuiz()
-        {
-
+        public static void RunQuiz() {
             Console.WriteLine("What is the capital city of Botswana?");
             string answer = Console.ReadLine();
-
         }
 
 
