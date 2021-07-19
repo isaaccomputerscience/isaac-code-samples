@@ -11,30 +11,27 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Subroutines
 {
-    class CallStackExample
+    class CallStack
     {
         // Simple program to demonstrate the use of call stacks
-        static void Main(string[] args){
-            
+        static void Main(string[] args) {            
             Console.WriteLine("Enter hours worked ");
-            string hours_input = Console.ReadLine();
-            int hours_float = Convert.ToInt32(num1_input);
+            string hoursInput = Console.ReadLine();
+            int hoursFloat = Convert.ToInt32(num1_input);
             Console.WriteLine("Enter hourly rate ");
-            string rate_float = Console.ReadLine();
-            int num2 = Convert.ToInt32(num2_input);
-            int pay = CalculatePay(hours_float, rate_float);
-            Console.WriteLine(pay);
-            
+            string rateInput = Console.ReadLine();
+            int rateFloat = Convert.ToInt32(num2_input);
+            int pay = CalculatePay(hoursFloat, rateFloat);
+            Console.WriteLine(pay);            
            }
+        
 
         // A simple pay calculation program
-        static float CalculatePay(float h, float r){
-
+        static float CalculatePay(float h, float r) {
             float pay = h * r;
             return pay;
-
         }
     }
 }
