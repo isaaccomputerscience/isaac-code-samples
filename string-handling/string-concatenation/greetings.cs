@@ -10,12 +10,13 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace StringHandling
 {
     class StringConcatenation
     {
-        static void Main(string[] args)
-        {
+        
+        // The main method is the entry point for all C# programs
+        static void Main(string[] args) {
             Greetings();           
         }
 
@@ -27,9 +28,11 @@ namespace isaac_code_samples
             string firstName = Console.ReadLine();
             Console.WriteLine("Greetings " + firstName);
             Console.Write("Please enter your surname ");
-            string surname = Console.ReadLine();
-            string userName = firstName + " " + surname;
+            string lastName = Console.ReadLine();
+            string userName = firstName + " " + lastName;
             Console.WriteLine("Greetings " + userName);
         }
+        
+        
     }
 }
