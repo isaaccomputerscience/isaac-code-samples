@@ -1,4 +1,7 @@
 /*
+Isaac Computer Science
+Usage licensed under the Open Government Licence v3.0
+
 Note: This file is designed to be copied out and compiled on your machine. 
 In order for it to compile properly you need to ensure that the project name is the same as the "namespace" in this file. 
 To run this file you need to:
@@ -10,23 +13,29 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace StringHandling
 {
-    class Cases
+
+    class StringCharacteristics
     {
-        static void Main(string[] args){
-            ConvertToLower();
+
+        // The Main method is the entry point for all C# programs
+        public static void Main(string[] args) {
+            string letter = "B";
+            char lowerCase = ConvertToLower(letter);
+            Console.WriteLine(lowerCase);
         }
 
-        //Demonstrates conversion to lower case
-        static void ConvertToLower(){
-            Console.Write("Enter an uppercase letter ");
-            string letter = Console.ReadLine();
-            int letterCode = (int)letter[0];  // Converts first letter to ASCII code
+
+        // Demonstrates how to use ASCII codes to convert letter case
+        public static char ConvertToLower(string letter) {
+            int letterCode = (int)letter[0];  // Get code for character extraced from string
             int newLetterCode = letterCode + 32;
-            char lowerCase = Convert.ToChar(newLetterCode);  // Converts new code to a letter
-           Console.WriteLine(lowerCase);
+            char lowerCase = Convert.ToChar(newLetterCode);  // Converts new code to a character
+            return lowerCase;
         }
+
 
     }
 }
+
