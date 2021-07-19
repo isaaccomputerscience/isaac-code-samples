@@ -10,31 +10,31 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace StringHandling
 {
-    class NullStrings
+    class StringCharacteristics
     {
-        static void Main(string[] args)
-        {
+
+        
+        // The main method is the entry point for all C# programs
+        static void Main(string[] args) {
             DemonstrateNulls();
         }
         
 
         // Demonstrates the difference between a null and a space 
-        public static void DemonstrateNulls()
-        {
+        public static void DemonstrateNulls() {
             string nullString = "";
             Console.WriteLine(nullString.Length);
             string stringWithSpace = " ";
             Console.WriteLine(stringWithSpace.Length);
             if (nullString == stringWithSpace) {
                 Console.WriteLine("We are the same");
-            }
-            else
-            {
+            } else {
                 Console.WriteLine("We are different");
             }
         }
+        
 
     }
 }
