@@ -11,22 +11,23 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Subroutines
 {
-    class StackOverflowExample
+    class CallStack               
     {
-        static void Main(string[] args){
-
+        
+        // The main method is the entry point for all C# programs
+        static void Main(string[] args) {
             StackOverflow();
-
         }
 
+        
         // Will force a stack overflow
-        static void StackOverflow(){
-
-            StackOverflow();
-            
+        static void StackOverflow() {
+            StackOverflow();           
         }
+        
+        
     }
 
 }
