@@ -10,21 +10,24 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace StringHandling
 {
-    class StringLength
-    {
-        static void Main(string[] args)
-        {
+    class StringCharacteristics
+    {        
+        
+        // The main method is the entry point for all C# programs
+        static void Main(string[] args) {
             ShowPasswordLength();
          }
 
+        
         // Prompts for a password and displays length
-        public static void ShowPasswordLength()
-        {
+        public static void ShowPasswordLength() {
             Console.Write("Please enter a password ");
             string password = Console.ReadLine();
             Console.WriteLine(password.Length);
         }
+        
+        
     }
 }
