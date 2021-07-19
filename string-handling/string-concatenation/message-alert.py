@@ -1,10 +1,12 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-def message_alert():
+def message_alert(new_messages):
     """Example of type conversion for string concatenation"""
-    messages = 5
-    print("You have " + str(messages) + " new messages")
+    
+    print("You have " + str(new_messages) + " new messages")
+    
 
 if __name__ == "__main__":
-    message_alert()
+    messages = 5
+    message_alert(new_messages)
