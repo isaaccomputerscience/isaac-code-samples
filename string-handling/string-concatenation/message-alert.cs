@@ -17,14 +17,14 @@ namespace StringHandling
         
         // The main method is the entry point for all C# programs
         static void Main(string[] args) {
-            MessageAlert();           
+            int newMessages = 5;
+            MessageAlert(newMessages);           
         }
 
         
         //Example of type conversion for string concatenation
-        public static void MessageAlert() {
-            int messages = 5;
-            Console.WriteLine("You have " + messages.ToString() + " new messages");
+        public static void MessageAlert(newMessages) {            
+            Console.WriteLine("You have " + newMessages.ToString() + " new messages");
         }
         
         
