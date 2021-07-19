@@ -22,8 +22,7 @@ namespace StringHandling
 
         
         // Demonstration of string concatenation
-        public static void Greetings()
-        {
+        public static void Greetings() {
             Console.Write("Please enter your first name ");
             string firstName = Console.ReadLine();
             Console.WriteLine("Greetings " + firstName);
