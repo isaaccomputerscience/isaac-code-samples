@@ -1,5 +1,4 @@
 # Isaac Computer Science
-# Iterative version of binary search
 # Usage licensed under the Open Government Licence v3.0
 
 def stack_overflow():
