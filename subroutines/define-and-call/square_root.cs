@@ -11,18 +11,16 @@ To run this file you need to:
 using System;
 
 
-namespace isaac_code_samples
+namespace Subroutines
 {
-    class subroutines
+    class DefineAndCall
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args)
-        {
-
+        static void Main(string[] args) {
             double SquareRoot = Math.Sqrt(9);
             Console.WriteLine(SquareRoot);
-
         }
+        
 
     }
 }
