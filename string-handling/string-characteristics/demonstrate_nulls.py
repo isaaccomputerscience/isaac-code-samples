@@ -1,3 +1,7 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+
+
 def demonstrate_nulls():
     """Demonstrates the difference between a null and a space"""
     null_string = ""
