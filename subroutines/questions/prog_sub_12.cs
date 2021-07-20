@@ -10,19 +10,21 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Subroutines
 {
     class SubQuestion12
     {
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) {
             display_menu();
         }
+        
 
-        static void display_menu(){
+        static void DisplayMenu() {
             Console.WriteLine("1 - Weather");
             Console.WriteLine("2 - Time");
             Console.WriteLine("3 - Exit");
         }
+        
+        
     }
 }
