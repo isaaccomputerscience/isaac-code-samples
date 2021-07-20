@@ -11,29 +11,33 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace Subroutines
 {
     class SubQuestion13
     {
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) {
             song();
         }
+        
 
-        static void badger(){
+        static void badger() {
             Console.WriteLine("Badger");
         }
+        
 
-        static void mushroom(){
+        static void mushroom() {
             Console.WriteLine("Mushroom");
         }
+        
 
-        static void song(){
-            for(int i = 1; i <= 12; i++){
+        static void song() {
+            for(int i = 1; i <= 12; i++) {
                 badger();
             }
             mushroom();
             mushroom();
         }
+        
+        
     }
 }
