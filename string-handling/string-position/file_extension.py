@@ -1,14 +1,19 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-def extract_file_extention():
-    """Demonstrates how to extract a file extension"""
-    file_name = "monster.csv"
+def get_extension(file_name):
+    """Extracts everything after dot in file name"""    
     dot_location = file_name.find(".")
-    print(dot_location)
-    position = dot_location + 1
-    print(file_name[position:]) # Prints the remainder of the string
-    
+    index = dot_location + 1
+    extension = file_name[index:] # Gets the remainder of the string
+    return extension
+
+
+def test():
+    file_name = "monster.csv"
+    extension = get_extension(file_name)
+    print(extension)
+        
 
 if __name__ == '__main__':
-    extract_file_extention()
+    test()
