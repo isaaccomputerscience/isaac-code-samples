@@ -21,6 +21,5 @@ def main():
     print("Enter an amount in pounds to find the higher tax rate:")
     calculate_higher_tax_rate()
 
-
 if __name__ == '__main__':
     main() 
