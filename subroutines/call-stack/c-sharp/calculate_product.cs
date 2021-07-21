@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
     {
         
         // Simple program to demonstrate the use of call stacks
-        static void Main(string[] args) {            
+        static void Main() {            
             Console.WriteLine("Please enter a number");
             string num1String = Console.ReadLine();
             int num1 = Convert.ToInt32(num1String);
