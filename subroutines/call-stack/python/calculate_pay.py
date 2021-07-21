@@ -10,8 +10,8 @@ def calculate_pay(h, r):
 
 def main():
     """A simple pay calculator"""
-    hours_input = input('Enter hours worked ')
-    rate_input = input('Enter hourly rate ')
+    hours_input = input("Enter hours worked ")
+    rate_input = input("Enter hourly rate ")
     hours = float(hours_input)
     rate = float(rate_input)
     pay = calculate_pay(hours, rate)
