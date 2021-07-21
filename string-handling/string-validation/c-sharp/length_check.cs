@@ -14,11 +14,10 @@ To run this file you need to:
 
 using System;
 
-
-namespace StringHandling
+namespace IsaacCodeSamples
 {
 
-    class Program
+    class StringValidation
     {
 
         // The Main method is the entry point for all C# programs
