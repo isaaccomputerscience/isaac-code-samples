@@ -5,11 +5,8 @@
 def main():
     """Simple demonstration of flow of control"""
     minutes = 90
-
-    # Sample code
     seconds = minutes * 60
     milliseconds = seconds * 1000
-
     print(f"Seconds: {seconds}, Milliseconds: {milliseconds}")
 
 
