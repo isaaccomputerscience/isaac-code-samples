@@ -22,9 +22,9 @@ namespace IsaacCodeSamples
         
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            string test_word = "kayak";
-            bool is_palindrome = Palindrome(test_word);
-            string result = $"{test_word}: {is_palindrome}";
+            string testWord = "kayak";
+            bool isPalindrome = Palindrome(testWord);
+            string result = $"{testWord}: {isPalindrome}";
             Console.WriteLine(result);
         }
         
@@ -35,8 +35,8 @@ namespace IsaacCodeSamples
             if (length == 0 || length == 1) {
                 return true;
             } else if (word[0] == word[length - 1]) {
-                string new_word = word.Substring(1, length - 2);
-                return Palindrome(new_word);
+                string newWord = word.Substring(1, length - 2);
+                return Palindrome(newWord);
             } else {
                 return false;
             }
