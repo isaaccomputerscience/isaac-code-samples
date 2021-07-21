@@ -19,7 +19,7 @@ namespace IsaacCodeSamples
     class DefineAndCall
     {
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args) {
+        static void Main() {
             GreetMe();
         }
 
