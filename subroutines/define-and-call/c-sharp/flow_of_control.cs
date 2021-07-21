@@ -21,14 +21,9 @@ namespace IsaacCodeSamples
     
         // The Main method is the entry point for all C# programs
         static void Main() {
-
-            // Extra code is included to make sample execute
             int minutes = 90;
-
-            // Sample code
             int seconds = minutes * 60;
             int milliseconds = seconds * 1000;
-
             Console.WriteLine($"Seconds: {seconds}, Milliseconds: {milliseconds}");
         }
 
