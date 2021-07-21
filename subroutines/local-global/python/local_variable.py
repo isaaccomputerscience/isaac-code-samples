@@ -4,7 +4,6 @@
 
 
 def calculate_reduced_vat():
-
     """Calculate vat at a reduced rate"""
 
     # Local variable also called vat_rate overrides the vat_rate from global scope
@@ -17,7 +16,6 @@ def calculate_reduced_vat():
 
 
 if __name__ == '__main__':
-
     # Global variable vat_rate is defined within the global scope
     vat_rate = 0.2
     calculate_reduced_vat()
