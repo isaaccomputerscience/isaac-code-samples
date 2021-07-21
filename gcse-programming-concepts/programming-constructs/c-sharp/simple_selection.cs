@@ -1,18 +1,21 @@
 using System;
 
-namespace isaac_code_samples
+namespace IsaacCodeSamples
 {
-    class SimpleSelection
+
+    class ProgrammingConstructs  // Simple selection
     {
-        void Main(string[] args){
+       
+        public static void Main() {
             Console.WriteLine("Which animal has a long bendy trunk?");
             string animal = Console.ReadLine();
-            if (animal == "Elephant"){
+            if (animal == "Elephant") {
                 Console.WriteLine("You are correct");
-            }else{
+            } else {
                 Console.WriteLine("You are incorrect");
             }
-
         }
+        
+        
     }
 }
