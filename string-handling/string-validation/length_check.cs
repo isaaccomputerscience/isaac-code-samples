@@ -21,14 +21,12 @@ namespace StringHandling
     {
 
         // The Main method is the entry point for all C# programs
-        public static void Main()
-        {
+        public static void Main() {
             Test();
         }
 
         // Test data
-        private static void Test()
-        {
+        private static void Test() {
             // normal data
             string password = "elephant1234";
             bool result = CheckPassword(password);
@@ -47,15 +45,14 @@ namespace StringHandling
 
 
         // Checks password length
-        private static bool CheckPassword(string password)
-        {
+        private static bool CheckPassword(string password) {
             bool isValid = true;
-            if (password.Length < 8)
-            {
+            if (password.Length < 8) {
                 isValid = false;
             }
             return isValid;
         }
+        
 
     }
 }
