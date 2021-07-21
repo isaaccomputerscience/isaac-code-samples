@@ -3,7 +3,7 @@
 # https://isaaccomputerscience.org/concepts/prog_sub_define_and_call
 
 def main():
-    # Some extra code is included to make sample execute
+    """Simple demonstration of flow of control"""
     minutes = 90
 
     # Sample code
