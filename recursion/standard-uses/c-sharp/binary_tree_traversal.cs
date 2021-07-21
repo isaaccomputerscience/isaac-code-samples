@@ -1,22 +1,27 @@
 /*
-Note: This file is designed to be copied out and compiled on your machine. 
-In order for it to compile properly you need to ensure that the project name is the same as the "namespace" in this file. 
+Isaac Computer Science
+Usage licensed under the Open Government Licence v3.0
 
+Note: This file is designed to be copied out and compiled on your machine.
+In order for it to compile properly you need to ensure that the project name is the same as the "namespace" in this file.
 To run this file you need to:
 1. Copy the contents
 2. Paste them into the C# IDE of your choice (Visual Studio, for example)
-3. Compile the program
-4. Run the program
+3. Change the namespace to match your project (if neccesary)
+4. Compile the program
+5. Run the program
 */
 
 using System;
 
-namespace Recursion
+namespace IsaacCodeSamples 
+    
 {
-    class BinaryTreeTraversal
+    class StandardUses  // Binary tree traversal
     {
+        
         // The Main method is the entry point for all C# programs
-        static void Main(string[] args) {
+        public static void Main() {
             BST myTree = new BST();
             TestData(myTree);  // Create some test data
             Node start = myTree.GetRoot();  // Get start node
@@ -25,7 +30,7 @@ namespace Recursion
         
 
         // Inserts some data into the tree
-        static void TestData(BST bst) {
+        public static void TestData(BST bst) {
             bst.Insert("Zac");
             bst.Insert("Lucy");
             bst.Insert("Anil");
@@ -34,7 +39,7 @@ namespace Recursion
 
         
         // In order binary search traversal
-        static void TraverseInOrder(Node node) {    
+        public static void TraverseInOrder(Node node) {    
             if (node != null) {
                 TraverseInOrder(node.left);
                 Console.WriteLine(node.data);

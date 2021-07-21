@@ -1,5 +1,4 @@
 # Isaac Computer Science
-# Iterative version of sum_to_n
 # Usage licensed under the Open Government Licence v3.0
 
 def sum_to_n_iterative(n):
