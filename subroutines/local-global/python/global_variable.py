@@ -6,12 +6,11 @@
 def calculate_standard_vat():
     """Calculate vat at the standard rate"""
     amount = float(input("Enter amount to calculate VAT on: "))
-    vat = amount * vat_rate
+    vat = amount * vat_rate  # Global variable used
     print(vat)
 
 
 if __name__ == '__main__':
-
     # Global variable vat_rate is defined within the global scope
     vat_rate = 0.2
     calculate_standard_vat()
