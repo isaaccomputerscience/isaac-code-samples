@@ -11,27 +11,26 @@ To run this file you need to:
 
 using System;
 
-namespace isaac_code_samples
+namespace IsaacCodeSamples
 {
-    class StrToFloat
+
+    class Casting
     {
 
-        static void Main(string[] args){
-
+        static void Main() {
             DoubleIt();
-
         }
+        
 
         // Asks the user for a number and doubles it
-        static void DoubleIt(){
-
-            Console.WriteLine("Enter a number");
+        static void DoubleIt() {
+            Console.WriteLine("Enter a number ");
             string number = Console.ReadLine();
             float floatNumber = float.Parse(number);
             float answer = floatNumber * 2.0f;
             Console.WriteLine(answer);
-
         }
+        
 
     }
 }
