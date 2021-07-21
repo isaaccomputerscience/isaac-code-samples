@@ -11,27 +11,26 @@ To run this file you need to:
 
 using System;
 
-namespace string_to_integer
+namespace IsaacCodeSamples
 {
-    class StrToInt
+    
+    class Casting
     {
 
-        static void Main(string[] args){
-
+        static void Main() {
             DoubleIt();
-
         }
+        
 
         // Asks the user for a number and doubles it
-        static void DoubleIt(){
-
-            Console.WriteLine("Enter a number");
+        static void DoubleIt() {
+            Console.WriteLine("Enter a number ");
             string number = Console.ReadLine();
             int intNumber = int.Parse(number);
             int answer = intNumber * 2;
             Console.WriteLine(answer);
-
         }
+        
 
     }
 }
