@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
     {
         
         // Simple program to demonstrate the use of call stacks
-        static void Main(string[] args) {            
+        static void Main() {            
             Console.WriteLine("Enter hours worked ");
             string hoursInput = Console.ReadLine();
             int hoursFloat = Convert.ToInt32(num1_input);
