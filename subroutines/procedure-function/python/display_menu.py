@@ -4,11 +4,10 @@
 
 
 def display_menu():
-    print("Enter a number of one of the the menu options")
+    """Displays a simple menu"""
     print("1: Log in")
     print("2: Sign up")
-
-    option = input()
+    print("9: Quit")
 
 
 if __name__ == '__main__':
