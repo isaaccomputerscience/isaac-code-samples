@@ -23,12 +23,12 @@ namespace IsaacCodeSamples
         public static void Main() {
             Console.Write("What is your name? ");
             string name = Console.ReadLine();
-            WelcomeUser(user);           
+            WelcomeUser(name);
         }
-        
+
 
         // A welcome message that uses value from parameter
-        public static void WelcomeUser(user) {
+        public static void WelcomeUser(string user) {
             Console.WriteLine("Greetings " + user);
         }
 
