@@ -5,14 +5,15 @@
 def calculate_volume(height, width, depth):
     """Calculate the volume of a cuboid"""
     volume = height * width * depth
-    print(volume)
+    return(volume)
 
 
 def main():
-    input_height = int(input("Enter height: "))
-    input_width = int(input("Enter width: "))
-    input_depth = int(input("Enter depth: "))
-    calculate_volume(input_height, input_width, input_depth)
+    input_height = float(input("Enter height: "))
+    input_width = float(input("Enter width: "))
+    input_depth = float(input("Enter depth: "))
+    volume = calculate_volume(input_height, input_width, input_depth)
+    print(volume)
 
 
 if __name__ == '__main__':
