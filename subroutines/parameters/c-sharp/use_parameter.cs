@@ -22,8 +22,8 @@ namespace IsaacCodeSamples
         // The Main method is the entry point for all C# programs
         public static void Main() {
             Console.Write("What is your name? ");
-            string name = Console.ReadLine();
-            WelcomeUser(name);
+            string userName = Console.ReadLine();
+            WelcomeUser(userName);
         }
 
 
