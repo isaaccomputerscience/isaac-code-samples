@@ -20,8 +20,7 @@ namespace IsaacCodeSamples
     {
 
         // The Main method is the entry point for all C# programs
-        public static void Main(string[] args)
-        {
+        public static void Main() {
             string fileName = "monster.csv";
             string extension = GetExtension(fileName);
             Console.WriteLine(extension);
