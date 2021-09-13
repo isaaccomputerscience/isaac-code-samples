@@ -19,7 +19,7 @@ namespace IsaacCodeSamples
     class RecursionBasics
     {
         // The Main method is the entry point for all C# programs
-        static void Main() {
+        public static void Main() {
             int n = 6;
             int result = SumToN(n);
             string output = $"The sum of 1 to {n.ToString()} is: {result.ToString()}";
