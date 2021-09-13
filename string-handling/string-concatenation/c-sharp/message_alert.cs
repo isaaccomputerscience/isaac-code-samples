@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
     {
         
         // The main method is the entry point for all C# programs
-        static void Main(string[] args) {
+        public static void Main() {
             int newMessages = 5;
             MessageAlert(newMessages);           
         }
