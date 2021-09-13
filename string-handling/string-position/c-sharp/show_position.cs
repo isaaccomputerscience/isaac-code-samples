@@ -22,18 +22,17 @@ namespace IsaacCodeSamples
     {
 
         // The Main method is the entry point for all C# programs
-        public static void Main(string[] args) {
-            ShowPosition();
+        public static void Main() {
+            string subject = "Computer Science";
+            string letter = "m";
+            ShowPosition(subject, letter);
         }
 
 
-        // Demonstrates how to find a character within a string
-        public static void ShowPosition() {
-
-            string subject = "Computer Science";
-            int position = subject.IndexOf("m");
-            Console.WriteLine(position);
-
+        // Demonstrates how to find a letter within a string
+        public static void ShowPosition(string myString, string letterSought) {
+            int position = myString.IndexOf(letterSought);
+            Console.WriteLine($"{letterSought} found at: {position}");
         }
         
 
