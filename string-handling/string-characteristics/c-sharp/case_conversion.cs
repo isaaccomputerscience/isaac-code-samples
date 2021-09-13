@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
     {
 
         // The Main method is the entry point for all C# programs
-        public static void Main(string[] args) {
+        public static void Main() {
             string letter = "B";
             char lowerCase = ConvertToLower(letter);
             Console.WriteLine(lowerCase);
@@ -29,7 +29,7 @@ namespace IsaacCodeSamples
 
         // Demonstrates how to use ASCII codes to convert letter case
         public static char ConvertToLower(string letter) {
-            int letterCode = (int)letter[0];  // Get code for character extraced from string
+            int letterCode = (int)letter[0];  // Get code for character extracted from string
             int newLetterCode = letterCode + 32;
             char lowerCase = Convert.ToChar(newLetterCode);  // Converts new code to a character
             return lowerCase;
