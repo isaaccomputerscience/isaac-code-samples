@@ -2,17 +2,17 @@
 # Usage licensed under the Open Government Licence v3.0
 
 
-def demonstrate_nulls():
-    """Demonstrates the difference between a null and a space"""
-    null_string = ""
-    print(len(null_string))
+def demonstrate_empty_string():
+    """Demonstrates the difference between an empty string and a space"""
+    empty_string = ""
+    print(len(empty_string))
     string_with_space = " "
     print(len(string_with_space))
-    if null_string == string_with_space:
+    if empty_string == string_with_space:
         print("We are the same")
     else:
         print("We are different")
 
         
 if __name__ == "__main__":
-    demonstrate_nulls()
+    demonstrate_empty_string()
