@@ -5,8 +5,8 @@ def greetings():
     """Demonstration of string concatenation"""
     first_name = input("Please enter your name ")
     print("Hello " + first_name)
-    last_name = input("Please enter your surname ")
-    user_name = first_name + " " + surname
+    last_name = input("Please enter your last name ")
+    user_name = first_name + " " + last_name
     print("Hello " + user_name)
 
 if __name__ == "__main__":
