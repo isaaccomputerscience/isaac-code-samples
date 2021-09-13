@@ -31,7 +31,7 @@ namespace IsaacCodeSamples
         public static void ShowPosition() {
 
             string subject = "Computer Science";
-            int position = subject.IndexOf("x");
+            int position = subject.IndexOf("m");
             Console.WriteLine(position);
 
         }
