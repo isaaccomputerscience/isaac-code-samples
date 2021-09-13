@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
     {
         
         // The main method is the entry point for all C# programs
-        static void Main(string[] args) {
+        public static void Main() {
             Greetings();           
         }
 
@@ -30,7 +30,7 @@ namespace IsaacCodeSamples
             Console.Write("Please enter your first name ");
             string firstName = Console.ReadLine();
             Console.WriteLine("Greetings " + firstName);
-            Console.Write("Please enter your surname ");
+            Console.Write("Please enter your last name ");
             string lastName = Console.ReadLine();
             string userName = firstName + " " + lastName;
             Console.WriteLine("Greetings " + userName);
