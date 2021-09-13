@@ -20,12 +20,12 @@ namespace IsaacCodeSamples
     {        
         
         // The main method is the entry point for all C# programs
-        static void Main(string[] args) {
+        public static void Main() {
             ShowPasswordLength();
          }
 
         
-        // Prompts for a password and displays length
+        // Prompts for a password and displays its length
         public static void ShowPasswordLength() {
             Console.Write("Please enter a password ");
             string password = Console.ReadLine();
