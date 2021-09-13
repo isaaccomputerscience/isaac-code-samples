@@ -1,12 +1,13 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-def show_position():
-    """Demonstrates how to find a character within a string"""
-    subject = "Computer Science"
-    position = subject.find("m")
-    print(f"Found at: {position}")
+def show_position(my_string, letter_sought):
+    """Demonstrates finding a letter within a string"""
+    position = my_string.find(letter_sought)
+    print(f"{letter_sought} found at: {position}")
     
 
 if __name__ == '__main__':
-    show_position()
+    subject = "Computer Science"
+    letter = "m"
+    show_position(subject, letter)
