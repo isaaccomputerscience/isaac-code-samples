@@ -27,7 +27,7 @@ namespace IsaacCodeSamples
 
         
         //Example of type conversion for string concatenation
-        public static void MessageAlert(newMessages) {            
+        public static void MessageAlert(int newMessages) {            
             Console.WriteLine("You have " + newMessages.ToString() + " new messages");
         }
         
