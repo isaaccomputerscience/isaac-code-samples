@@ -21,12 +21,12 @@ namespace IsaacCodeSamples
         
         // The main method is the entry point for all C# programs
         public static void Main() {
-            Greetings();           
+            GreetUser();           
         }
 
         
         // Demonstration of string concatenation
-        public static void Greetings() {
+        public static void GreetUser() {
             Console.Write("Please enter your first name ");
             string firstName = Console.ReadLine();
             Console.WriteLine("Greetings " + firstName);
