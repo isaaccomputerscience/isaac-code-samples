@@ -1,7 +1,7 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-def greetings():
+def greet_user():
     """Demonstration of string concatenation"""
     first_name = input("Please enter your name ")
     print("Hello " + first_name)
@@ -10,4 +10,4 @@ def greetings():
     print("Hello " + user_name)
 
 if __name__ == "__main__":
-    greetings()
+    greet_user()
