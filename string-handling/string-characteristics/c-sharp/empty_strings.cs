@@ -20,17 +20,17 @@ namespace IsaacCodeSamples
         
         // The main method is the entry point for all C# programs
         public static void Main() {
-            DemonstrateNulls();
+            DemonstrateEmptyStrings();
         }
         
 
         // Demonstrates the difference between a null and a space 
-        public static void DemonstrateNulls() {
-            string nullString = "";
-            Console.WriteLine(nullString.Length);
+        public static void DemonstrateEmptyStrings() {
+            string emptyString = "";
+            Console.WriteLine(emptyString.Length);
             string stringWithSpace = " ";
             Console.WriteLine(stringWithSpace.Length);
-            if (nullString == stringWithSpace) {
+            if (emptyString == stringWithSpace) {
                 Console.WriteLine("We are the same");
             } else {
                 Console.WriteLine("We are different");
