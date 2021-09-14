@@ -9,8 +9,9 @@ def calculate_area(length):
     return area
 
 def main():
-    total_area = calculate_area(20)
-    print(total_area)
+    length = 12
+    result = calculate_area(length)
+    print(result)
 
 if __name__ == '__main__':
-    main()    
+    main() 
