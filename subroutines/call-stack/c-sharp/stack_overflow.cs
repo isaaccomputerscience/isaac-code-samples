@@ -20,13 +20,13 @@ namespace IsaacCodeSamples
     {        
         
         // The main method is the entry point for all C# programs
-        static void Main() {
+        public static void Main() {
             StackOverflow();
         }
 
         
         // Will force a stack overflow
-        static void StackOverflow() {
+        public static void StackOverflow() {
             StackOverflow();           
         }
         
