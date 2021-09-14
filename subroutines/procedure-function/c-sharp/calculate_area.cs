@@ -21,7 +21,7 @@ namespace IsaacCodeSamples
 
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            float length = 20;
+            float length = 12;
             float totalArea = CalculateArea(length);
             Console.WriteLine(totalArea);
         }
