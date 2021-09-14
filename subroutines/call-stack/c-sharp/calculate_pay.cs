@@ -20,21 +20,21 @@ namespace IsaacCodeSamples
     {
         
         // Simple program to demonstrate the use of call stacks
-        static void Main() {            
+        public static void Main() {            
             Console.WriteLine("Enter hours worked ");
             string hoursInput = Console.ReadLine();
-            int hoursFloat = Convert.ToInt32(num1_input);
+            int hoursFloat = Convert.ToInt32(hoursInput);
             Console.WriteLine("Enter hourly rate ");
 
             string rateInput = Console.ReadLine();
-            int rateFloat = Convert.ToInt32(num2_input);
+            int rateFloat = Convert.ToInt32(rateInput);
             int pay = CalculatePay(hoursFloat, rateFloat);
             Console.WriteLine(pay);            
         }
         
 
         // A simple pay calculation program
-        static float CalculatePay(float h, float r) {
+        public static float CalculatePay(float h, float r) {
             float pay = h * r;
             return pay;
         }
