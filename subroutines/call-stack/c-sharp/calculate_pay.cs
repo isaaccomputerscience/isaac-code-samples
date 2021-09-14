@@ -13,33 +13,30 @@ To run this file you need to:
 
 using System;
 
-namespace IsaacCodeSamples    
+namespace IsaacCodeSamples   
 {
-    
     class CallStack
     {
-        
+
         // Simple program to demonstrate the use of call stacks
-        public static void Main() {            
+        public static void Main() {
             Console.WriteLine("Enter hours worked ");
             string hoursInput = Console.ReadLine();
-            int hoursFloat = Convert.ToInt32(hoursInput);
+            double hours = Convert.ToDouble(hoursInput);
             Console.WriteLine("Enter hourly rate ");
-
             string rateInput = Console.ReadLine();
-            int rateFloat = Convert.ToInt32(rateInput);
-            int pay = CalculatePay(hoursFloat, rateFloat);
-            Console.WriteLine(pay);            
+            double rate = Convert.ToDouble(rateInput);
+            double pay = CalculatePay(hours, rate);
+            Console.WriteLine(pay);
         }
-        
+
 
         // A simple pay calculation program
-        public static float CalculatePay(float h, float r) {
-            float pay = h * r;
+        public static double CalculatePay(double h, double r) {
+            double pay = h * r;
             return pay;
         }
-        
-        
+
+
     }
 }
-
