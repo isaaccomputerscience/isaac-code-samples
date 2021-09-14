@@ -11,14 +11,14 @@ def calculate_area(length):
 
 def get_hypotenuse(a, b):
     """Calculates the length of the hypotenuse of a right angled triangle"""
-    hypotenuse = math.sqrt( calculate_area(a) + calculate_area(b) ) 
-    return hypotenuse
+    h = math.sqrt( calculate_area(a) + calculate_area(b) ) 
+    return h
 
 def main():
-    length1 = 3
-    length2 = 4
-    hyp = get_hypotenuse(length1, length2)
-    print(hyp)
+    side1 = 3
+    side2 = 4
+    hypotenuse = get_hypotenuse(side1, side2)
+    print(hypotenuse)
 
 if __name__ == '__main__':
     main() 
