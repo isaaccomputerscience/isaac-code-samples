@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
     {
         
         // Simple program to demonstrate the use of call stacks
-        static void Main() {            
+        public static void Main() {            
             Console.WriteLine("Please enter a number");
             string num1String = Console.ReadLine();
             int num1 = Convert.ToInt32(num1String);
@@ -32,7 +32,7 @@ namespace IsaacCodeSamples
         
 
         // Calculates the product of two numbers
-        static void CalculateProduct(int n1, int n2) {
+        public static void CalculateProduct(int n1, int n2) {
             int product = n1 * n2;
             Console.WriteLine(product);
         }
