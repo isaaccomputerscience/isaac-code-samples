@@ -23,15 +23,15 @@ namespace IsaacCodeSamples
         // Entry point for C# programs
         public static void Main() {
             List<string> shoppingList = new List<string>();  // Empty list
-            AddNewItem(shoppingList, "milk");
-            AddNewItem(shoppingList, "bread");
-            AddNewItem(shoppingList, "cake");
+            AddNewItem(ref shoppingList, "milk");
+            AddNewItem(ref shoppingList, "bread");
+            AddNewItem(ref shoppingList, "cake");
             shoppingList.ForEach(Console.WriteLine);  // Will display whole list
         }
 
 
         // A simple program to demonstrate passing by reference
-        public static void AddNewItem(List<string> aList, string newItem) {
+        public static void AddNewItem(ref List<string> aList, string newItem) {
             aList.Add(newItem);  // Uses built in method Add
         }
 
