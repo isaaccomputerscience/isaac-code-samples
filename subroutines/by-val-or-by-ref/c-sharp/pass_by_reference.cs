@@ -31,8 +31,7 @@ namespace IsaacCodeSamples
 
 
         // A simple program to demonstrate passing by reference
-        public static void AddNewItem(List<string> aList, string newItem)
-        {
+        public static void AddNewItem(List<string> aList, string newItem) {
             aList.Add(newItem);  // Uses built in method Add
         }
 
