@@ -17,24 +17,13 @@ using System;
 namespace IsaacCodeSamples
 {
 
-    class Variables
+    class Inputs
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            NewGame();
-        }
-
-
-        // Sets the score to 0 if user chooses to start a new game
-        public static void NewGame() {
-          int score;
-
-          Console.WriteLine("Would you like to start a new game?");
-          string response = Console.ReadLine();
-
-          if (response == "YES") {
-              score = 0;
-          }
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello {name}");
         }
 
 
