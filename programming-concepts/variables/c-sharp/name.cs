@@ -21,14 +21,9 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-          int score;
-
-          Console.WriteLine("Would you like to start a new game?");
-          string response = Console.ReadLine();
-
-          if (response == "YES") {
-              score = 0;
-          }
+            string name;              // Initialising variable
+            name = "Mikita";          // Assigning a value to the variable
+            Console.WriteLine(name);  // Referencing variable
         }
         
 

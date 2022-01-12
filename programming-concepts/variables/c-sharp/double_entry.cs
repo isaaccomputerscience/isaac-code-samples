@@ -21,14 +21,18 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-          int score;
+            Console.WriteLine("Enter your email address: ");
+            string email = Console.ReadLine();
 
-          Console.WriteLine("Would you like to start a new game?");
-          string response = Console.ReadLine();
+            Console.WriteLine("Re-type your email address: ");
+            string verifyEmail = Console.ReadLine();
 
-          if (response == "YES") {
-              score = 0;
-          }
+            if (email == verifyEmail) {
+                Console.WriteLine("The emails match");
+            }
+            else {
+                Console.WriteLine("Error: the email addresses did not match");
+            } 
         }
         
 

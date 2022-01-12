@@ -21,14 +21,16 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-          int score;
+            Console.WriteLine("Enter a week of the year: ");
+            string userInput = Console.ReadLine();
+            int week = Int32.Parse(userInput);
 
-          Console.WriteLine("Would you like to start a new game?");
-          string response = Console.ReadLine();
-
-          if (response == "YES") {
-              score = 0;
-          }
+            if (week > 0 && week <= 52) {
+                Console.WriteLine($"You have chosen week {week}");
+            }
+            else {
+                Console.WriteLine("A week must be between 1-52");
+            }
         }
         
 

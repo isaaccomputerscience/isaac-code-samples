@@ -21,14 +21,14 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-          int score;
+            Console.WriteLine("Please enter the first name: ");
+            string firstName = Console.ReadLine();
 
-          Console.WriteLine("Would you like to start a new game?");
-          string response = Console.ReadLine();
-
-          if (response == "YES") {
-              score = 0;
-          }
+            while (firstName == "") {
+                Console.WriteLine("Error: First name is required");
+                Console.WriteLine("Please enter the first name: ");
+                firstName = Console.ReadLine();
+            }            
         }
         
 
