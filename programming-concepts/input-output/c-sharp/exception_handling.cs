@@ -17,7 +17,7 @@ using System;
 namespace IsaacCodeSamples
 {
 
-    class Inputs
+    class InputOutput
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
