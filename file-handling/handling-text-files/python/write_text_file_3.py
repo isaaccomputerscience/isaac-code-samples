@@ -3,7 +3,7 @@
      
 
 def write_to_file():
-    """Simple example of writing to a text file"""
+    """Simple example of writing records to a text file"""
     with open("playlist.txt", mode = "a") as playlist:
         new_track = "Happy, Pharrell Williams, 3.55"
         playlist.write(new_track)
