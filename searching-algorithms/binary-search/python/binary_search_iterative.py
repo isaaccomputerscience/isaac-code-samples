@@ -42,5 +42,7 @@ def run_test():
     print(f"Result of search was {result}")
     
 
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == "__main__":
     run_test()
