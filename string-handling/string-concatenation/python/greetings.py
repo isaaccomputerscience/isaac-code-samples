@@ -9,5 +9,8 @@ def greet_user():
     user_name = first_name + " " + last_name
     print("Hello " + user_name)
 
+
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == "__main__":
     greet_user()

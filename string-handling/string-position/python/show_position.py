@@ -7,6 +7,8 @@ def show_position(my_string, letter_sought):
     print(f"{letter_sought} found at: {position}")
     
 
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == '__main__':
     subject = "Computer Science"
     letter = "m"
