@@ -8,7 +8,9 @@ def sum_to_n_iterative(n):
         total = total + i
     return total
 
-    
+
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ =='__main__':
     n = 6
     result = sum_to_n_iterative(n)
