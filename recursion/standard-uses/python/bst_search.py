@@ -32,7 +32,10 @@ def test(bst):
         print("zac - test failed")
     print("Tests complete")
     
-       
+
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
+      
 if __name__ == '__main__':
     my_bst = BST()
     insert_test_data(my_bst)  # Create some test data

@@ -19,6 +19,9 @@ def insert_test_data(bst):
     bst.insert('Boris')
  
        
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
+
 if __name__ == '__main__':
     my_tree = BST()
     insert_test_data(my_tree)  # Create some test data
