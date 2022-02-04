@@ -29,6 +29,8 @@ namespace IsaacCodeSamples
           if (response == "YES") {
               score = 0;
           }
+
+          Console.WriteLine(score);
         }
         
 
