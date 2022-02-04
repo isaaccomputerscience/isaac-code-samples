@@ -13,7 +13,9 @@ def test():
     file_name = "monster.csv"
     extension = get_extension(file_name)
     print(extension)
-        
 
+        
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == '__main__':
     test()
