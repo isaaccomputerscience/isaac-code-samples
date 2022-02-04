@@ -8,6 +8,8 @@ def main():
         print("Your drink is being processed")
     else:
         print("Choose either tea or coffee but not both")
+
+        
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
 if __name__ == '__main__':
