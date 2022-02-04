@@ -6,6 +6,8 @@ def message_alert(new_messages):
     print("You have " + str(new_messages) + " new messages")
     
 
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == "__main__":
     messages = 5
-    message_alert(new_messages)
+    message_alert(messages)

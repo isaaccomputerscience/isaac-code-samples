@@ -44,8 +44,11 @@ class BST:
                         placed = True
                     else:
                         current = current.right                    
+
                     
-                   
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
+                  
 if __name__ == '__main__':
     # Just for testing
     bst = BST()

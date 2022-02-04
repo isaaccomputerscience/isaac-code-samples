@@ -14,5 +14,7 @@ def show_substrings():
     print(my_string[6:])
     
 
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == '__main__':
     show_substrings()
