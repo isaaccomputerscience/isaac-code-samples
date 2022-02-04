@@ -12,7 +12,8 @@ def main():
     print(data)
     print(type(data))  # So that you can see it is a single string
 
-if __name__ == "__main__":
-    main()
 
-    
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
+if __name__ == "__main__":
+    main()   

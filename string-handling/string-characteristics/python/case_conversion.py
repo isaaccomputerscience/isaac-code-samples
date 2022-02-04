@@ -14,7 +14,9 @@ def test():
     letter = "B"
     lower_case = convert_to_lower(letter)
     print(lower_case)       
-    
 
+
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == '__main__':
     test()

@@ -1,6 +1,8 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
+
 from random import randint
+
 def main():
     random_number = randint(1,100)
     print(random_number)

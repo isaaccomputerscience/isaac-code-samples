@@ -15,7 +15,6 @@ def palindrome(word):
 
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
-
 if __name__ == '__main__':
     test_word = 'kayak'
     is_palindrome = palindrome(test_word)

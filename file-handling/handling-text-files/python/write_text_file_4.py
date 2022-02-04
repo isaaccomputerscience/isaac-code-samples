@@ -9,6 +9,7 @@ def write_to_file(data):
         playlist.write("\n")
         playlist.close()
 
+
 def main():
     new_track = "Happy, Pharrell Williams, 3:55"
     write_to_file(new_track)
@@ -16,7 +17,7 @@ def main():
     write_to_file(new_track)
     
 
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == "__main__":
-    main()
-
-    
+    main() 

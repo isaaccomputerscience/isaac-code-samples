@@ -6,5 +6,8 @@ def show_password_length():
     password = input("Please enter a password ")
     print(len(password))
 
+
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
 if __name__ == "__main__":
     show_password_length()
