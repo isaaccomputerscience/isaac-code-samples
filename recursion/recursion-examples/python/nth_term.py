@@ -8,6 +8,10 @@ def nth_term(n, increment):
     else:
         return increment + nth_term(n-1, increment)
 
+
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
+
 if __name__ == '__main__':
     increment = 6
     n = 10
