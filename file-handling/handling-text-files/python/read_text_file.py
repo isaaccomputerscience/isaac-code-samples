@@ -3,7 +3,7 @@
      
 
 def read_file():
-    """Read and display all records from a file"""
+    """Read and display each record from a file"""
     with open("playlist.txt", mode = "r") as playlist:
         for track in playlist:
             print(track)   

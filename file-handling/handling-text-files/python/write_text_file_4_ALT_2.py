@@ -1,0 +1,26 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+     
+
+def write_to_file(filename, data):
+    """Writes data to a file"""
+    with open("playlist.txt", mode = "a") as playlist:
+        playlist.write(data)
+        playlist.write("\n")
+        playlist.close()
+
+
+def main():
+    filename = "playlist.txt"
+    
+    track1 = "Happy, Pharrell Williams, 3:55"
+    write_to_file(filename, track1)
+    
+    track2 = "Reach, S Club 7, 4:02"
+    write_to_file(filename, track2)
+    
+
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
+if __name__ == "__main__":
+    main() 

@@ -3,9 +3,11 @@
      
 
 def read_all():
+    """Read all the data from a file"""
     with open("playlist.txt", mode = "r") as playlist:
         data = playlist.read()
     return data
+
 
 def main():
     data = read_all()
