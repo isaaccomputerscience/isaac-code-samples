@@ -15,7 +15,7 @@ To run this file you need to:
 using System;
 using System.IO;
 
-namespace MyApplication
+namespace IsaacCodeSamples
 {
     class Program
     {
