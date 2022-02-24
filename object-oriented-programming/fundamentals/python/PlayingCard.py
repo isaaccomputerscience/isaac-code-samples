@@ -9,7 +9,6 @@ class PlayingCard:
         self.__value = given_value
     
 
-if __name__ == '__main__':
-    
+if __name__ == '__main__':    
     # Instantiate an example PlayingCard object
     two_of_clubs = PlayingCard("clubs", "2", 2)
