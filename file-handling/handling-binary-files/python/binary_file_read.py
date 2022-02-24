@@ -3,7 +3,7 @@
 
 import pickle # Module for working with binary files
 
-def read_file():
+def read_binary_file():
     """Simple example of reading from a binary file"""
     with open("treasure.game", "rb") as gamefile:
         player_stats = pickle.load(gamefile)
@@ -11,7 +11,7 @@ def read_file():
 
 
 def main():
-    player_stats = read_file()
+    player_stats = read_binary_file()
     print(player_stats)
     print(type(player_stats)) # to prove it is a dictionary!
     

@@ -22,7 +22,7 @@ namespace MyApplication
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            var player_stats = new Dictionary<string, double>(){
+            var player_stats = new Dictionary<string, double>() {
                 {"health", 100},
                 {"hunger", 10},
                 {"money", 20.00},

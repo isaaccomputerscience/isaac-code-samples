@@ -21,15 +21,15 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            CreatePlaylist();
+            CreateFile();
         }
 
 
         // Simple example of creating a text file
-        public static void CreatePlaylist() {
+        public static void CreateFile() {
             string filename = "playlist.txt";
             using (FileStream fs = File.Create(filename)) {
-                // Here you can use the filstream to write text etc.
+                // Here you can use the filestream to write text etc.
             } // The stream is now closed
         }
 
