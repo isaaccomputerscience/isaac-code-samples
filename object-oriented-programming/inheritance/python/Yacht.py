@@ -15,5 +15,8 @@ class Yacht(Boat):
         self.__masts = given_masts
 
 
+# This code will run if this file is executed directly
+# (i.e. not called by another program)
+
 if __name__ == '__main__':
     my_boat = Yacht("Mary Sue", 15.7, 300, 6, 54.50, 2)
