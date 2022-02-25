@@ -12,6 +12,8 @@ def write_csv():
     brazil = ["Brazil", "215353593", "South America"]
     australia = ["Australia", "26068792", "Oceania"]
 
+    filename = "playlist.csv"
+
     with open("countries_population.csv", "w") as countries:
         write_to_csv = csv.writer(countries)
         write_to_csv.writerow(header)

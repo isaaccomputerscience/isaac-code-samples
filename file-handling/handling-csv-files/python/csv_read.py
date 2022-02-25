@@ -4,9 +4,10 @@
 import csv
 
 def read_csv():
-   with open("myplaylist.csv", mode = "r") as file:
-       csvfile = csv.reader(file)
-       for line in csvfile:
+   filename = "playlist.csv"
+   with open(filename, mode = "r") as playlist:
+       playlist = csv.reader(playlist)
+       for line in playlist:
            print(line)
 
 

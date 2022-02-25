@@ -38,8 +38,10 @@ namespace MyApplication
         
         // Read all the records of a CSV file
         public static void ReadCSV() {
+            string filename = "playlist.txt";
+
             // Read the CSV file using StreamReader and CsvReader
-            using (var reader = new StreamReader("playlist.csv"))
+            using (var reader = new StreamReader(filename))
             using (var csvReader = new CsvReader(reader, CultureInfo.CurrentCulture)) {
                 // Get all the records and store them as a list of Track objects
                 var records = csvReader.GetRecords<Track>();

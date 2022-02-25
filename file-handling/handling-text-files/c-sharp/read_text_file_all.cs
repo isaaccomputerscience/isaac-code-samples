@@ -31,8 +31,8 @@ namespace IsaacCodeSamples
             string filename = "playlist.txt";
             string data;
 
-            using (StreamReader sr = new StreamReader(filename)) {
-                data = sr.ReadToEnd();
+            using (StreamReader reader = new StreamReader(filename)) {
+                data = reader.ReadToEnd();
             } // The stream is now closed
 
             return data;

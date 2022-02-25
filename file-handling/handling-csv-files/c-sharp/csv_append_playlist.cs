@@ -50,8 +50,10 @@ namespace IsaacCodeSamples
                 new Track {Artist = "Carolina Gaitán", Song = "We don't talk about Bruno", Duration = "03:36"}
             };
 
+            string filename = "playlist.txt";
+
             // Append to the CSV file using File, StreamWriter and CsvWriter
-            using (var stream = File.Open("playlist.csv", FileMode.Append))
+            using (var stream = File.Open(filename, FileMode.Append))
             using (var writer = new StreamWriter(stream))
             using (var csvWriter = new CsvWriter(writer, csvConfig)) {
                 csvWriter.WriteRecords(tracks);

@@ -32,8 +32,8 @@ namespace IsaacCodeSamples
         public static void WriteToFile(string data) {
             string filename = "playlist.txt";
 
-            using (StreamWriter sw = new StreamWriter(filename, true)) {
-                sw.WriteLine(data);
+            using (StreamWriter writer = new StreamWriter(filename, true)) {
+                writer.WriteLine(data);
             } // The stream is now closed
         }
 

@@ -4,8 +4,9 @@
 
 def read_file_with_exception_handler():
     """Use an exception handler to catch file not found error"""
+    filename = "playlist.txt"
     try:
-        with open("playlist.txt", mode = "r") as playlist:
+        with open(filename, mode = "r") as playlist:
             for track in playlist:
                 print(track)
     except FileNotFoundError:

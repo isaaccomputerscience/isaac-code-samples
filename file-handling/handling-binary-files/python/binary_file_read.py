@@ -5,7 +5,8 @@ import pickle # Module for working with binary files
 
 def read_binary_file():
     """Simple example of reading from a binary file"""
-    with open("treasure.game", "rb") as gamefile:
+    filename = "treasure.game"
+    with open(filename, "rb") as gamefile:
         player_stats = pickle.load(gamefile)
     return player_stats
 

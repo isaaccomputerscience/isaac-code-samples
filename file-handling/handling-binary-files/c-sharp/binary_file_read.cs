@@ -31,13 +31,15 @@ namespace MyApplication
             // Declare an empty dictionary for adding the data to
             Dictionary<string, double> player_stats = new Dictionary<string, double>();
 
+            string filename = "treasure.game";
+
             // Read from a file using File and BinaryReader
-            using (var stream = File.Open("treasure.game", FileMode.Open))
-            using (var reader = new BinaryReader(stream)) { 
+            using (var stream = File.Open(filename, FileMode.Open))
+            using (var binaryReader = new BinaryReader(stream)) { 
                 // Read each key and value pair from the file
-                while (reader.BaseStream.Position != reader.BaseStream.Length) {
-                    var key = reader.ReadString();
-                    var value = reader.ReadDouble();
+                while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length) {
+                    var key = binaryReader.ReadString();
+                    var value = binaryReader.ReadDouble();
 
                     player_stats.Add(key, value);
                 }

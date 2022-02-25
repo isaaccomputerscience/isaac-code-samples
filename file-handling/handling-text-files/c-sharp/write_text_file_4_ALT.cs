@@ -33,8 +33,8 @@ namespace IsaacCodeSamples
 
         // Method for writing data to a new line in a text file
         public static void WriteToFile(string filename, string data) {
-            using (StreamWriter sw = new StreamWriter(filename, true)) {
-                sw.WriteLine(data);
+            using (StreamWriter writer = new StreamWriter(filename, true)) {
+                writer.WriteLine(data);
             } // The stream is now closed
         }
 

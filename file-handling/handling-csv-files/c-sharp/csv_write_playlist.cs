@@ -46,9 +46,11 @@ namespace IsaacCodeSamples
                 new Track {Artist = "Adele", Song = "Easy on me", Duration = "03:44"},
                 new Track {Artist = "Elton John & Dua Lipa", Song = "Cold heart", Duration = "03:22"}
             };
+            
+            string filename = "playlist.txt";
 
             // Write to the CSV file using StreamWriter and CsvWriter
-            using (var writer = new StreamWriter("playlist.csv"))
+            using (var writer = new StreamWriter(filename))
             using (var csvWriter = new CsvWriter(writer, CultureInfo.CurrentCulture)) {
                 csvWriter.WriteRecords(tracks);
             }

@@ -4,7 +4,8 @@
 
 def read_all():
     """Read all the data from a file"""
-    with open("playlist.txt", mode = "r") as playlist:
+    filename = "playlist.txt"
+    with open(filename, mode = "r") as playlist:
         data = playlist.read()
     return data
 

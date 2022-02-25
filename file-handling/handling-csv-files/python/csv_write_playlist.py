@@ -4,14 +4,16 @@
 import csv  
 
 def write_csv():
-    header = ["Artist", "Song title", "Duration"]
+    header = ["Artist", "Song", "Duration"]
     track_one = ["Pharrell Williams", "Happy", "03:55"]
     track_two = ["Meat Loaf", "Bat out of hell", "09:50"]
     track_three = ["Adele", "Easy on me", "03:44"]
     track_four = ["Elton John & Dua Lipa", "Cold heart", "03:22"]
 
-    with open("myplaylist.csv", "w") as file:
-        write_to_csv = csv.writer(file)
+    filename = "playlist.csv"
+
+    with open(filename, "w") as playlist:
+        write_to_csv = csv.writer(playlist)
         write_to_csv.writerow(header)
         write_to_csv.writerow(track_one)
         write_to_csv.writerow(track_two)

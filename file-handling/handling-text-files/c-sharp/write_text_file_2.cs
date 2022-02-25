@@ -30,8 +30,8 @@ namespace IsaacCodeSamples
             string filename = "playlist.txt";
             string new_track = "Reach, S Club 7, 4:02";
 
-            using (StreamWriter sw = new StreamWriter(filename, true)) {
-                sw.WriteLine(new_track);
+            using (StreamWriter writer = new StreamWriter(filename, true)) {
+                writer.WriteLine(new_track);
             } // The stream is now closed
         }
 

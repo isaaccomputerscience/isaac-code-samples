@@ -30,9 +30,9 @@ namespace IsaacCodeSamples
             string filename = "playlist.txt";
 
             try {
-                using (StreamReader sr = new StreamReader(filename)) {
+                using (StreamReader reader = new StreamReader(filename)) {
                     string line;
-                    while ((line = sr.ReadLine()) != null) {
+                    while ((line = reader.ReadLine()) != null) {
                         Console.WriteLine(line);
                     }
                 } // The stream is now closed

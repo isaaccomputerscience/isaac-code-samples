@@ -5,7 +5,8 @@ import pickle  # Module for working with binary files
 
 def write_binary_file(player_stats):
     """Simple example of writing to a binary file"""
-    with open("treasure.game", "wb") as gamefile:
+    filename = "treasure.game"
+    with open(filename, "wb") as gamefile:
         pickle.dump(player_stats, gamefile) 
 
     

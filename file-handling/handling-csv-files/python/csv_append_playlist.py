@@ -4,9 +4,10 @@
 import csv  
 
 def append_csv():
+    filename = "playlist.csv"
     new_track = ["Carolina Gaitán", "We don't talk about Bruno", "03:36"]
-    with open("myplaylist.csv", mode = "a") as file:
-        write_to_csv = csv.writer(file)
+    with open(filename, mode = "a") as playlist:
+        write_to_csv = csv.writer(playlist)
         write_to_csv.writerow(new_track)
 
 

@@ -2,9 +2,10 @@
 # Usage licensed under the Open Government Licence v3.0
      
 
-def read_file():
+def read_line_by_line():
     """Read and display each record from a file"""
-    with open("playlist.txt", mode = "r") as playlist:
+    filename = "playlist.txt"
+    with open(filename, mode = "r") as playlist:
         for track in playlist:
             print(track)   
     
@@ -12,4 +13,4 @@ def read_file():
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
 if __name__ == "__main__":
-    read_file()
+    read_line_by_line()

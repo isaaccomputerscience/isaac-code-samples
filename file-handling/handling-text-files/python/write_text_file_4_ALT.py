@@ -4,7 +4,8 @@
 
 def write_to_file(data):
     """Writes data to a file"""
-    with open("playlist.txt", mode = "a") as playlist:
+    filename = "playlist.txt"
+    with open(filename, mode = "a") as playlist:
         playlist.write(data)
         playlist.write("\n")
         playlist.close()

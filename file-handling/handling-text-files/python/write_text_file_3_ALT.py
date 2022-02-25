@@ -4,10 +4,11 @@
 
 def write_to_file():
     """Simple example of writing records to a text file"""
+    filename = "playlist.txt"
     track1 = "Happy, Pharrell Williams, 3.55"
     track2 = "Reach, S Club 7, 4.02"
     
-    with open("playlist.txt", mode = "a") as playlist:
+    with open(filename, mode = "a") as playlist:
         playlist.write(track1)
         playlist.write("\n")
         playlist.write(track2)

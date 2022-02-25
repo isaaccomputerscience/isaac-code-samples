@@ -34,13 +34,15 @@ namespace MyApplication
 
         // Write data to a binary file
         public static void WriteBinaryFile(Dictionary<string, double> player_stats) {
+            string filename = "treasure.game";
+
             // Write to a new file using File and BinaryWriter
-            using (var stream = File.Open("treasure.game", FileMode.Create))
-            using (var writer = new BinaryWriter(stream)) {
+            using (var stream = File.Open(filename, FileMode.Create))
+            using (var binaryWriter = new BinaryWriter(stream)) {
                 // Write each key and value pair to the file
                 foreach (var item in player_stats) {
-                    writer.Write(item.Key);
-                    writer.Write(item.Value);
+                    binaryWriter.Write(item.Key);
+                    binaryWriter.Write(item.Value);
                 }
             }
         }

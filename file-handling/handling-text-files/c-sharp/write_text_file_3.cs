@@ -31,9 +31,9 @@ namespace IsaacCodeSamples
             string track1 = "Happy, Pharrell Williams, 3.55";
             string track2 = "Reach, S Club 7, 4:02";
 
-            using (StreamWriter sw = new StreamWriter(filename, true)) {
-                sw.WriteLine(track1);
-                sw.WriteLine(track2);
+            using (StreamWriter writer = new StreamWriter(filename, true)) {
+                writer.WriteLine(track1);
+                writer.WriteLine(track2);
             } // The stream is now closed
         }
 

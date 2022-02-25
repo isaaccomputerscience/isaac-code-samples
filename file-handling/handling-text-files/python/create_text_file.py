@@ -4,7 +4,8 @@
 
 def create_file():
     """Simple example of creating a text file"""
-    playlist = open("playlist.txt", mode = "w")
+    filename = "playlist.txt"
+    playlist = open(filename, mode = "w")
     playlist.close()  
     
 
