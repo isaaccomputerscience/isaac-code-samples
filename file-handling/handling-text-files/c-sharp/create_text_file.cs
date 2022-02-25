@@ -28,9 +28,7 @@ namespace IsaacCodeSamples
         // Simple example of creating a text file
         public static void CreateFile() {
             string filename = "playlist.txt";
-            using (FileStream fs = File.Create(filename)) {
-                // Here you can use the filestream to write text etc.
-            } // The stream is now closed
+            File.Create(filename);
         }
 
         
