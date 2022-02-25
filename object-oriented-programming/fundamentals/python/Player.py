@@ -10,7 +10,6 @@ class Player:
 
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
-
 if __name__ == '__main__':
     # Instantiate an example Player object
     player1 = Player("Leona")
