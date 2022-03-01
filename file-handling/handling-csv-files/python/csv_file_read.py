@@ -4,6 +4,7 @@
 import csv
 
 def read_csv():
+   """Read all the records from a CSV file"""
    filename = "playlist.csv"
    with open(filename, mode = "r") as playlist:
        playlist = csv.reader(playlist)

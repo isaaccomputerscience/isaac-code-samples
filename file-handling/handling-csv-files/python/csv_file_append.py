@@ -4,6 +4,7 @@
 import csv  
 
 def append_csv():
+    """Append a record to a CSV file"""
     filename = "playlist.csv"
     new_track = ["Jorja Smith", "Addicted", "03:24"]
     with open(filename, mode = "a") as playlist:

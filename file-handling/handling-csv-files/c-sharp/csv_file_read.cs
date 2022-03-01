@@ -36,7 +36,7 @@ namespace MyApplication
         }
 
         
-        // Read all the records of a CSV file
+        // Read all the records from a CSV file
         public static void ReadCSV() {
             string filename = "playlist.txt";
 

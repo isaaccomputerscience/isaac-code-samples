@@ -4,6 +4,7 @@
 import csv  
 
 def write_csv():
+    """Write records to a CSV file"""
     header = ["Artist", "Song", "Duration"]
     track_one = ["Pharrell Williams", "Happy", "03:55"]
     track_two = ["Meat Loaf", "Bat out of hell", "09:50"]
