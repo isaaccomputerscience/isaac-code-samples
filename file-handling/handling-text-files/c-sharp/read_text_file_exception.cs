@@ -21,12 +21,12 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            ReadFile();
+            ReadFileWithExceptionHandler();
         }
 
 
         // Use an exception handler to catch file not found error
-        public static void ReadFile() {
+        public static void ReadFileWithExceptionHandler() {
             string filename = "playlist.txt";
 
             try {
