@@ -3,7 +3,7 @@
      
 
 def write_to_file(data):
-    """Writes data to a file"""
+    """Appends data to a file and adds a new line"""
     filename = "playlist.txt"
     with open(filename, mode = "a") as playlist:
         playlist.write(data)
@@ -12,10 +12,11 @@ def write_to_file(data):
 
 
 def main():
-    new_track = "Happy, Pharrell Williams, 3:55"
-    write_to_file(new_track)
-    new_track = "Reach, S Club 7, 4:02"
-    write_to_file(new_track)
+    track1 = "Happy, Pharrell Williams, 03:55"
+    write_to_file(track1)
+    
+    track2 = "Reach, S Club 7, 04:02"
+    write_to_file(track2)
     
 
 # This code will run if this file is executed directly

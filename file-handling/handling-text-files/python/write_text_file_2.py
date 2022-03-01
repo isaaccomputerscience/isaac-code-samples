@@ -3,9 +3,9 @@
      
 
 def write_to_file():
-    """Simple example of writing a record to a text file"""
+    """Example of appending a record to a text file"""
     filename = "playlist.txt"
-    new_track = "Reach, S Club 7, 4:02"
+    new_track = "Reach, S Club 7, 04:02"
     
     with open(filename, mode = "a") as playlist:
         playlist.write(new_track)

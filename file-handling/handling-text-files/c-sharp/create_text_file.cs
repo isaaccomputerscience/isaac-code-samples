@@ -25,7 +25,7 @@ namespace IsaacCodeSamples
         }
 
 
-        // Simple example of creating a text file
+        // Create an empty text file
         public static void CreateFile() {
             string filename = "playlist.txt";
             File.Create(filename);

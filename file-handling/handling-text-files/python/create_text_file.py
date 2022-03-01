@@ -3,7 +3,7 @@
      
 
 def create_file():
-    """Simple example of creating a text file"""
+    """Create an empty text file"""
     filename = "playlist.txt"
     playlist = open(filename, mode = "w")
     playlist.close()  
