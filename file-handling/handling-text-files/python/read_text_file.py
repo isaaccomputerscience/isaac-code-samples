@@ -3,7 +3,7 @@
      
 
 def read_line_by_line():
-    """Read and display each record from a file"""
+    """Read and display each record from a file line by line"""
     filename = "playlist.txt"
     with open(filename, mode = "r") as playlist:
         for track in playlist:

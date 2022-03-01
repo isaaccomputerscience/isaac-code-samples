@@ -8,7 +8,7 @@ def write_csv():
     track_one = ["Pharrell Williams", "Happy", "03:55"]
     track_two = ["Meat Loaf", "Bat out of hell", "09:50"]
     track_three = ["Adele", "Easy on me", "03:44"]
-    track_four = ["Elton John & Dua Lipa", "Cold heart", "03:22"]
+    track_four = ["Olivia Rodrigo", "deja vu", "03:35"]
 
     filename = "playlist.csv"
 

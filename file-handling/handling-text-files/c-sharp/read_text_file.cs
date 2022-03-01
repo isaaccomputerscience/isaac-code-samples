@@ -25,7 +25,7 @@ namespace IsaacCodeSamples
         }
 
 
-        // Read and display each record from a file
+        // Read and display each record from a file line by line
         public static void ReadLineByLine() {
             string filename = "playlist.txt";
 
