@@ -47,7 +47,7 @@ namespace IsaacCodeSamples
 
             // Create a list of Track objects for writing to the CSV file
             var tracks = new List<Track>() {
-                new Track {Artist = "Carolina Gaitán", Song = "We don't talk about Bruno", Duration = "03:36"}
+                new Track {Artist = "Jorja Smith", Song = "Addicted", Duration = "03:24"}
             };
 
             string filename = "playlist.txt";

@@ -44,7 +44,7 @@ namespace IsaacCodeSamples
                 new Track {Artist = "Pharrell Williams", Song = "Happy", Duration = "03:55"},
                 new Track {Artist = "Meat Loaf", Song = "Bat out of hell", Duration = "09:50"},
                 new Track {Artist = "Adele", Song = "Easy on me", Duration = "03:44"},
-                new Track {Artist = "Elton John & Dua Lipa", Song = "Cold heart", Duration = "03:22"}
+                new Track {Artist = "Olivia Rodrigo", Song = "deja vu", Duration = "03:35"}
             };
             
             string filename = "playlist.txt";
