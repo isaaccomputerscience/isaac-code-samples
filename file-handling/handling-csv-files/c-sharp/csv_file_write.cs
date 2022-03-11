@@ -47,7 +47,7 @@ namespace IsaacCodeSamples
                 new Track {Artist = "Olivia Rodrigo", Song = "deja vu", Duration = "03:35"}
             };
             
-            string filename = "playlist.txt";
+            string filename = "playlist.csv";
 
             // Write to the CSV file using StreamWriter and CsvWriter
             using (var writer = new StreamWriter(filename))

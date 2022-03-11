@@ -50,7 +50,7 @@ namespace IsaacCodeSamples
                 new Track {Artist = "Jorja Smith", Song = "Addicted", Duration = "03:24"}
             };
 
-            string filename = "playlist.txt";
+            string filename = "playlist.csv";
 
             // Append to the CSV file using File, StreamWriter and CsvWriter
             using (var stream = File.Open(filename, FileMode.Append))

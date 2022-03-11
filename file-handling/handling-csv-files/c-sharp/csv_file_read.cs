@@ -38,7 +38,7 @@ namespace MyApplication
         
         // Read all the records from a CSV file
         public static void ReadCSV() {
-            string filename = "playlist.txt";
+            string filename = "playlist.csv";
 
             // Read the CSV file using StreamReader and CsvReader
             using (var reader = new StreamReader(filename))
