@@ -22,8 +22,8 @@ namespace IsaacCodeSamples
         // The Main method is the entry point for all C# programs
         public static void Main() {
             Console.WriteLine("Enter a test score");
-            string user_input = Console.ReadLine();
-            int testScore = Int32.Parse(user_input);
+            string userInput = Console.ReadLine();
+            int testScore = Int32.Parse(userInput);
 
             if (testScore >= 60) {
                 Console.WriteLine("Pass");
