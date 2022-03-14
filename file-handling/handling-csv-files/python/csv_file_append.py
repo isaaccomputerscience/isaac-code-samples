@@ -7,7 +7,7 @@ def append_csv():
     """Append a record to a CSV file"""
     filename = "playlist.csv"
     new_track = ["Jorja Smith", "Addicted", "03:24"]
-    with open(filename, mode = "a") as playlist:
+    with open(filename, mode="a") as playlist:
         write_to_csv = csv.writer(playlist)
         write_to_csv.writerow(new_track)
 
