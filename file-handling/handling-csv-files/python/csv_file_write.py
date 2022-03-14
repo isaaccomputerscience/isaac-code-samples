@@ -13,13 +13,13 @@ def write_csv():
 
     filename = "playlist.csv"
 
-    with open(filename, "w") as playlist:
-        write_to_csv = csv.writer(playlist)
-        write_to_csv.writerow(header)
-        write_to_csv.writerow(track_one)
-        write_to_csv.writerow(track_two)
-        write_to_csv.writerow(track_three)
-        write_to_csv.writerow(track_four)
+    with open(filename, mode="w", newline="") as playlist:
+        csv_writer = csv.writer(playlist)
+        csv_writer.writerow(header)
+        csv_writer.writerow(track_one)
+        csv_writer.writerow(track_two)
+        csv_writer.writerow(track_three)
+        csv_writer.writerow(track_four)
 
 
 # This code will run if this file is executed directly
