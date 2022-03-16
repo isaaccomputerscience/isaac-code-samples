@@ -1,8 +1,8 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-def main():
-    """Use of nested selection to check user can rent a flat"""
+def rent_check():
+    """Example of nested selection to check user can rent a flat"""
     input_age = input("Enter your age: ")
     age = int(input_age)    
    
@@ -28,4 +28,4 @@ def main():
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
 if __name__ == '__main__':
-    main()
+    rent_check()
