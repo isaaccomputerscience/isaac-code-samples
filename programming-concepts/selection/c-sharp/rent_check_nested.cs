@@ -21,7 +21,12 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            // Use of nested selection to check user can rent a flat
+            RentCheck();
+        }
+        
+
+        // Example of nested selection to check user can rent a flat
+        public static void RentCheck() {
             Console.WriteLine("Enter your age: ");
             string inputAge = Console.ReadLine();
             int age = Int32.Parse(inputAge);
@@ -30,7 +35,7 @@ namespace IsaacCodeSamples
                 Console.WriteLine("Enter your salary: ");
                 string inputSalary = Console.ReadLine();
                 int salary = Int32.Parse(inputSalary);
-
+                
                 if (salary > 15000) {
                     Console.WriteLine("You can rent the flat");
                 }
@@ -53,7 +58,6 @@ namespace IsaacCodeSamples
                 Console.WriteLine("I am sorry but you can't rent the flat");
             }
         }
-        
 
     }
 }

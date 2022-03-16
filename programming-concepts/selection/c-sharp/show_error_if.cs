@@ -25,30 +25,28 @@ namespace IsaacCodeSamples
         }
 
 
-        // Example of a switch/case statement to match the error code
+        // Example of an if/else if statement to match the error code
         public static void ShowError() {
             Console.WriteLine("Enter the error code: ");
             string errorCode = Console.ReadLine();
 
-            switch (errorCode) {
-                case "400":
-                    Console.WriteLine("Bad request");
-                    break;
-                case "401":
-                    Console.WriteLine("Unauthorised request");
-                    break;
-                case "403":
-                    Console.WriteLine("Forbidden request");
-                    break;
-                case "404":
-                    Console.WriteLine("Page not found");
-                    break;
-                case "408":
-                    Console.WriteLine("Timeout error");
-                    break;
-                default:
-                    Console.WriteLine("Unknown error");
-                    break;
+            if (errorCode == "400") {
+                Console.WriteLine("Bad request");
+            }
+            else if (errorCode == "401") {
+                Console.WriteLine("Unauthorised request");
+            }
+            else if (errorCode == "403") {
+                Console.WriteLine("Forbidden request");
+            }
+            else if (errorCode == "404") {
+                Console.WriteLine("Page not found");
+            }
+            else if (errorCode == "408") {
+                Console.WriteLine("Timeout error");
+            }
+            else {
+                Console.WriteLine("Unknown error");
             }
         }
         
