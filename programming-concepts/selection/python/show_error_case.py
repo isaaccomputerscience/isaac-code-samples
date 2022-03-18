@@ -4,6 +4,7 @@
 def show_error():
     """Example of a match/case statement to match the error code"""
     error_code = input("Enter the error code: ")
+    
     match error_code:
         case "400":
             print("Bad request")

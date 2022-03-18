@@ -2,7 +2,6 @@
 # Usage licensed under the Open Government Licence v3.0
 
 def main():
-
     test_score = 71
 
     if test_score >= 60:
