@@ -3,11 +3,11 @@
      
 
 def read_line_by_line():
-    """Read and display each record from a file line by line"""
-    filename = "playlist.txt"
-    with open(filename, mode = "r") as playlist:
-        for track in playlist:
-            print(track)   
+    """Read and display a file line by line"""
+    file_object = open("bridge.txt", mode="r")
+    for rhyme_line in file_object:
+        print(rhyme_line)
+    file_object.close() 
     
 
 # This code will run if this file is executed directly

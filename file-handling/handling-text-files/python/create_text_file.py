@@ -5,8 +5,8 @@
 def create_file():
     """Create an empty text file"""
     filename = "playlist.txt"
-    playlist = open(filename, mode = "w")
-    playlist.close()  
+    file_object = open(filename, mode = "w")
+    file_object.close()  
     
 
 # This code will run if this file is executed directly
