@@ -21,21 +21,34 @@ namespace MyApplication
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            ReadCsv();
+            SelectHighEarners();
         }
 
 
-        // Read and display the records from a CSV file
-        public static void ReadCsv() {
+        // Select and display high earning movies over $200 million
+        public static void SelectHighEarners() {
+            int recordNum = 0;
+            int highEarners = 0;
+
             using (StreamReader reader = new StreamReader("movies.csv")) {
                 string record;
                 while ((record = reader.ReadLine()) != null) {
-                    string[] movieData = record.Split(",");
-                    string title = movieData[0];
-                    string rating = movieData[4];
-                    Console.WriteLine($"File name: {title}, Rating: {rating}");
+                    // Ignore the header row
+                    if (recordNum != 0) {
+                        string[] movieData = record.Split(",");
+                        decimal revenue =  decimal.Parse(movieData[5]);
+
+                        // Check if the movie revenue was over $200 million
+                        if (revenue > 200) {
+                            string title = movieData[0];
+                            Console.WriteLine($"File name: {title}, Revenue: {revenue}");
+                            highEarners = highEarners + 1;
+                        }
+                    } 
+                    recordNum = recordNum + 1;
                 }
             } // The stream is now closed
+            Console.WriteLine($"There were {highEarners} high earning movies.");
         }
 
         
