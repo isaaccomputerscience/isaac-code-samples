@@ -21,18 +21,17 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            WriteToFile();
+            ReadLineByLine();
         }
 
 
-        // Example of appending a record to a text file
-        public static void WriteToFile() {
-            string filename = "playlist.txt";
-            string new_track = "Happy, Pharrell Williams, 03:55";
-
-            // The second argument is true which opens the file in append mode
-            using (StreamWriter writer = new StreamWriter(filename, true)) {
-                writer.WriteLine(new_track);
+        // Read and display each record from a file line by line
+        public static void ReadLineByLine() {
+            using (StreamReader reader = new StreamReader("bridge.txt")) {
+                string line;
+                while ((line = reader.ReadLine()) != null) {
+                    Console.WriteLine(line);
+                }
             } // The stream is now closed
         }
 

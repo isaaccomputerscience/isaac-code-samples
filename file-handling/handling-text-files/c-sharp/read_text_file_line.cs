@@ -21,20 +21,17 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            ReadLineByLine();
+            ReadLineOfFile();
         }
 
 
-        // Read and display each record from a file line by line
-        public static void ReadLineByLine() {
-            string filename = "playlist.txt";
-
-            using (StreamReader reader = new StreamReader(filename)) {
-                string line;
-                while ((line = reader.ReadLine()) != null) {
-                    Console.WriteLine(line);
-                }
+        // Read and display a single line of the file
+        public static void ReadLineOfFile() {
+            string rhymeLine;
+            using (StreamReader reader = new StreamReader("bridge.txt")) {
+                rhymeLine = reader.ReadLine();
             } // The stream is now closed
+            Console.WriteLine(rhymeLine);
         }
 
         

@@ -21,19 +21,18 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            string track1 = "Happy, Pharrell Williams, 3:55";
-            WriteToFile(track1);
-
-            string track2 = "Reach, S Club 7, 4:02";
-            WriteToFile(track2);
+            AppendToFile();
         }
 
 
-        // Method for writing data to a new line in a text file
-        public static void WriteToFile(string data) {
-            string filename = "playlist.txt";
-            using (StreamWriter writer = new StreamWriter(filename, true)) {
-                writer.WriteLine(data);
+        // Example of appending to a text file
+        public static void AppendToFile() {
+            using (StreamWriter writer = new StreamWriter("twinkle.txt", true)) {
+                writer.WriteLine("");
+                writer.WriteLine("When the blazing sun is gone");
+                writer.WriteLine("When he nothing shines upon,");
+                writer.WriteLine("Then you show your little light,");
+                writer.WriteLine("Twinkle, twinkle, all the night.");
             } // The stream is now closed
         }
 

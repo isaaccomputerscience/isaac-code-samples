@@ -25,14 +25,13 @@ namespace IsaacCodeSamples
         }
 
 
-        // Example of appending a record to a text file
+        // Example of writing to a text file
         public static void WriteToFile() {
-            string filename = "playlist.txt";
-            string new_track = "Reach, S Club 7, 04:02";
-
-            // The second argument is true which opens the file in append mode
-            using (StreamWriter writer = new StreamWriter(filename, true)) {
-                writer.WriteLine(new_track);
+            using (StreamWriter writer = new StreamWriter("twinkle.txt", false)) {
+                writer.WriteLine("Twinkle, twinkle, little star,");
+                writer.WriteLine("How I wonder what you are!");
+                writer.WriteLine("Up above the world so high,");
+                writer.WriteLine("Like a diamond in the sky.");
             } // The stream is now closed
         }
 
