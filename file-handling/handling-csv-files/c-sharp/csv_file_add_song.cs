@@ -15,21 +15,21 @@ To run this file you need to:
 using System;
 using System.IO;
 
-namespace IsaacCodeSamples
-{    
+namespace MyApplication
+{
     class Program
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            AppendMovie();
+            AddSong("Happy", "Pharrell Williams", "03:55");
         }
 
 
-        // Append a new record to the CSV file
-        public static void AppendMovie() {
-            string newMovie = "Spider-Man: No Way Home,2021,148,Jon Watts,8.6,793.9";
-            using (StreamWriter writer = new StreamWriter("movies.csv", true)) {
-                writer.WriteLine(newMovie);
+        // Append a new song to the playlist
+        public static void AddSong(string title, string artist, string duration) {
+            string newSong = title + "," + artist + "," + duration;
+            using (StreamWriter writer = new StreamWriter("playlist.csv", true)) {
+                writer.WriteLine(newSong);
             }
         }
 

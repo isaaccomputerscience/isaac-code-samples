@@ -27,25 +27,19 @@ namespace MyApplication
 
         // Select and display high earning movies over $200 million
         public static void SelectHighEarners() {
-            int recordNum = 0;
             int highEarners = 0;
-
             using (StreamReader reader = new StreamReader("movies.csv")) {
                 string record;
                 while ((record = reader.ReadLine()) != null) {
-                    // Ignore the header row
-                    if (recordNum != 0) {
-                        string[] movieData = record.Split(",");
-                        decimal revenue =  decimal.Parse(movieData[5]);
+                    string[] movieData = record.Split(",");
+                    decimal revenue =  decimal.Parse(movieData[5]);
 
-                        // Check if the movie revenue was over $200 million
-                        if (revenue > 200) {
-                            string title = movieData[0];
-                            Console.WriteLine($"File name: {title}, Revenue: {revenue}");
-                            highEarners = highEarners + 1;
-                        }
-                    } 
-                    recordNum = recordNum + 1;
+                    // Check if the movie revenue was over $200 million
+                    if (revenue > 200) {
+                        string title = movieData[0];
+                        Console.WriteLine($"Movie name: {title}, Revenue: ${revenue} million");
+                        highEarners = highEarners + 1;
+                    }
                 }
             } // The stream is now closed
             Console.WriteLine($"There were {highEarners} high earning movies.");

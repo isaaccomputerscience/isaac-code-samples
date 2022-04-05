@@ -33,7 +33,7 @@ namespace MyApplication
                     string[] movieData = record.Split(",");
                     string title = movieData[0];
                     string rating = movieData[4];
-                    Console.WriteLine($"File name: {title}, Rating: {rating}");
+                    Console.WriteLine($"Movie name: {title}, Rating: {rating}");
                 }
             } // The stream is now closed
         }

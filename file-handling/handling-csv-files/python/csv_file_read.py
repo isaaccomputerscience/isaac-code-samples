@@ -1,6 +1,7 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
+
 def read_csv():
     """Read and display the records from a CSV file"""
     file_object = open("movies.csv", mode="r")
@@ -8,7 +9,7 @@ def read_csv():
        movie_data = record.split(",")
        title = movie_data[0]
        rating = movie_data[4]
-       print(f"Film name: {title}, Rating: {rating}")
+       print(f"Movie name: {title}, Rating: {rating}")
     file_object.close()
 
 
