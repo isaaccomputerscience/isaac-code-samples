@@ -11,6 +11,8 @@ def main():
     number2 = int(input("Enter another number"))
     answer = number1 + number2
     print(answer)
-
+    
+    
+# This code will run if this file is executed directly (i.e. not called by another program)
 if __name__ == '__main__':
     main()
