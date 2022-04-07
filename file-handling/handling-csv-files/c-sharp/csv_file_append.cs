@@ -27,7 +27,7 @@ namespace IsaacCodeSamples
 
         // Append a new record to the CSV file
         public static void AppendMovie() {
-            string newMovie = "Spider-Man: No Way Home,2021,148,Jon Watts,8.6,793.9";
+            string newMovie = "CODA,2021,111,Sian Heder,8.1,1.5";
             using (StreamWriter writer = new StreamWriter("movies.csv", true)) {
                 writer.WriteLine(newMovie);
             }

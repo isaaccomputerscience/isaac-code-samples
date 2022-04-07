@@ -4,7 +4,7 @@
 
 def append_movie():
     """Append a new record to the CSV file"""
-    new_movie = "Spider-Man: No Way Home,2021,148,Jon Watts,8.6,793.9"
+    new_movie = "CODA,2021,111,Sian Heder,8.1,1.5"
     file_object = open("movies.csv", mode="a")
     file_object.write(new_movie)
     file_object.write("\n")
