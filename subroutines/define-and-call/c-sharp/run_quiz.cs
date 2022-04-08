@@ -32,8 +32,13 @@ namespace IsaacCodeSamples
         public static void RunQuiz() {
             Console.WriteLine("What is the capital city of Botswana?");
             string answer = Console.ReadLine();
-        }
-
+            if (answer == "Gaborone") {
+                Console.WriteLine("Well done!");
+                }
+            else {
+                Console.WriteLine("Sorry! That is the wrong answer");
+                }
+      }
 
     }
 }
