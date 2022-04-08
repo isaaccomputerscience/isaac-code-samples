@@ -27,10 +27,8 @@ namespace IsaacCodeSamples
 
         // Use an exception handler to catch file not found error
         public static void ReadFileWithExceptionHandler() {
-            string filename = "playlist.txt";
-
             try {
-                using (StreamReader reader = new StreamReader(filename)) {
+                using (StreamReader reader = new StreamReader("twynkle.txt")) {
                     string line;
                     while ((line = reader.ReadLine()) != null) {
                         Console.WriteLine(line);

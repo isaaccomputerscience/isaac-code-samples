@@ -4,8 +4,7 @@
 
 def create_file():
     """Create an empty text file"""
-    filename = "playlist.txt"
-    file_object = open(filename, mode = "w")
+    file_object = open("playlist.txt", mode = "w")
     file_object.close()  
     
 
