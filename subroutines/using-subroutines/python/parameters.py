@@ -1,6 +1,6 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-# https://isaaccomputerscience.org/concepts/prog_sub_proc_fun
+# https://isaaccomputerscience.org/concepts/prog_sub_using_subroutines
 
 def calculate_two_numbers(number1, number2):
     answer = number1 + number2
