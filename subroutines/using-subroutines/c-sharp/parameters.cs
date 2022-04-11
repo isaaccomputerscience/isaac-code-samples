@@ -21,7 +21,7 @@ namespace IsaacCodeSamples
 
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            CalculateTwoNumbers(3, 4)
+            CalculateTwoNumbers(5, 10)
         }
 
 
