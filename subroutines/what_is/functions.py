@@ -10,6 +10,7 @@ def main():
     length = 12
     result = calculate_area_of_square(length)
     print(result)
-    
+
+# This code will run if this file is executed directly (i.e. not called by another program)
 if __name__ == "main":
     main()
