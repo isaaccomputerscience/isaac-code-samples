@@ -23,6 +23,7 @@ namespace IsaacCodeSamples
         public static void Main() {
             Console.Write("What is your name? ");
             string name = Console.ReadLine();
+            Console.WriteLine("Greetings " + name);
             RunQuiz();
             Console.WriteLine("End of the quiz");
         }
