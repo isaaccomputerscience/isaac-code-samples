@@ -21,16 +21,17 @@ namespace IsaacCodeSamples
 
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            CalculateTwoNumbers(5, 10)
+            float length = 12;
+            float result = CalculateArea(length);
+            Console.WriteLine(result);
         }
 
 
-        // Adds two numbers
-        public static void CalculateTwoNumbers(int number1, int number2) {
-            int answer = number1 + number2;
-            Console.WriteLine(answer);
+        // Calculates area of a square
+        public static float CalculateArea(float length) {
+            float area = length * length;
+            return area;
         }
-
 
     }
 }
