@@ -1,0 +1,80 @@
+https://sqliteonline.com/
+
+-- Database creation -- 
+
+CREATE DATABASE SportsClub;
+
+
+-- Table creation --
+
+CREATE TABLE Member (
+     MemberId CHAR(6),
+     FirstName VARCHAR(30),
+     LastName VARCHAR (30),
+     Phone VARCHAR(15),
+     PRIMARY KEY (MemberId));
+
+CREATE TABLE Course (
+     CourseCode CHAR(6),
+     Description VARCHAR(100),
+     Fee DECIMAL (13,2),
+     PRIMARY KEY (CourseCode));
+
+CREATE TABLE Instructor (
+     InstructorId INT,
+     FirstName VARCHAR(30),
+     LastName VARCHAR (30),
+     Email VARCHAR (30),
+     PRIMARY KEY (InstructorId));
+
+ CREATE TABLE IF NOT EXISTS Certificate(
+  MemberID CHAR(6),
+  CourseCode CHAR(6),
+  AssessmentDate DATE,
+  InstructorID INT,
+  PRIMARY Key(MemberID, CourseCode),
+  FOREIGN KEY(MemberID) REFERENCES Member(MemberID),
+  FOREIGN KEY(CourseCode) REFERENCES Course(CourseCode),
+  FOREIGN KEY(InstructorID) REFERENCES Instructor(InstructorID) 
+ );
+
+
+-- Inserting data --
+
+INSERT INTO Member (MemberID, FirstName, LastName, Phone) VALUES
+('012010','Emily','Marr','01433 181743'),
+('131092','Joe','Donald','01433 910007'),
+('132099','Abdel','Patel','01433 897267'),
+('145543','Precious','Jones','01433 982816'),
+('148765','Jack','Marr','01433 181743');
+
+
+INSERT INTO Course (CourseCode, Description, Fee) VALUES
+('DG0011','Tennis',30),
+('CR0001','Kayaking',100),
+('DG3002','Swimming',20),
+('SO0112','Judo L1',20),
+('SP8701','Judo L2',30),
+('CR0020','Badminton',20),
+('CR0014','Climbing',40);
+
+
+INSERT INTO Instructor (InstructorId, FirstName, LastName, Email) VALUES
+(1,'Sue','James','sue.james@me.co.uk'),
+(2,'Greta','Geuze', 'g.geuze@hotmail.com'),
+(3,'Mohammed','Franks', 'm.franks@hotmail.com'),
+(4,'Jay','Linton', 'Jay12@gmail.com'),
+(5,'Sue','Robbins', 'susan.robbins@gmail.com');
+
+
+INSERT INTO Certificate (MemberId, CourseCode, AssessmentDate, InstructorId) VALUES
+('145543','DG0011','2019-02-21',1),
+('012010','DG0011','2019-02-21',1),
+('132099','DG3002','2019-03-01',2),
+('131092','CR0001','2019-04-15',3),
+('132099','CR0001','2019-04-15',3),
+('012010','CR0020','2019-04-15',5),
+('132099','SO0112','2019-06-02',4),
+('145543','SO0112','2019-06-02',4),
+('148765','SP8701','2019-06-11',2),
+('145543','CR0014','2019-07-01',5);
