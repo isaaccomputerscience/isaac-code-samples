@@ -1,7 +1,7 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-def convert_string_case(my_string):
+def convert_string_upper(my_string):
   my_string = ""
   converted_string = my_string.upper()
   return converted_string
