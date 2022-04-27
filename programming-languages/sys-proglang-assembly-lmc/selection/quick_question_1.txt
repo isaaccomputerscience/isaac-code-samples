@@ -1,0 +1,18 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+# https://isaaccomputerscience.org/concepts/sys_prog_assembly_lmc
+#
+# This program is designed to be run in the LMC simulator
+# http://www.peterhigginson.co.uk/LMC/
+#
+# Remove the comments and leading blank lines before running
+        
+        
+        LDA 50
+        SUB 51
+        BRP first
+second  LDA 51
+        BRA end
+first   LDA 50 
+end     OUT
+        HLT
