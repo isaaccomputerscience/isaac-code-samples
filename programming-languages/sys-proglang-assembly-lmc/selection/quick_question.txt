@@ -1,0 +1,31 @@
+  ** This program is designed to be run in the LMC simulator
+  ** http://www.peterhigginson.co.uk/LMC/
+  ** Remove the comments and leading blank lines before running
+  **
+  ** https://isaaccomputerscience.org/concepts/sys_prog_assembly_lmc 
+        
+        
+        
+        
+        
+        INP
+        STA number
+        SUB twenty
+        BRP top 
+        LDA number 
+        SUB ten 
+        BRP middle
+        BRA bottom 
+top     LDA two
+        BRA end
+middle  LDA one 
+        BRA end 
+bottom  LDA zero
+end     OUT
+        HLT 
+number  DAT 
+twenty  DAT 20 
+ten     DAT 10
+two     DAT 2 
+one     DAT 1 
+zero    DAT 0 
