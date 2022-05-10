@@ -1,3 +1,7 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+# https://isaaccomputerscience.org/concepts/prog_oop_concepts
+
 import random
 
 class Pet:
