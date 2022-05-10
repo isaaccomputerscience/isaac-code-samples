@@ -26,8 +26,8 @@ namespace IsaacCodeSamples
         public Node right;
         
         // Constructor
-        public Node(string new_data) {
-            data = new_data;
+        public Node(string newData) {
+            data = newData;
         }
         
     }
