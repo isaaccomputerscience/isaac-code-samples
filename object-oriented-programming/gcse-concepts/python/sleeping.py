@@ -10,7 +10,6 @@ def main():
     pet_colour = input(f"What colour is {pet_name}? ")
     my_pet = Pet(pet_name, pet_type, pet_colour)  # Instantiation
 
-
     if my_pet.is_sleeping():
         print(f"Shhhhhh, {pet_name} is asleep")
     else:
