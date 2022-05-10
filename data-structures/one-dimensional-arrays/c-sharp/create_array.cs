@@ -13,21 +13,24 @@ To run this file you need to:
 */
 
 using System;
-using System.Collections.Generic;
 
 namespace IsaacCodeSamples
 {
 
-    class Dictionaries
+    class OneDimensionalArrays
     {
         // The Main method is the entry point for all C# programs
-        public static void Main() {
-            Dictionary<string, int> results = new Dictionary<string, int>() {
-                {"Detra", 17},	
-                {"Nova", 84},
-                {"Charlie", 22}
-            };
-            Console.WriteLine(results["Detra"]);
+        public static void Main()
+        {
+            string[] emotions = new string[6]; // Declare an array of 6 elements
+
+            emotions[0] = "amazed";  // Assign a value into a position of the array
+            emotions[1] = "delighted";
+            emotions[2] = "ecstatic";
+            emotions[3] = "enthusiastic";
+            emotions[4] = "lively";
+
+            Console.WriteLine(emotions[2]);
         }
 
 
