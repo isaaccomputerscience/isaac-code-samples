@@ -1,3 +1,9 @@
+# Isaac Computer Science
+# Usage licensed under the Open Government Licence v3.0
+# https://isaaccomputerscience.org/concepts/prog_oop_concepts
+#
+# To run this file you also need to download the file pet_class.py
+
 from pet_class import Pet
 
 def change_pet(my_pet):
@@ -53,13 +59,7 @@ def main():
             finished = True # This will cause game to end
             print ("Thanks for playing the pet game")
         else:
-            print("That is not a menu option")
-
-        
-            
-              
-
-    
+            print("That is not a menu option")    
 
 if __name__ == "__main__":
     main()
