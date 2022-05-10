@@ -30,7 +30,7 @@ def main():
     #test_items = [2,3,7,21,35,43,50,64,80] # Sorted
     test_items = [43,21,2,50,3,80,35,7,64] # Random
     
-    print(f"\n### Bubble sort version 2 (while and for loops) ###")
+    print(f"### Bubble sort version 2 (while and for loops) ###")
     print(test_items)
     
     bubble_sort_version_2(test_items)
