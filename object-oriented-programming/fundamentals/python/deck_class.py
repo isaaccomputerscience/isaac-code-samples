@@ -16,7 +16,7 @@ class Deck:
             
         for i in range(4):
             for j in range(13):
-                new_card = PlayingCard(suits[i], ranks[j], values[j])
+                new_card = Card(suits[i], ranks[j], values[j])
                 self.__cards.append(new_card)
         
     
