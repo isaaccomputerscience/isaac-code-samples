@@ -30,16 +30,17 @@ namespace IsaacCodeSamples
             emotions[4] = "lively";
 
             Console.WriteLine(emotions[2]);  // Displays the third element of the array
-            
+
             emotions[5] = "happy";  // Adds a new item to the array
-            
+
             emotions[1] = "";  // Deletes the item in the second element of the array
-            
-            for (int i = 0; i < 6; count++) {
-                Console.WriteLine(emotions[i]));
+
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine(emotions[i]);
             }
+
         }
-
-
     }
+
 }
