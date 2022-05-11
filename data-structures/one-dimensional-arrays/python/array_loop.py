@@ -11,9 +11,10 @@ def main():
     emotions.append("happy")  # Appends an item to the end of the list
     
     emotions.pop(1)  # Removes the second item from the list
-    
-    for i in range(6):
-       print(emotions[i])
+
+    list_length = len(emotions)  # Get length of list
+    for i in range(list_length):
+        print(emotions[i])
 
 
 # This code will run if this file is executed directly
