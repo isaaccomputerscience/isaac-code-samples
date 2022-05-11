@@ -12,6 +12,5 @@ class PlayingCard:
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
 
-if __name__ == '__main__':    
-    # Instantiate an example PlayingCard object
-    two_of_clubs = PlayingCard("clubs", "2", 2)
+if __name__ == '__main__':        
+    two_of_clubs = PlayingCard("clubs", "2", 2) # Instantiate an example PlayingCard object
