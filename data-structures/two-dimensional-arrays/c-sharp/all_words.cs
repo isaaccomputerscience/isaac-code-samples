@@ -21,7 +21,6 @@ namespace IsaacCodeSamples
         // The Main method is the entry point for all C# programs
         public static void Main()
         {
-            Console.WriteLine("Hello");
             string[,] spellingWords = new string[3, 3]; // Declare a two dimensional array
 
             spellingWords[0, 0] = "school";
@@ -33,12 +32,6 @@ namespace IsaacCodeSamples
             spellingWords[2, 0] = "accident";
             spellingWords[2, 1] = "answer";
             spellingWords[2, 2] = "eight";
-
-            Console.WriteLine(spellingWords[2, 1]);  // Displays an element from the array
-
-            spellingWords[2, 1] = "";  // Removes a value from the array
-
-            spellingWords[2, 1] = "happy";  // Inserts a value into the array
 
             for (int level = 0; level < 3; level++)
             {
