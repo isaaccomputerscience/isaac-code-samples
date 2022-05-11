@@ -1,14 +1,18 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
+LEVEL1 = 0
+LEVEL2 = 1
+LEVEL3 = 2
 
 def main():
     spelling_words = [
         ["school", "pull", "where"],
         ["path", "floor", "sugar"],
         ["accident", "answer", "eight"]]
-
-    print(spelling_words[1][2])
+  
+    for word in range (3):
+        print(spelling_words[LEVEL2][word])
 
 
 # This code will run if this file is executed directly
