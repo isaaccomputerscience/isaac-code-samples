@@ -5,11 +5,10 @@
 # This program is designed to be run in the LMC simulator
 # http://www.peterhigginson.co.uk/LMC/
 #
-# Remove the comments and leading blank lines before running
 
-
-        LDA 60
-        ADD 61
-        SUB 70
-        STA 80
+        INP
+        STA 60
+        INP
+        ADD 60
+        STA 61
         HLT
