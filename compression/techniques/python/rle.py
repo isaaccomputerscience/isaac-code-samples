@@ -6,8 +6,8 @@ def rle(text_string):
     """A simple version of RLE for text strings"""
     current_token = text_string[0]
     compressed = current_token
-    counter = 0
-    for i in range (len(text_string)):
+    counter = 1
+    for i in range (1, len(text_string)):
         next_token = text_string[i]
         if next_token != current_token:
             compressed = compressed + str(counter) + next_token
