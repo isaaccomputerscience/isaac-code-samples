@@ -26,7 +26,7 @@ namespace IsaacCodeSamples
         }
 
         // Test data
-        private static void Test() {
+        public static void Test() {
             // normal data
             string password = "elephant1234";
             bool result = CheckPassword(password);
@@ -45,7 +45,7 @@ namespace IsaacCodeSamples
 
 
         // Checks password length
-        private static bool CheckPassword(string password) {
+        public static bool CheckPassword(string password) {
             bool isValid = true;
             if (password.Length < 8) {
                 isValid = false;

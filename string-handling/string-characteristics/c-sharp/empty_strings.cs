@@ -29,11 +29,14 @@ namespace IsaacCodeSamples
         public static void DemonstrateEmptyStrings() {
             string emptyString = "";
             Console.WriteLine(emptyString.Length);
+
             string stringWithSpace = " ";
             Console.WriteLine(stringWithSpace.Length);
+
             if (emptyString == stringWithSpace) {
                 Console.WriteLine("We are the same");
-            } else {
+            } 
+            else {
                 Console.WriteLine("We are different");
             }
         }

@@ -31,8 +31,10 @@ namespace IsaacCodeSamples
             Console.Write("Please enter your first name ");
             string firstName = Console.ReadLine();
             Console.WriteLine("Greetings " + firstName);
+
             Console.Write("Please enter your last name ");
             string lastName = Console.ReadLine();
+            
             string userName = firstName + " " + lastName;
             Console.WriteLine("Greetings " + userName);
         }

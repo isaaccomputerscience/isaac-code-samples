@@ -6,8 +6,10 @@ def demonstrate_empty_string():
     """Demonstrates the difference between an empty string and a space"""
     empty_string = ""
     print(len(empty_string))
+    
     string_with_space = " "
     print(len(string_with_space))
+    
     if empty_string == string_with_space:
         print("We are the same")
     else:
