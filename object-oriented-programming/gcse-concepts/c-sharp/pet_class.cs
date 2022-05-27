@@ -89,12 +89,12 @@ namespace IsaacCodeSamples
             } else if (mood == "tired") {
                 Console.WriteLine("I am too tired to play");
             } else {
-                Console.WriteLine("This is fun, I love playing");
+                Console.WriteLine("This is fun, I love playing");            
+                string[] allMoods = { "playful", "hungry", "sleepy" };
+                Random rnd = new Random();
+                int index = rnd.Next(allMoods.Length);
+                mood = allMoods[index];
             }
-            string[] allMoods = { "playful", "hungry", "sleepy" };
-            Random rnd = new Random();
-            int index = rnd.Next(allMoods.Length);
-            mood = allMoods[index];
         }
         
         
