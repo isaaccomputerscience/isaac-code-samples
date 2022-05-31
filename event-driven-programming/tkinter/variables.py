@@ -21,8 +21,7 @@ def display_order_form():
     var_customer = StringVar()
     var_item = StringVar()
     var_qty = StringVar()
-    var_msg = StringVar()
-    
+    var_msg = StringVar()    
     
     # widgets
     lbl_customer = Label(order_form)
