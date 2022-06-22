@@ -12,7 +12,7 @@ def bubble_sort_version_1(items):
                 temp = items[index]
                 items[index] = items[index + 1]
                 items[index + 1] = temp
-        print(f"Pass {pass_num}: {items}   Comparisons: {index+1}")
+        print(f"Pass {pass_num}: {items}   Comparisons: {index+1}") # Testing
 
 
 def bubble_sort_version_2(items):
@@ -29,7 +29,7 @@ def bubble_sort_version_2(items):
                 items[index] = items[index + 1]
                 items[index + 1] = temp
                 swapped = True
-        print(f"Pass {pass_num}: {items}   Comparisons: {index+1}")
+        print(f"Pass {pass_num}: {items}   Comparisons: {index+1}") # Testing
         pass_num = pass_num + 1
 
 
@@ -47,7 +47,7 @@ def bubble_sort_version_3(items):
                 items[index] = items[index + 1]
                 items[index + 1] = temp
                 swapped = True
-        print(f"Pass {pass_num}: {items}   Comparisons: {index+1}")
+        print(f"Pass {pass_num}: {items}   Comparisons: {index+1}") # Testing
         pass_num = pass_num + 1
 
 
@@ -65,13 +65,13 @@ def get_test_data():
 
 def main():
     """Execute all three versions of the bubble sort algorithms"""
-    print(f"\n### Bubble sort version 1 (for loops) ###")
+    print("\n### Bubble sort version 1 (for loops) ###")
     bubble_sort_version_1(get_test_data())
     
-    print(f"\n### Bubble sort version 2 (while and for loops) ###")
+    print("\n### Bubble sort version 2 (while and for loops) ###")
     bubble_sort_version_2(get_test_data())
     
-    print(f"\n### Bubble sort version 3 (while and for loops improved) ###")
+    print("\n### Bubble sort version 3 (while and for loops improved) ###")
     bubble_sort_version_3(get_test_data())
 
 

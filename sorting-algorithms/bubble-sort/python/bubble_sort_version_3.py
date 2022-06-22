@@ -3,7 +3,7 @@
 
 
 def bubble_sort_version_3(items):
-    """A quite efficient bubble sort that stops if the items are sorted"""
+    """A more efficient bubble sort that reduces the number of comparisons per pass"""
     # Initialise the variables
     num_items = len(items)
     swapped = True
@@ -22,7 +22,7 @@ def bubble_sort_version_3(items):
                 items[index + 1] = temp
                 swapped = True
         pass_num = pass_num + 1
-        print(items)
+        print(items) # Testing
 
 
 def main():
@@ -32,7 +32,7 @@ def main():
     #test_items = [2,3,7,21,35,43,50,64,80] # Sorted
     test_items = [43,21,2,50,3,80,35,7,64] # Random
     
-    print(f"### Bubble sort version 3 (while and for loops improved) ###")
+    print("### Bubble sort version 3 (while and for loops improved) ###")
     print(test_items)
     
     bubble_sort_version_3(test_items)

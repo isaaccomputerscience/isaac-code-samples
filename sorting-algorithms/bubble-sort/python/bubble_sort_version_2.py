@@ -20,7 +20,7 @@ def bubble_sort_version_2(items):
                 items[index] = items[index + 1]
                 items[index + 1] = temp
                 swapped = True
-        print(items)
+        print(items) # Testing
 
 
 def main():
@@ -30,7 +30,7 @@ def main():
     #test_items = [2,3,7,21,35,43,50,64,80] # Sorted
     test_items = [43,21,2,50,3,80,35,7,64] # Random
     
-    print(f"### Bubble sort version 2 (while and for loops) ###")
+    print("### Bubble sort version 2 (while and for loops) ###")
     print(test_items)
     
     bubble_sort_version_2(test_items)
