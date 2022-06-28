@@ -1,9 +1,9 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-# https://isaaccomputerscience.org/concepts/prog_sub_using_subroutines
+
 
 def rle(text_string):
-    """A simple version of RLE for text strings"""
+    """A simple version of Run Length Encoding for text strings"""
     current_token = text_string[0]
     compressed = current_token
     counter = 1
@@ -20,24 +20,30 @@ def rle(text_string):
 
 
 def run_tests():
-    """sample test data"""
+    """Sample test data"""
+    
     # Normal data
     text = "aaaabbbccdddeee"
     print(text)
     print(rle(text))
+    
     text = "Bobby"
     print(text)
     print(rle(text))
+    
     # Boundary data
     text = "a"
     print(text)
     print(rle(text))
+    
     text = "aaaaaa"
     print(text)
-    print(rle(text))    
+    print(rle(text))
+    
     text = "aaaae"
     print(text)
     print(rle(text))
+    
     text = "aeeeee"
     print(text)
     print(rle(text))

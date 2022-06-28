@@ -26,45 +26,48 @@ namespace IsaacCodeSamples
             string text = "aaaabbbccdddeee";
             Console.WriteLine(text);
             Console.WriteLine(RLE(text));
+
             text = "Bobby";
             Console.WriteLine(text);
             Console.WriteLine(RLE(text));
+
             // Test data - boundary data
             text = "a";
             Console.WriteLine(text);
             Console.WriteLine(RLE(text));
+
             text = "aaaaaa";
             Console.WriteLine(text);
             Console.WriteLine(RLE(text));
+
             text = "aaaae";
             Console.WriteLine(text);
             Console.WriteLine(RLE(text));
+
             text = "aeeeee";
             Console.WriteLine(text);
             Console.WriteLine(RLE(text));
         }
 
+        // A simple version of Run Length Encoding for text strings
         public static string RLE(string textString)
         {
             char currentToken = textString[0];
-            string compressed = "";
-            compressed += currentToken;
+            string compressed = currentToken.ToString();
             int counter = 1;
-            for (int i = 1; i < textString.Length; i++)
-            {
+
+            for (int i = 1; i < textString.Length; i++) {
                 char nextToken = textString[i];
-                if (nextToken != currentToken)
-                {
+                if (nextToken != currentToken) {
                     compressed = compressed + counter.ToString() + nextToken;
                     counter = 1;
                 }
-                else
-                {
-                    counter += 1;
+                else {
+                    counter = counter + 1;
                 }
                 currentToken = nextToken;
             }
-            compressed += counter.ToString();
+            compressed = compressed + counter.ToString();
             return compressed;
         }
     }
