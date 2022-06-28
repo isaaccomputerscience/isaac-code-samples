@@ -18,8 +18,8 @@ def bubble_sort_version_1(items):
 def bubble_sort_version_2(items):
     """A quite efficient bubble sort that stops if the items are sorted"""
     num_items = len(items)
-    pass_num = 1
     swapped = True
+    pass_num = 1 # Testing
     
     while swapped == True:
         swapped = False
@@ -30,14 +30,14 @@ def bubble_sort_version_2(items):
                 items[index + 1] = temp
                 swapped = True
         print(f"Pass {pass_num}: {items}   Comparisons: {index+1}") # Testing
-        pass_num = pass_num + 1
+        pass_num = pass_num + 1 # Testing
 
 
 def bubble_sort_version_3(items):
     """A more efficient bubble sort that reduces the number of comparisons per pass"""
     num_items = len(items)
-    pass_num = 1
     swapped = True
+    pass_num = 1
     
     while swapped == True:
         swapped = False

@@ -11,26 +11,28 @@ def insertion_sort(items):
     for index in range(1, num_items):
         # Get the value of the next item to insert
         item_to_insert = items[index] 
-        print("\nItem to insert:", item_to_insert) # Testing
+        print(f"\nItem to insert: {item_to_insert}") # Testing
 
         # Get the position of the previous item
-        previous = index - 1    
+        previous = index - 1
 
         # Repeat while there are previous items to check and the
-        # value of the previous item is higher that the value to insert
+        # value of the previous item is higher than the item to insert
         while previous >= 0 and items[previous] > item_to_insert:
-            print(items, "Item in previous position:", items[previous]) # Testing
+            print(f"{items}  Previous position value: {items[previous]}") # Testing
             
             # Copy the previous item up one place
             items[previous + 1] = items[previous]
 
             # Get the position of the next previous item
             previous = previous - 1
+            
+        print(f"{items}  Correct position found: Index {previous+1}") # Testing
 
         # Copy the value of the item to insert into the correct position
         items[previous + 1] = item_to_insert
         
-        print(items, "Item inserted in position:", previous + 1) # Testing
+        print(f"{items}  Item inserted into index {previous+1}") # Testing
 
 
 def main():

@@ -22,7 +22,7 @@ def bubble_sort(items):
                 items[index] = items[index + 1]
                 items[index + 1] = temp
                 swapped = True
-            total_comparisons += 1 # Testing
+            total_comparisons = total_comparisons + 1 # Testing
         print(f"Pass {pass_num}: {items}   Comparisons: {index+1}") # Testing
         pass_num = pass_num + 1
 
@@ -45,10 +45,10 @@ def insertion_sort(items):
 
         # Testing
         comparisons = 1
-        total_comparisons += 1
+        total_comparisons = total_comparisons + 1
 
         # Repeat while there are previous items to check and the
-        # value of the previous item is higher that the value to insert
+        # value of the previous item is higher than the item to insert
         while previous >= 0 and items[previous] > item_to_insert:
             # Copy the previous item up one place
             items[previous + 1] = items[previous]
@@ -57,8 +57,8 @@ def insertion_sort(items):
             previous = previous - 1
 
             # Testing
-            comparisons += 1
-            total_comparisons += 1
+            comparisons = comparisons + 1
+            total_comparisons = total_comparisons + 1
             
         # Copy the value of the item to insert into the correct position
         items[previous + 1] = item_to_insert
