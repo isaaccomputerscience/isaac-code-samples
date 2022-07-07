@@ -1,5 +1,6 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
+# BETA VERSION
 
 from hand_class import Hand
 
