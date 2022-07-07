@@ -9,7 +9,6 @@ class Hand:
         self.__value = 0
         self.__aces = 0
 
-
     def add_card(self, card):
         self.__cards.append(card)
         if card.get_rank() == "Ace":
@@ -32,12 +31,7 @@ class Hand:
         self.__value = 0
         self.__aces = 0
                 
-            
-            
-
-
-   
-
+                   
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
 
