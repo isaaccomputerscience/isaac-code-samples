@@ -18,13 +18,13 @@ class BlackJack:
 
 
     def show_player_hand(self):
-        print("\nPlayer hand....")
+        print("\nYour hand....")
         player_hand = self.__player.get_hand()
         player_cards = player_hand.get_cards()
         for card in player_cards:
             print(f"  {card}")
         player_hand_value = player_hand.get_value()
-        print(f"Player hand value {player_hand_value}")
+        print(f"Your hand value {player_hand_value}")
 
 
     def show_dealer_hand(self):        
@@ -124,7 +124,7 @@ class BlackJack:
     def show_scores(self):
         dealer_score = self.__dealer.get_score()
         player_score = self.__player.get_score()
-        print(f"\nPlayers' score is {player_score}")
+        print(f"\nYour score is {player_score}")
         print(f"Dealer's score is {dealer_score}")      
 
             
@@ -140,10 +140,10 @@ class BlackJack:
             if self.__state == 2: # game over
                 self.show_scores()
                 if self.__dealer.get_score() >= 20:
-                    print ("\nMatch over - dealer wins")
+                    print ("\nMatch over - dealer won")
                     finished = True
                 elif self.__player.get_score() >= 20:
-                    print ("\nMatch over - player wins")
+                    print ("\nMatch over - you won!")
                     finished = True
                 else: #start new game
                     input("Press enter to start new game")
