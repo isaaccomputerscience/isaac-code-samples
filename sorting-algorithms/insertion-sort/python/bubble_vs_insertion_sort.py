@@ -48,7 +48,7 @@ def insertion_sort(items):
         total_comparisons = total_comparisons + 1
 
         # Repeat while there are previous items to check and the
-        # value of the previous item is higher than the item to insert
+        # value of the previous item is greater than the item to insert
         while previous >= 0 and items[previous] > item_to_insert:
             # Copy the previous item up one place
             items[previous + 1] = items[previous]
