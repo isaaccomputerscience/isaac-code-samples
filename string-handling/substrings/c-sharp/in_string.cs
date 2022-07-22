@@ -17,23 +17,20 @@ using System;
 namespace IsaacCodeSamples
 {
 
-    class StringPosition
+    class Substrings
     {
 
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            string fileName = "monster.csv";
-            string extension = GetExtension(fileName);
-            Console.WriteLine(extension);
+            CheckInString();
         }
 
 
-        // Extracts everything after dot in file name
-        public static string GetExtension(string fileName) {
-            int position = fileName.IndexOf(".");
-            int index = position + 1;
-            string extension = fileName.Substring(index);
-            return extension;
+        // Demonstrates checking if a substring occurs within a string
+        public static void CheckInString() {
+            string myString = "Hello World!";
+            bool isInString = myString.Contains("World");
+            Console.WriteLine(isInString);
         }
 
 
