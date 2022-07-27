@@ -16,55 +16,64 @@ using System;
 
 namespace IsaacCodeSamples
 {
-
-    class BinarySearch  // Recursive version
+    class SearchingAlgorithms
     {
-    
         // The Main method is the entry point for all C# programs
-        public static void Main() {
-           test(); 
-        }
-        
+        public static void Main()
+        {
+            // Perform a binary search on the test data
+            int[] testItems = new int[] {10, 11, 13, 15, 18, 25, 29};
 
-        // Performs a binary search recursively
-        public static int BinarySearch(int[] items, int search_item, int first, int last) {
+            int firstIndex = 0;
+            int lastIndex = testItems.Length - 1;
+
+            Console.WriteLine("### Binary search (recursive) ###");
+            Console.WriteLine("[{0}]", string.Join(", ", testItems));
+
+            // Search for a value and return the found index
+            int index = BinarySearchRecursive(testItems, 15, firstIndex, lastIndex);
+
+            if (index == -1) {
+                Console.WriteLine("The item was not found in the list");
+            }
+            else {
+                Console.WriteLine($"The item was found at index {index}");
+            }
+        }
+
+        public static int BinarySearchRecursive(int[] items, int searchItem, int first, int last)
+        {
+            // Base case for recursion: The recursion will stop when the
+            // index of the first item is greater than the index of last
             if (first > last) {
-                return -1;
-            } else {
+                return -1; // Return -1 if the search item is not found
+            }
+            // Recursively call the function
+            else {
+                // Find the midpoint position (in the middle of the range)
                 int midpoint = (first + last) / 2;
-                if (items[midpoint] == search_item) {
+
+                // Compare the item at the midpoint to the search item
+                if (items[midpoint] == searchItem) {
+                    // If the item has been found, return the midpoint position
                     return midpoint;
-                } else if (search_item > items[midpoint]) {
+                }
+                // Check if the item at the midpoint is less than the search item
+                else if (searchItem > items[midpoint]) {
+                    // Focus on the items after the midpoint
                     first = midpoint + 1;
-                    return BinarySearch(items, search_item, first, last);
-                } else {
+                    return BinarySearchRecursive(items, searchItem, first, last);
+                }
+                // Otherwise the item at the midpoint is greater than the search item
+                else {
+                    // Focus on the items before the midpoint
                     last = midpoint - 1;
-                    return BinarySearch(items, search_item, first, last);
+                    return BinarySearchRecursive(items, searchItem, first, last);
+
                 }
             }
         }
         
 
-        // Test function for binary search
-        private static void test() {
-            int[] items = new int[]{5, 12, 24, 56, 68, 72, 81, 95};
-
-            //Search for first item in array
-            Console.WriteLine("Searching for first item in array...");
-            int result = BinarySearch(items, 5, 0, items.Length - 1);
-            Console.WriteLine("The search result was: " + result.ToString());
-
-            //Search for last item in array
-            Console.WriteLine("Searching for last item in array...");
-            result = BinarySearch(items, 95, 0, items.Length - 1);
-            Console.WriteLine("The search result was: " + result.ToString());
-
-            //Search for an item that is not in the array
-            Console.WriteLine("Searching for last item in array...");
-            result = BinarySearch(items, 36, 0, items.Length - 1);
-            Console.WriteLine("The search result was: " + result.ToString());
-        }
-        
-        
     }
 }
