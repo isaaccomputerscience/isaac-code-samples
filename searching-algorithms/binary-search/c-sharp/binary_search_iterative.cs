@@ -16,59 +16,66 @@ using System;
 
 namespace IsaacCodeSamples
 {
-
-    class BinarySearch  // Iterative version
+    class SearchingAlgorithms
     {
         // The Main method is the entry point for all C# programs
-        public static void Main() {
-           test(); 
-        }
-        
+        public static void Main()
+        {
+            // Perform a binary search on the test data
+            int[] testItems = new int[] {10, 11, 13, 15, 18, 25, 29};
 
-        // Binary search iterative version
-        public static int BinarySearch(int[] items, int search_item){
-            // Initialise variables
-            int index = -1;
+            Console.WriteLine("### Binary search (iterative) ###");
+            Console.WriteLine("[{0}]", string.Join(", ", testItems));
+
+            // Search for a value and return the found index
+            int index = BinarySearch(testItems, 15);
+
+            if (index == -1) {
+                Console.WriteLine("The item was not found in the list");
+            }
+            else {
+                Console.WriteLine($"The item was found at index {index}");
+            }
+        }
+
+
+        // An iterative binary search algorithm
+        public static int BinarySearch(int[] items, int searchItem)
+        {
+            // Initialise the variables
             bool found = false;
+            int foundIndex = -1;
             int first = 0;
             int last = items.Length - 1;
+            int midpoint = 0;
 
-            // Repeat while there are more items to check and the item has not yet been found.
-            while(first <= last && found == false){
-                int midpoint = (first + last) / 2;
-                if (items[midpoint] == search_item){
-                    index = midpoint;
-                    found = true;
-                }else if (items[midpoint] < search_item){
+            // Repeat while there are still items between first and last 
+            // and the search item has not been found
+            while (first <= last && found == false) {
+                // Find the midpoint position (in the middle of the range)
+                midpoint = (first + last) / 2;
+
+                // Compare the item at the midpoint to the search item
+                if (items[midpoint] == searchItem) {
+                    // If the item has been found, store the midpoint position
+                    foundIndex = midpoint;
+                    found = true; // Raise the flag to stop the loop
+                }
+                // Check if the item at the midpoint is less than the search item
+                else if (items[midpoint] < searchItem) {
+                    // Focus on the items after the midpoint
                     first = midpoint + 1;
-                }else{
+                }
+                // Otherwise the item at the midpoint is greater than the search item
+                else {
+                    // Focus on the items before the midpoint
                     last = midpoint - 1;
                 }
-            }
-            return index;
-        }
-
-
-        // Test function for binary search
-        private static void test() {
-            int[] items = new int[]{5, 12, 24, 56, 68, 72, 81, 95};
-
-            // Search for first item in array
-            Console.WriteLine("Searching for first item in array...");
-            int result = BinarySearch(items, 5);
-            Console.WriteLine("The search result was: " + result.ToString());
-
-            // Search for last item in array
-            Console.WriteLine("Searching for last item in array...");
-            result = BinarySearch(items, 95);
-            Console.WriteLine("The search result was: " + result.ToString());
-
-            // Search for an item that is not in the array
-            Console.WriteLine("Searching for last item in array...");
-            result = BinarySearch(items, 36);
-            Console.WriteLine("The search result was: " + result.ToString());
+            } 
+            // Return the position of the searchItem or -1 if not found
+            return foundIndex;
         }
         
-        
+
     }
 }
