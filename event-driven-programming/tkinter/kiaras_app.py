@@ -13,7 +13,7 @@ def display_login_form():
         userid = txt_userid.get()
         password = txt_password.get()        
         if userid != "Kiara":
-            messagebox.showinfo("Error", "Incorrect userid")
+            messagebox.showinfo("Error", "Incorrect user id")
             txt_userid.focus()
         elif password != "doughnut":
             messagebox.showinfo("Error", "Incorrect password")
