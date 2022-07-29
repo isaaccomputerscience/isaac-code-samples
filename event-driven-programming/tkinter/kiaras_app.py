@@ -27,7 +27,7 @@ def display_login_form():
     login_form = Tk()
     login_form.title("Kiara's Cakes")
     login_form.geometry("400x300") # Width x Height
-    login_form.configure(bg="#f5fffa")
+    login_form.config(bg="#f5fffa")
     login_form.option_add("*font", "Verdana 10")
     
     # Widgets
