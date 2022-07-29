@@ -14,7 +14,7 @@ def display_order_form():
     order_form = Tk()
     order_form.title("Kiara's Cakes")
     order_form.geometry("400x300") # Width x Height
-    order_form.configure(bg="#f5fffa")
+    order_form.config(bg="#f5fffa")
     order_form.option_add("*font", "Verdana 10")
 
     # variables
