@@ -17,7 +17,7 @@ def display_login_form():
         elif password != "doughnut":
             messagebox.showinfo("Error", "Incorrect password")
             txt_password.focus()
-        else: # userid and password match
+        else: # user id and password match
             login_form.destroy()
             
     
