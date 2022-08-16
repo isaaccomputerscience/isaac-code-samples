@@ -23,20 +23,11 @@ namespace IsaacCodeSamples
         // The Main method is the entry point for all C# programs
         public static void Main()
         {
-            Console.WriteLine("Enter full name:");
-            string name = Console.ReadLine();
-            string convertedString = ConvertToUpper(name);
-            Console.WriteLine(convertedString);
+            Console.WriteLine("Enter your full name:");
+            string userName = Console.ReadLine();
+            string upperCaseName = ConvertToUpper(userName);
+            Console.WriteLine(upperCaseName);
         }
-
-
-        // Demonstrates how to convert a string to upper case
-        public static string ConvertToUpper(string myString)
-        {
-            string upperCaseString = myString.ToUpper();
-            return upperCaseString;
-        }
-
 
     }
 }
