@@ -81,6 +81,7 @@ class BST:
         elif search_item < node.data and node.left is not None:
             return self.search(node.left, search_item)
 
+        # Base case for recursion:
         # Otherwise the search item does not exist
         else:
             return False

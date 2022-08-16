@@ -113,6 +113,7 @@ namespace IsaacCodeSamples
                 return Search(node.left, searchItem);
             }
 
+            // Base case for recursion:
             // Otherwise the search item does not exist
             else {
                 return false;
