@@ -25,7 +25,7 @@ namespace IsaacCodeSamples
         {
             Console.WriteLine("Enter your full name:");
             string userName = Console.ReadLine();
-            string upperCaseName = ConvertToUpper(userName);
+            string upperCaseName = ToUpper(userName);
             Console.WriteLine(upperCaseName);
         }
 
