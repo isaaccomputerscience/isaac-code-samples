@@ -21,7 +21,7 @@ namespace IsaacCodeSamples
         // The Main method is the entry point for all C# programs
         public static void Main() {
             Console.WriteLine("Please enter a number:");
-            int number = Convert.ToInt32(Console.ReadLine());
+            int number = Int32.Parse(Console.ReadLine());
             Console.WriteLine(number);
         }
     }
