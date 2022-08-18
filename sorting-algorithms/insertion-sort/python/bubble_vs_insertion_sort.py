@@ -40,28 +40,28 @@ def insertion_sort(items):
         # Get the value of the next item to insert
         item_to_insert = items[index] 
 
-        # Get the position of the previous item
-        previous = index - 1
+        # Get the current position of the last sorted item
+        position = index - 1
 
         # Testing
         comparisons = 1
         total_comparisons = total_comparisons + 1
 
-        # Repeat while there are previous items to check and the
-        # value of the previous item is greater than the item to insert
-        while previous >= 0 and items[previous] > item_to_insert:
-            # Copy the previous item up one place
-            items[previous + 1] = items[previous]
+        # Repeat while there are still items in the list to check
+        # and the current sorted item is greater than the item to insert
+        while position >= 0 and items[position] > item_to_insert:
+            # Copy the value of the sorted item up one place
+            items[position + 1] = items[position]
 
-            # Get the position of the next previous item
-            previous = previous - 1
+            # Get the position of the next sorted item
+            position = position - 1
 
             # Testing
             comparisons = comparisons + 1
             total_comparisons = total_comparisons + 1
             
         # Copy the value of the item to insert into the correct position
-        items[previous + 1] = item_to_insert
+        items[position + 1] = item_to_insert
         
         print(f"Pass {index}: {items}   Comparisons: {comparisons}") # Testing
 
