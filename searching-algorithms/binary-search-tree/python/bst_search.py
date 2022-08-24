@@ -43,7 +43,7 @@ class BST:
                 # Check if the new item is greater than the current node data
                 if item > current.data:
                     # Check if the current node does not have a right child node
-                    if current.right == None:
+                    if current.right is None:
                         # Insert the new node to the right of the current node
                         current.right = new_node
                         placed = True
@@ -54,7 +54,7 @@ class BST:
                 # Otherwise the new item is less than or equal to the current node
                 else:
                     # Check if the current node does not have a left child node
-                    if current.left == None:
+                    if current.left is None:
                         # Insert the new node to the left of the current node
                         current.left = new_node
                         placed = True
