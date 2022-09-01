@@ -72,7 +72,8 @@ def dijkstras_shortest_path(graph, start_node):
         
     # Set the cost of the start node to 0
     unvisited[start_node][COST] = 0
-    
+
+    # Testing
     print("--- Initialised state of unvisited list ---")
     display_list(unvisited)
    

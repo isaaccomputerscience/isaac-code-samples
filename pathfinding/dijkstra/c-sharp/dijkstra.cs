@@ -123,6 +123,7 @@ namespace IsaacCodeSamples
             // Set the cost of the start node to 0
             unvisited[startNode][Cost] = 0;
             
+            // Testing
             Console.WriteLine("--- Initialised state of unvisited list ---");
             DisplayList(unvisited);
 
