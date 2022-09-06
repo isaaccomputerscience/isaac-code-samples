@@ -31,8 +31,9 @@ namespace IsaacCodeSamples
         // Demonstrates how to use ASCII codes to convert letter case
         public static string ChangeString(string myString) {
             string newString = "";  // New empty string
-            foreach (var character in myString) {
-                if (character == Convert.ToChar("a")) { 
+            foreach (var character in myString)
+            {
+                if (character == 'a') {
                     newString = newString + "b";
                 } else {
                     newString = newString + character;
