@@ -6,6 +6,7 @@ class Player:
     def __init__(self, given_name):
         self.__name = given_name
         self.__score = 0
+        THIS IS A STUPID CHANGE!
     
 
 # This code will run if this file is executed directly
