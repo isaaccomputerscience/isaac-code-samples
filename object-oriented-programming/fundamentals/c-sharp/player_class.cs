@@ -25,10 +25,9 @@ namespace IsaacCodeSamples
 
         // Constructor method
         public Player(string givenName) {
-            this.name = givenName;
-            this.score = 0;
+            name = givenName;
+            score = 0;
         }
-
         
     }
     
