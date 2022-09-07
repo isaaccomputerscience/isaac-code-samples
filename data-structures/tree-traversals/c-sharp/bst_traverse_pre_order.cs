@@ -92,20 +92,20 @@ namespace IsaacCodeSamples
         }
 
 
-        // An in-order traversal of the binary search tree
-        public void InOrderTraversal(Node node)
+        // A pre-order traversal of the binary search tree
+        public void PreOrderTraversal(Node node)
         {
-            // Check any nodes to the left of the current node
-            if (node.left != null) {
-                InOrderTraversal(node.left);
-            }
-
             // Output the data of the current node
             Console.WriteLine(node.data);
+
+            // Check any nodes to the left of the current node
+            if (node.left != null) {
+                PreOrderTraversal(node.left);
+            }
             
             // Check any nodes to the right of the current node
             if (node.right != null) {
-                InOrderTraversal(node.right);
+                PreOrderTraversal(node.right);
             }
         }
 
@@ -131,9 +131,9 @@ namespace IsaacCodeSamples
             Console.WriteLine("The root is the left-most value and the children are to the right\n");
             OutputTree(root);
 
-            // Output the binary search tree using an in-order traversal
-            Console.WriteLine("\n### Binary search tree (in-order traversal) ###");
-            bst.InOrderTraversal(root);
+            // Output the binary search tree using a pre-order traversal
+            Console.WriteLine("\n### Binary search tree (pre-order traversal) ###");
+            bst.PreOrderTraversal(root);
         }
 
 

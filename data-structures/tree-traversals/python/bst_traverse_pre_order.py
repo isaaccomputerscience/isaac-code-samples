@@ -63,19 +63,19 @@ class BST:
                         current = current.left
 
     
-    def in_order_traversal(self, node):
-        """An in-order traversal of the binary search tree"""
-
-        # Check any nodes to the left of the current node
-        if node.left is not None:
-            self.in_order_traversal(node.left)
+    def pre_order_traversal(self, node):
+        """A pre-order traversal of the binary search tree"""
 
         # Output the data of the current node
         print(node.data)
+
+        # Check any nodes to the left of the current node
+        if node.left is not None:
+            self.pre_order_traversal(node.left)
         
         # Check any nodes to the right of the current node
         if node.right is not None:
-            self.in_order_traversal(node.right)
+            self.pre_order_traversal(node.right)
             
 
 def insert_test_data(bst):
@@ -117,9 +117,9 @@ def main():
     print("The root is the left-most value and the children are to the right\n")
     output_tree(root)
 
-    # Output the binary search tree using an in-order traversal
-    print("\n### Binary search tree (in-order traversal) ###")
-    bst.in_order_traversal(root)
+    # Output the binary search tree using a pre-order traversal
+    print("\n### Binary search tree (pre-order traversal) ###")
+    bst.pre_order_traversal(root)
     
 
 # This code will run if this file is executed directly
