@@ -1,7 +1,7 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-from PlayingCard import PlayingCard
+from card_class import Card
 
 class Deck:
 
@@ -16,7 +16,7 @@ class Deck:
             
         for i in range(4):
             for j in range(13):
-                new_card = PlayingCard(suits[i], ranks[j], values[j])
+                new_card = Card(suits[i], ranks[j], values[j])
                 self.__cards.append(new_card)
         
     
