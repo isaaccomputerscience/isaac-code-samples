@@ -17,14 +17,14 @@ using System.IO;
 
 namespace IsaacCodeSamples
 {
-    class Card
+    class PlayingCard
     {
         private string suit;
         private string rank;
         private int value;
 
         // Constructor method
-        public Card(string givenSuit, string givenRank, int givenValue) {
+        public PlayingCard(string givenSuit, string givenRank, int givenValue) {
             suit = givenSuit;
             rank = givenRank;
             value = givenValue;
@@ -39,7 +39,7 @@ namespace IsaacCodeSamples
         public static void Main()
         {
             // Instantiate a new card object
-            Card two_of_clubs = new Card("clubs", "2", 2);
+            PlayingCard two_of_clubs = new PlayingCard("clubs", "2", 2);
         }
         
     }
