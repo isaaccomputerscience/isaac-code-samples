@@ -1,8 +1,8 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
 
-from Deck import Deck
-# Requires the Deck and PlayingCard classes to exist inside the same folder
+from deck_class import Deck
+# Requires the Deck and Card classes to exist inside the same folder
 # otherwise this will cause an error
 
 class Hand(Deck):
