@@ -52,8 +52,8 @@ namespace IsaacCodeSamples
             {
                 for (int j = 0; j == 13; j++)
                 {
-                    Card card = new Card(suits[i], ranks[j], values[j]);
-                    cards[cardNumber] = card;
+                    Card newCard = new Card(suits[i], ranks[j], values[j]);
+                    cards[cardNumber] = newCard;
                     cardNumber += 1;
                 }
             }
