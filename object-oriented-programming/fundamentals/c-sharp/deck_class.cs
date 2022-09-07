@@ -14,40 +14,63 @@ To run this file you need to:
 
 using System;
 using System.IO;
-using card_class;
+
+
 
 namespace IsaacCodeSamples
 {
-    class Deck
+
+    class Card
     {
-        
-        private string[] cards = new string[52]; // Declare an array of 52 elements
-        private string[] suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
-        private string[] ranks = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
-        private string[] values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+        private string suit;
+        private string rank;
+        private int value;
 
         // Constructor method
-        public static void Deck() {
-            for (int i = 0; i = 4; i++) {
-                for (int j = 0; j = 13; j++) {
-                new card = Card(suits[i], ranks[j], values[j])
-                this.cards.append(card);
-                }
-             }
-             
+        public Card(string givenSuit, string givenRank, int givenValue)
+        {
+            this.suit = givenSuit;
+            this.rank = givenRank;
+            this.value = givenValue;
         }
-
     }
     
-    
+
+    class Deck
+    {
+
+        private Card[] cards = new Card[52]; // Declare an array of 52 elements
+        private string[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
+        private string[] ranks = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
+        private int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
+
+        // Constructor method
+        public Deck()
+        {
+            int cardNumber = 0;
+            for (int i = 0; i == 4; i++)
+            {
+                for (int j = 0; j == 13; j++)
+                {
+                    Card card = new Card(suits[i], ranks[j], values[j]);
+                    this.cards[cardNumber] = card;
+                    cardNumber += 1;
+                }
+            }
+        }
+        
+
+    }
+
+
     class Testing
     {
         // The Main method is the entry point for all C# programs
         public static void Main()
         {
-            myDeck = new Deck();  // Instantiate a new deck object
+            Deck myDeck = new Deck();  // Instantiate a new deck object
         }
     }
-    
-    
+
+
 }
