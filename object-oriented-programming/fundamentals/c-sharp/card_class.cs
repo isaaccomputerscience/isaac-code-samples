@@ -25,7 +25,7 @@ namespace IsaacCodeSamples
         private int value;
 
         // Constructor method
-        public Card(string givenSuit, string givenRank, int givenValue,) {
+        public Card(string givenSuit, string givenRank, int givenValue) {
             this.suit = givenSuit;
             this.rank = givenRank;
             this.value = givenValue;
