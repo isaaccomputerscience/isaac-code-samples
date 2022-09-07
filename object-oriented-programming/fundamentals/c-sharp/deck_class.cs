@@ -53,7 +53,7 @@ namespace IsaacCodeSamples
                 for (int j = 0; j == 13; j++)
                 {
                     Card card = new Card(suits[i], ranks[j], values[j]);
-                    this.cards[cardNumber] = card;
+                    cards[cardNumber] = card;
                     cardNumber += 1;
                 }
             }
