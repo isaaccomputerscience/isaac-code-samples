@@ -20,14 +20,14 @@ using System.IO;
 namespace IsaacCodeSamples
 {
 
-    class Card
+    class PlayingCard
     {
         private string suit;
         private string rank;
         private int value;
 
         // Constructor method
-        public Card(string givenSuit, string givenRank, int givenValue)
+        public PlayingCard(string givenSuit, string givenRank, int givenValue)
         {
             suit = givenSuit;
             rank = givenRank;
@@ -39,7 +39,7 @@ namespace IsaacCodeSamples
     class Deck
     {
 
-        private Card[] cards = new Card[52]; // Declare an array of 52 elements
+        private PlayingCard[] cards = new PlayingCard[52]; // Declare an array of 52 elements
         private string[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
         private string[] ranks = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
         private int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
@@ -52,7 +52,7 @@ namespace IsaacCodeSamples
             {
                 for (int j = 0; j == 13; j++)  // For each rank
                 {
-                    Card newCard = new Card(suits[i], ranks[j], values[j]);
+                    PlayingCard newCard = new PlayingCard(suits[i], ranks[j], values[j]);
                     cards[cardNumber] = newCard;
                     cardNumber += 1;
                 }
