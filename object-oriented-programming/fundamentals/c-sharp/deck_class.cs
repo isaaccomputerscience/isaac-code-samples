@@ -48,9 +48,9 @@ namespace IsaacCodeSamples
         public Deck()
         {
             int cardNumber = 0;
-            for (int i = 0; i == 4; i++)
+            for (int i = 0; i == 4; i++)  // For each suit
             {
-                for (int j = 0; j == 13; j++)
+                for (int j = 0; j == 13; j++)  // For each rank
                 {
                     Card newCard = new Card(suits[i], ranks[j], values[j]);
                     cards[cardNumber] = newCard;
