@@ -24,7 +24,7 @@ namespace IsaacCodeSamples
         private int score;
 
         // Constructor method
-        public static void Player(string givenName) {
+        public Player(string givenName) {
             this.name = givenName;
             this.score = 0;
         }
