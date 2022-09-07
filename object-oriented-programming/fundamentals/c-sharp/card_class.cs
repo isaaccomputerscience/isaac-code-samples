@@ -19,7 +19,6 @@ namespace IsaacCodeSamples
 {
     class Card
     {
-
         private string suit;
         private string rank;
         private int value;
@@ -30,7 +29,6 @@ namespace IsaacCodeSamples
             rank = givenRank;
             value = givenValue;
         }
-
         
     }
     
@@ -43,6 +41,7 @@ namespace IsaacCodeSamples
             // Instantiate a new card object
             Card two_of_clubs = new Card("clubs", "2", 2);
         }
+        
     }
     
     
