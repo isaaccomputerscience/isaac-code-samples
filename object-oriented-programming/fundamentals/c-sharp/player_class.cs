@@ -17,20 +17,30 @@ using System.IO;
 
 namespace IsaacCodeSamples
 {
-    class Program
+    class Player
     {
-        // The Main method is the entry point for all C# programs
-        public static void Main() {
-            CreateFile();
+
+        private string name;
+        private int score;
+
+        // Constructor method
+        public Player(string givenName) {
+            name = givenName;
+            score = 0;
         }
-
-
-        // Simple example of creating a text file
-        public static void CreateFile() {
-            string filename = "playlist.txt";
-            File.Create(filename);
-        }
-
         
     }
+    
+    
+    class Testing
+    {
+        // The Main method is the entry point for all C# programs
+        public static void Main()
+        {
+            // Instantiate a new player object
+            Player player1 = new Player("Leona");
+        }
+    }
+    
+    
 }
