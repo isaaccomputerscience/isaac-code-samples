@@ -29,20 +29,33 @@ namespace IsaacCodeSamples
             rank = givenRank;
             value = givenValue;
         }
-        
+
+        public string GetSuit() {
+            return suit;
+        }
+
+        public string GetRank() {
+            return rank;
+        }
+
+        public int GetValue() {
+            return value;
+        }
+
     }
-    
+
     
     class Testing
     {
         // The Main method is the entry point for all C# programs
-        public static void Main()
-        {
+        public static void Main() {
             // Instantiate a new card object
-            PlayingCard two_of_clubs = new PlayingCard("clubs", "2", 2);
+            PlayingCard myCard = new PlayingCard("clubs", "2", 2);
+            Console.WriteLine($"Suit is: {myCard.GetSuit()}");
+            Console.WriteLine($"Rank is: {myCard.GetRank()}");
+            Console.WriteLine($"Value is: {myCard.GetValue()}");
         }
         
     }
-    
-    
+
 }
