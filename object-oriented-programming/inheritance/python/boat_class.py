@@ -27,7 +27,7 @@ namespace IsaacCodeSamples
         private float length;
         private int capacity;
         private int berths;
-        private float unitCost;
+        protected float unitCost;
 
         // Constructor method
         public Boat(string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost) {
