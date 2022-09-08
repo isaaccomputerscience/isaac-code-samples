@@ -26,4 +26,4 @@ if __name__ == '__main__':
     print(f"The player's name is: {game_player.get_name()}")
     print(f"The player's score is: {game_player.get_score()}")
     game_player.set_score(20)
-    print(f"The player's score is: {game_player.get_score()}")
+    print(f"The player's score is now: {game_player.get_score()}")
