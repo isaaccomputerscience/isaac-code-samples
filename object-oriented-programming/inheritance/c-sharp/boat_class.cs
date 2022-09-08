@@ -20,34 +20,39 @@ namespace IsaacCodeSamples
 {
 
 
-    class Boat()
+    class Boat
     {
+
         private string name;
         private float length;
         private int capacity;
         private int berths;
-        private float unitCost;
+        protected float unitCost;
 
         // Constructor method
-        public Boat(string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost)
-        {
-            name = givenName
-            length = givenLength
-            capacity = givenCapacity
-            berths = givenBerths
-            unitCost = givenUnitCost
+        public Boat(string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost) {
+            name = givenName;
+            length = givenLength;
+            capacity = givenCapacity;
+            berths = givenBerths;
+            unitCost = givenUnitCost;
         }
+        
     }
-    
+
 
     class Testing
     {
         // The Main method is the entry point for all C# programs
-        public static void Main()
-        {
-            Boat myBoat = new Boat();  // Instantiate a new boat object
+        public static void Main() {
+            string name = "Sir David Attenborough";
+            float length = 128.9F;
+            int capacity = 88;
+            int berths = 90;
+            float cost = 200000000F;
+            Boat boaty = new Boat(name, length, capacity, berths, cost);  // Instantiate a new boat object
         }
+        
     }
-
-
+    
 }
