@@ -30,18 +30,6 @@ namespace IsaacCodeSamples
             value = givenValue;
         }
 
-        public string GetSuit() {
-            return suit;
-        }
-
-        public string GetRank() {
-            return rank;
-        }
-
-        public int GetValue() {
-            return value;
-        }
-
     }
 
     
@@ -51,9 +39,6 @@ namespace IsaacCodeSamples
         public static void Main() {
             // Instantiate a new card object
             PlayingCard myCard = new PlayingCard("clubs", "2", 2);
-            Console.WriteLine($"Suit is: {myCard.GetSuit()}");
-            Console.WriteLine($"Rank is: {myCard.GetRank()}");
-            Console.WriteLine($"Value is: {myCard.GetValue()}");
         }
         
     }
