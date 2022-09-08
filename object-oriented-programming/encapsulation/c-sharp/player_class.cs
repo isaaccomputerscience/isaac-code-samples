@@ -50,11 +50,11 @@ namespace IsaacCodeSamples
         public static void Main()
         {
             // Instantiate a new player object
-            Player player1 = new Player("Leona");
-            Console.WriteLine($"The player's name is: {player1.GetName()}");
-            Console.WriteLine($"The player's score is: {player1.GetScore()}");
-            player1.setScore(20);
-            Console.WriteLine($"The player's score is now: {player1.GetScore()}");
+            Player gamePlayer = new Player("Leona");
+            Console.WriteLine($"The player's name is: {gamePlayer.GetName()}");
+            Console.WriteLine($"The player's score is: {gamePlayer.GetScore()}");
+            gamePlayer.setScore(20);
+            Console.WriteLine($"The player's score is now: {gamePlayer.GetScore()}");
         }
     }
     
