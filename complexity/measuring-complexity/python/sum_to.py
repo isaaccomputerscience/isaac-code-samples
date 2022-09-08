@@ -13,8 +13,8 @@ def sum_to(given_number):
 
 
 def main():
-    """Test the sum_to function"""
 
+    # Test the sum_to function
     num = 5
     result = sum_to(num)
     print(f"The sum of all integers from 1 to {num} is {result}")
