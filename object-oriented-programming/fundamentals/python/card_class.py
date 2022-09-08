@@ -13,4 +13,4 @@ class PlayingCard:
 # (i.e. not called by another program)
 if __name__ == '__main__':    
     # Instantiate an example Card object
-    two_of_clubs = PlayingCard("clubs", "2", 2)
+    my_card = PlayingCard("clubs", "2", 2)
