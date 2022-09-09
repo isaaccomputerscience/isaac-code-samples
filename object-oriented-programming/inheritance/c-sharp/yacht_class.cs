@@ -41,7 +41,7 @@ namespace IsaacCodeSamples
 
     class Yacht : Boat  // Inherits from Boat
     {
-
+        
         private int masts;
 
         // Constructor method
@@ -55,6 +55,7 @@ namespace IsaacCodeSamples
 
     class Testing
     {
+        
         // The Main method is the entry point for all C# programs
         public static void Main()
         {
