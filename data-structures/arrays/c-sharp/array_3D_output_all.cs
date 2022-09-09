@@ -25,7 +25,7 @@ namespace IsaacCodeSamples
             string[,,] myArray = Create3DArray();
 
             // Output every element in the array
-            Console.WriteLine("### Output each element in the 3D array ###"); # test
+            Console.WriteLine("### Output each element in the 3D array ###");
             OutputEachElement(myArray);
         }
 
