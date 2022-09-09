@@ -18,7 +18,26 @@ using System.IO;
 
 namespace IsaacCodeSamples
 {
+    class Boat
+    {
 
+        private string name;
+        private float length;
+        private int capacity;
+        private int berths;
+        protected float unitCost;
+
+        // Constructor method
+        public Boat(string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost)
+        {
+            name = givenName;
+            length = givenLength;
+            capacity = givenCapacity;
+            berths = givenBerths;
+            unitCost = givenUnitCost;
+        }
+
+    }
 
     class Yacht : Boat  // Inherits from Boat
     {
@@ -26,20 +45,22 @@ namespace IsaacCodeSamples
         private int masts;
 
         // Constructor method
-        public Yacht(int givenMasts) : base(string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost) {
+        public Yacht(string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost, int givenMasts) : base(givenName, givenLength, givenCapacity, givenBerths, givenUnitCost)
+        {
             masts = givenMasts;
         }
-        
+
     }
 
 
     class Testing
     {
         // The Main method is the entry point for all C# programs
-        public static void Main() {
-             myBoat = Yacht("Mary Sue", 15.7, 300, 6, 54.5, 2)
+        public static void Main()
+        {
+            Yacht myYacht = new Yacht("Mary Sue", 15.7F, 300, 6, 54.5F, 2);
         }
-        
+
     }
-    
+
 }
