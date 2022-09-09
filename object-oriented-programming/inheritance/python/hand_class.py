@@ -9,7 +9,8 @@ from deck_class import Deck
 class Hand(Deck):
 
     def __init__(self):
-        super().__init__()
+        super().__init__()  # Call Deck constructor
+        # Extra code for Hand constructor
     
     def get_value(self):
         # Code to calculate the values of the cards in a hand
