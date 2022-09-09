@@ -37,7 +37,7 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-             my_boat = Yacht("Mary Sue", 15.7, 300, 6, 54.5, 2)
+             myBoat = Yacht("Mary Sue", 15.7, 300, 6, 54.5, 2)
         }
         
     }
