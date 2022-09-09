@@ -23,19 +23,11 @@ namespace IsaacCodeSamples
     class Yacht : Boat  // Inherits from Boat
     {
 
-        private string name;
-        private float length;
-        private int capacity;
-        private int berths;
-        protected float unitCost;
+        private int masts;
 
         // Constructor method
-        public Yacht(base : string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost) {
-            name = givenName;
-            length = givenLength;
-            capacity = givenCapacity;
-            berths = givenBerths;
-            unitCost = givenUnitCost;
+        public Yacht(int givenMasts) : base(string givenName, float givenLength, int givenCapacity, int givenBerths, float givenUnitCost) {
+            masts = givenMasts;
         }
         
     }
@@ -45,12 +37,7 @@ namespace IsaacCodeSamples
     {
         // The Main method is the entry point for all C# programs
         public static void Main() {
-            string name = "Sir David Attenborough";
-            float length = 128.9F;
-            int capacity = 88;
-            int berths = 90;
-            float cost = 200000000F;
-            Boat boaty = new Boat(name, length, capacity, berths, cost);  // Instantiate a new boat object
+             my_boat = Yacht("Mary Sue", 15.7, 300, 6, 54.5, 2)
         }
         
     }
