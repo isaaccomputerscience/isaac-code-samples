@@ -131,7 +131,7 @@ def a_star(graph, start_node, target_node):
         if len(unvisited) == 0:
             finished = True
         else:
-            # Get the unvisited node with the lowest f-score
+            # Return the unvisited node with the lowest f-score
             current_node = get_minimum(unvisited)
             print(f"\nCurrent node >>> {current_node}") # Testing
 

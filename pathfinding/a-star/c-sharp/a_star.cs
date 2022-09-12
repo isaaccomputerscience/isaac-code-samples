@@ -200,7 +200,7 @@ namespace IsaacCodeSamples
                 if (unvisited.Count == 0)
                     finished = true;
                 else {
-                    // Get the unvisited node with the lowest f-score
+                    // Return the unvisited node with the lowest f-score
                     string currentNode = GetMinimum(unvisited);
                     Console.WriteLine($"\nCurrent node >>> {currentNode}"); // Testing
 
