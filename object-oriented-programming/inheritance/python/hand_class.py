@@ -1,14 +1,16 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
+# Requires the files deck_class and hand_class to exist inside the same folder
+# otherwise the import statement will throw an error
 
 from deck_class import Deck
-# Requires the Deck and Card classes to exist inside the same folder
-# otherwise this will cause an error
+
 
 class Hand(Deck):
 
     def __init__(self):
-        super().__init__()
+        super().__init__()  # Call Deck constructor
+        # Extra code for Hand constructor
     
     def get_value(self):
         # Code to calculate the values of the cards in a hand
