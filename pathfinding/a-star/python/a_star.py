@@ -104,7 +104,7 @@ def get_minimum(unvisited):
 
 
 def a_star(graph, start_node, target_node):
-    """Apply the A* algorithm"""
+    """Apply the A* algorithm on a graph stored as a dictionary"""
     
     # Declare the visited and unvisited lists as dictionaries
     visited = {} 

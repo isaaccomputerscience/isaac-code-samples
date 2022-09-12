@@ -118,7 +118,7 @@ namespace IsaacCodeSamples
             }
         }
 
-        // Apply Dijkstra's shortest path algorithm
+        // Apply Dijkstra's shortest path algorithm on a graph stored as a dictionary
         public static Dictionary<string, List<object>> DijkstrasShortestPath(
             Dictionary<string, Dictionary<string, int>> graph, string startNode)
         {

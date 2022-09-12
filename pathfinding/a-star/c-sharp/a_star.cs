@@ -167,7 +167,7 @@ namespace IsaacCodeSamples
             return lowestKey;
         }
 
-        // Apply the A* algorithm
+        // Apply the A* algorithm on a graph stored as a dictionary
         public static Dictionary<string, List<object>> AStar(
             Dictionary<string, Dictionary<string, int>> graph, string startNode, string targetNode)
         {

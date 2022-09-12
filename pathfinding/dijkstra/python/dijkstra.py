@@ -64,7 +64,7 @@ def display_shortest_paths(visited, start_node):
 
 
 def dijkstras_shortest_path(graph, start_node):
-    """Apply Dijkstra's shortest path algorithm"""
+    """Apply Dijkstra's shortest path algorithm on a graph stored as a dictionary"""
 
     # Declare the visited and unvisited lists as dictionaries
     unvisited = {}
