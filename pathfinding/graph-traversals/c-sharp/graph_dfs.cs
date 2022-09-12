@@ -22,7 +22,9 @@ namespace IsaacCodeSamples
         // The Main method is the entry point for all C# programs
         public static void Main()
         {
-            // Represent a graph using a dictionary with lists as values
+            // Use a dictionary to represent the graph as an adjacency list.
+            // Each key is a node in the graph.
+            // Each value is a list of the node's neighbours
             var testGraph = new Dictionary<string, List<string>>() {
                 {"1", new List<string>() {"2", "9"} },
                 {"2", new List<string>() {"1"} },
@@ -37,7 +39,7 @@ namespace IsaacCodeSamples
 
             Console.WriteLine("### Depth-first search (DFS) - Graph implementation ###");
 
-            // Search for a value and return if it has been found
+            // Search for a value and return true if it has been found
             string itemToFind = "4";
             string start = "1";
             bool found = BreadthFirstSearch(testGraph, start, itemToFind);
@@ -48,15 +50,15 @@ namespace IsaacCodeSamples
                 Console.WriteLine($"{itemToFind} was found in the graph");
             }
             else {
-                Console.WriteLine($"{itemToFind} does not exist in the graph");
+                Console.WriteLine($"{itemToFind} was NOT found in the graph");
             }
         }
 
-        // A breadth-first search performed on a graph
+        // A breadth-first search performed on a graph stored as a dictionary
         public static bool BreadthFirstSearch(Dictionary<string, List<string>> graph, 
             string startNode, string targetNode)
         {
-            // Initialise the variables
+            // Initialisation
             List<string> stack = new List<string>() {startNode};
             List<string> discovered = new List<string>() {startNode};
             List<string> neighbours = new List<string>();
@@ -83,7 +85,7 @@ namespace IsaacCodeSamples
                 Console.Write("Neighbours: ");
                 Console.WriteLine("[{0}]", string.Join(", ", neighbours));
 
-                // Repeat for each node in the neighbours list
+                // Repeat for each node in the list of neighbours
                 foreach (string node in neighbours) {
                     // Check if the node has not already been discovered
                     if (discovered.Contains(node) == false) {

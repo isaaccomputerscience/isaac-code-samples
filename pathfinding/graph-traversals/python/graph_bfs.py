@@ -3,9 +3,9 @@
 
 
 def breadth_first_search(graph, start_node, target_node):
-    """A breadth-first search performed on a graph"""
+    """A breadth-first search performed on a graph stored as a dictionary"""
 
-    # Initialise the variables
+    # Initialisation
     queue = [start_node]
     discovered = [start_node]
     neighbours = []
@@ -19,7 +19,7 @@ def breadth_first_search(graph, start_node, target_node):
         current_node = queue[0]
 
         # Remove the current node from the start of the queue
-        queue = queue[1:]
+        del queue[0]
 
         # Get the current node's list of neighbours
         neighbours = graph[current_node]
@@ -29,7 +29,7 @@ def breadth_first_search(graph, start_node, target_node):
         print(f"Discovered: {discovered}")
         print(f"Neighbours: {neighbours}")
 
-        # Repeat for each node in the neighbours list
+        # Repeat for each node in the list of neighbours
         for node in neighbours:
             # Check if the node has not already been discovered
             if node not in discovered:
@@ -54,7 +54,9 @@ def breadth_first_search(graph, start_node, target_node):
 def main():
     """Create a graph and search for an item"""
 
-    # Represent a graph using a dictionary with lists as values
+    # Use a dictionary to represent the graph as an adjacency list.
+    # Each key is a node in the graph.
+    # Each value is a list of the node's neighbours
     test_graph = {
         "1": ["2", "9"],
         "2": ["1"],
@@ -69,7 +71,7 @@ def main():
 
     print("### Graph traversal - breadth-first search (BFS) ###")
 
-    # Search for a value and return if it has been found
+    # Search for a value and return True if it has been found
     item_to_find = "4"
     start = "1"
     found = breadth_first_search(test_graph, start, item_to_find)
@@ -80,7 +82,7 @@ def main():
     if found == True:
         print(f"{item_to_find} was found in the graph")
     else:
-        print(f"{item_to_find} does not exist in the graph")
+        print(f"{item_to_find} was NOT found in the graph")
 
 
 # This code will run if this file is executed directly
