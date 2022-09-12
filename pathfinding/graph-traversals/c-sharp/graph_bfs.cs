@@ -93,8 +93,9 @@ namespace IsaacCodeSamples
                         if (node == targetNode) {
                             found = true;
                         }
-                        // Otherwise append the node to the queue and discovered lists
                         else {
+                            // Add the node to the stack 
+                            // and to the discovered list
                             queue.Add(node);
                             discovered.Add(node);
 

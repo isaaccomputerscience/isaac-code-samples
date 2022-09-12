@@ -36,8 +36,9 @@ def breadth_first_search(graph, start_node, target_node):
                 # Check if the target node has been found
                 if node == target_node:
                     found = True
-                # Otherwise append the node to the queue and discovered lists
                 else:
+                    # Add the node to the stack
+                    # and to the discovered list
                     queue.append(node)
                     discovered.append(node)
 

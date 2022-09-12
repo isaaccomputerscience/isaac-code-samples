@@ -33,8 +33,9 @@ def depth_first_search(graph, start_node, target_node):
                 # Check if the target node has been found
                 if node == target_node:
                     found = True
-                # Otherwise append the node to the stack and discovered lists
                 else:
+                    # Push the node onto the stack 
+                    # and add it to the discovered list
                     stack.append(node)
                     discovered.append(node)
 
