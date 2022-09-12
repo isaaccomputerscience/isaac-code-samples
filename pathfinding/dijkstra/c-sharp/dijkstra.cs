@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
 {
     class Pathfinding
     {
-        // Index values for cost and previous
+        // Index values for cost and previous node
         public const int Cost = 0;
         public const int Previous = 1;
 

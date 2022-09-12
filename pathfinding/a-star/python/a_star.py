@@ -6,7 +6,7 @@
 import sys
 
 
-# Index values for g-score, f-score and previous
+# Index values for g-score, f-score and previous node
 G_SCORE = 0
 F_SCORE = 1
 PREVIOUS = 2

@@ -20,7 +20,7 @@ namespace IsaacCodeSamples
 {
     class Pathfinding
     {
-        // Index values for g-score, f-score and previous
+        // Index values for g-score, f-score and previous node
         public const int GScore = 0;
         public const int FScore = 1;
         public const int Previous = 2;

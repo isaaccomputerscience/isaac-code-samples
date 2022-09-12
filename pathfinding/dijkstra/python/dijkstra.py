@@ -6,7 +6,7 @@
 import sys
 
 
-# Index values for cost and previous
+# Index values for cost and previous node
 COST = 0
 PREVIOUS = 1
 
@@ -45,7 +45,7 @@ def display_shortest_paths(visited, start_node):
     for node, neighbour in visited.items():
         # Don't print the path for the start node
         if node != start_node:
-            # Set the current node and the path to the visited node
+            # Set the current node and the path to be the visited node
             current_node = node
             path = node
 
