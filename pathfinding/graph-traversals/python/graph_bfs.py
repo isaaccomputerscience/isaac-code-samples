@@ -29,7 +29,7 @@ def breadth_first_search(graph, start_node, target_node):
         print(f"Discovered: {discovered}")
         print(f"Neighbours: {neighbours}")
 
-        # Repeat for each node in the list of neighbours
+        # Repeat for each node in the neighbours list
         for node in neighbours:
             # Check if the node has not already been discovered
             if node not in discovered:

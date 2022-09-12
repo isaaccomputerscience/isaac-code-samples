@@ -85,7 +85,7 @@ namespace IsaacCodeSamples
                 Console.Write("Neighbours: ");
                 Console.WriteLine("[{0}]", string.Join(", ", neighbours));
 
-                // Repeat for each node in the list of neighbours
+                // Repeat for each node in the neighbours list
                 foreach (string node in neighbours) {
                     // Check if the node has not already been discovered
                     if (discovered.Contains(node) == false) {

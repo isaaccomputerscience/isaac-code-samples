@@ -42,7 +42,7 @@ namespace IsaacCodeSamples
             // Search for a value and return true if it has been found
             string itemToFind = "4";
             string start = "1";
-            bool found = BreadthFirstSearch(testGraph, start, itemToFind);
+            bool found = DepthFirstSearch(testGraph, start, itemToFind);
 
             // Output the search result
             Console.WriteLine($"\nThe target node is {itemToFind}");
@@ -54,8 +54,8 @@ namespace IsaacCodeSamples
             }
         }
 
-        // A breadth-first search performed on a graph stored as a dictionary
-        public static bool BreadthFirstSearch(Dictionary<string, List<string>> graph, 
+        // A depth-first search performed on a graph stored as a dictionary
+        public static bool DepthFirstSearch(Dictionary<string, List<string>> graph, 
             string startNode, string targetNode)
         {
             // Initialisation
@@ -85,7 +85,7 @@ namespace IsaacCodeSamples
                 Console.Write("Neighbours: ");
                 Console.WriteLine("[{0}]", string.Join(", ", neighbours));
 
-                // Repeat for each node in the list of neighbours
+                // Repeat for each node in the neighbours list
                 foreach (string node in neighbours) {
                     // Check if the node has not already been discovered
                     if (discovered.Contains(node) == false) {
