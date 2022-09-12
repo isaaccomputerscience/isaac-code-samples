@@ -2,32 +2,37 @@
 # Usage licensed under the Open Government Licence v3.0
 
 
+# Use sys.maxsize to represent infinity
 import sys
+
 
 # Index values for cost and previous
 COST = 0
 PREVIOUS = 1
 
+
 def display_graph(graph):
     """Display each node with it's neighbours and costs"""
     
     # Repeat for each node in the graph
-    for key, value in graph.items():
-        print(f"Node: {key}")
+    for node, neighbours in graph.items():
+        print(f"Node: {node}")
         print("Neighbours:", end=" ")
 
-        # Repeat for each neighbour of the node
-        for neighbour in value:
-            print(f"{neighbour}:{value[neighbour]}", end = " ")
+        # Repeat for each neighbour node (n_node) in the neighbours list
+        for n_node in neighbours:
+            print(f"{n_node}:{neighbours[n_node]}", end = " ")
         print("\n")
         
         
-def display_list(list_as_dictionary):
+def display_list(adjacency_list):
     """Display a list of nodes with their closest neighbour and cost"""
 
-    # Repeat for each node in the given dictionary
-    for key, value in list_as_dictionary.items():
-        print(f"{key}:  {value}")
+    print("   (cost, previous)")
+
+    # Repeat for each node in the given adjacency list
+    for node, neighbours in adjacency_list.items():
+        print(f"{node}: {neighbours}")
     print()
 
 
@@ -36,13 +41,13 @@ def display_shortest_paths(visited, start_node):
     
     print("\nShortest paths:")
 
-    # Repeat for each node in the visited dictionary
-    for key, value in visited.items():
+    # Repeat for each node in the visited list
+    for node, neighbour in visited.items():
         # Don't print the path for the start node
-        if key != start_node:
-            # Set the current node and the path as the key node
-            current_node = key
-            path = key
+        if node != start_node:
+            # Set the current node and the path to the visited node
+            current_node = node
+            path = node
 
             # Repeat until the current node reaches the start node
             while current_node != start_node:
@@ -54,21 +59,22 @@ def display_shortest_paths(visited, start_node):
                 current_node = visited[current_node][PREVIOUS]
                 
             # Testing
-            print(f"Path for {key} with cost {visited[key][COST]}: ", end="")
+            print(f"Path for {node} with cost {visited[node][COST]}: ", end="")
             print(path)
 
 
 def dijkstras_shortest_path(graph, start_node):
     """Apply Dijkstra's shortest path algorithm"""
 
-    # Declare the visited and unvisited dictionaries
+    # Declare the visited and unvisited lists as dictionaries
     unvisited = {}
     visited = {}
 
-    # Add every node to the unvisited dictionary
-    for key in graph:
-        # Set distance to sys.maxsize for infinity and previous to None
-        unvisited[key] = [sys.maxsize, None]
+    # Add every node to the unvisited list
+    for node in graph:
+        # Initialise the node's distance to sys.maxsize (for infinity)
+        # and the previous node to None
+        unvisited[node] = [sys.maxsize, None]
         
     # Set the cost of the start node to 0
     unvisited[start_node][COST] = 0
@@ -77,7 +83,7 @@ def dijkstras_shortest_path(graph, start_node):
     print("--- Initialised state of unvisited list ---")
     display_list(unvisited)
    
-    # Repeat until there are no more nodes in the unvisited dictionary
+    # Repeat until there are no more nodes in the unvisited list
     finished = False
     while finished == False:
         # Check if there are no more nodes left to evaluate
@@ -88,12 +94,12 @@ def dijkstras_shortest_path(graph, start_node):
             current_node = min(unvisited, key = unvisited.get)
             print(f"\nCurrent node >>> {current_node}") # Testing
 
-            # Get the current node's dictionary of neighbours
+            # Get the current node's list of neighbours
             neighbours = graph[current_node]
 
-            # Repeat for each node in the neighbours dictionary
+            # Repeat for each neighbour node in the neighbours list
             for node in neighbours:
-                # Check if the node has already been visited
+                # Check if the neighbour node has already been visited
                 if node not in visited:
                     # Calculate the new cost
                     cost = unvisited[current_node][COST] + neighbours[node]
@@ -109,10 +115,10 @@ def dijkstras_shortest_path(graph, start_node):
                         print("--- Unvisited list ---")
                         display_list(unvisited)
 
-            # Add the current node to the visited dictionary
+            # Add the current node to the visited list
             visited[current_node] = unvisited[current_node]
 
-            # Remove the current node from the unvisited dictionary
+            # Remove the current node from the unvisited list
             del unvisited[current_node]
 
             # Testing
@@ -120,13 +126,14 @@ def dijkstras_shortest_path(graph, start_node):
             print("--- Visited list ---")
             display_list(visited)
 
+    # Return the final visited list
     return visited
 
 
 def main():
     """Perform Dijkstra's shortest path algorithm on the test data"""
 
-    # Use a dictionary to represent the nodes of a graph
+    # Use a dictionary to represent the graph as an adjacency list
     # and the cost of each neighbour
     test_graph = {"A": {"B":8, "C":5},
              "C": {"A":5, "D":6, "E":9},
@@ -140,10 +147,10 @@ def main():
     display_graph(test_graph)
 
     # Perform the shortest path algorithm on each node starting from node A
-    visited_dictionary = dijkstras_shortest_path(test_graph, "A")
+    visited_list = dijkstras_shortest_path(test_graph, "A")
 
-    # Display the shortest paths from node A using the visited dictionary
-    display_shortest_paths(visited_dictionary, "A")
+    # Display the shortest paths from node A using the visited list
+    display_shortest_paths(visited_list, "A")
 
 
 # This code will run if this file is executed directly

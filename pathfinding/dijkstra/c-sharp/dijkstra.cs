@@ -26,7 +26,9 @@ namespace IsaacCodeSamples
 
         // The Main method is the entry point for all C# programs
         public static void Main()
-        {   
+        { 
+            // Use a dictionary to represent the graph as an adjacency list
+            // and the cost of each neighbour
             var testGraph = new Dictionary<string, Dictionary<string, int>>
             {
                 {"A", new Dictionary<string, int> { {"B", 8}, {"C", 5} } },
@@ -41,10 +43,10 @@ namespace IsaacCodeSamples
             DisplayGraph(testGraph);
 
             // Perform the shortest path algorithm on each node starting from node A
-            var visitedDictionary = DijkstrasShortestPath(testGraph, "A");
+            var visitedList = DijkstrasShortestPath(testGraph, "A");
 
-            // Display the shortest paths from node A using the visited dictionary
-            DisplayShortestPaths(visitedDictionary, "A");
+            // Display the shortest paths from node A using the visited list
+            DisplayShortestPaths(visitedList, "A");
         }
 
         // Display each node with it's neighbours and costs
@@ -52,35 +54,45 @@ namespace IsaacCodeSamples
         {
             // Repeat for each node in the graph
             foreach (KeyValuePair<string, Dictionary<string, int>> kvp in graph) {
+                string node = kvp.Key;
+                Dictionary<string, int> neighbours = kvp.Value;
+
                 Console.WriteLine($"Node: {kvp.Key}");
                 Console.Write("Neighbours: ");
                 
-                // Repeat for each neighbour of the node
-                foreach (KeyValuePair<string, int> neighbour in kvp.Value) {
-                    Console.Write($"{neighbour.Key}:{neighbour.Value} ");
+                // Repeat for each neighbour node in the neighbours list
+                foreach (KeyValuePair<string, int> n_node in neighbours) {
+                    Console.Write($"{n_node.Key}:{n_node.Value} ");
                 }
                 Console.WriteLine("\n");
             }
         }
 
         // Display a list of nodes with their closest neighbour and cost
-        public static void DisplayList(Dictionary<string, List<object>> listAsDictionary)
+        public static void DisplayList(Dictionary<string, List<object>> adjacencyList)
         {
-            // Repeat for each node in the given dictionary
-            foreach (KeyValuePair<string, List<object>> kvp in listAsDictionary) {
-                int cost = (int)kvp.Value[0];
-                string node = kvp.Value[1] == null ? "null" : (string)kvp.Value[1];
-                Console.WriteLine($"{kvp.Key}:  {cost}, {node}");
+            Console.WriteLine("   (cost, previous)");
+
+            // Repeat for each node in the given adjacency list
+            foreach (KeyValuePair<string, List<object>> kvp in adjacencyList) {
+                string node = kvp.Key;
+                List<object> neighbours = kvp.Value;
+                
+                // If the neighbour node (nNode) does not exist then set the string to "null"
+                string nNode = neighbours[Previous] == null ? "null" : (string)neighbours[Previous];
+                
+                Console.WriteLine($"{node}: {neighbours[Cost]}, {nNode}");
             }
             Console.WriteLine();
         }
 
         // Display the shortest path from the start node to other nodes
-        public static void DisplayShortestPaths(Dictionary<string, List<object>> visited, string startNode)
+        public static void DisplayShortestPaths(Dictionary<string, List<object>> visited, 
+            string startNode)
         {
             Console.WriteLine("\nShortest paths:");
 
-            // Repeat for each node in the visited dictionary
+            // Repeat for each node in the visited list
             foreach (KeyValuePair<string, List<object>> kvp in visited) {
                 // Don't print the path for the start node
                 if (kvp.Key != startNode) {
@@ -95,7 +107,7 @@ namespace IsaacCodeSamples
                         path = previousNode + path;
                         
                         // Update the current node to be the previous node
-                        currentNode = (string)visited[currentNode][Previous];
+                        currentNode = previousNode;
                     }
 
                     // Testing
@@ -110,14 +122,18 @@ namespace IsaacCodeSamples
         public static Dictionary<string, List<object>> DijkstrasShortestPath(
             Dictionary<string, Dictionary<string, int>> graph, string startNode)
         {
-            // Declare the visited and unvisited dictionaries
+            // Declare the visited and unvisited lists as dictionaries
             Dictionary<string, List<object>> unvisited = new Dictionary<string, List<object>>();
             Dictionary<string, List<object>> visited = new Dictionary<string, List<object>>();
 
-            // Add every node to the unvisited dictionary
+            // Add and initialise every node to the unvisited list
             foreach (KeyValuePair<string, Dictionary<string, int>> kvp in graph) {
-                // Set distance to Int32.MaxValue for infinity and previous to null
-                unvisited[kvp.Key] = new List<object>() {Int32.MaxValue, null};
+                // Get the node
+                string node = kvp.Key;
+
+                // Initialise the node's distance to Int32.MaxValue (for infinity)
+                // and the previous node to null
+                unvisited[node] = new List<object>() {Int32.MaxValue, null};
             }
 
             // Set the cost of the start node to 0
@@ -127,7 +143,7 @@ namespace IsaacCodeSamples
             Console.WriteLine("--- Initialised state of unvisited list ---");
             DisplayList(unvisited);
 
-            // Repeat until there are no more nodes in the unvisited dictionary
+            // Repeat until there are no more nodes in the unvisited list
             bool finished = false;
             while (finished == false) {
                 // Check if there are no more nodes left to evaluate
@@ -139,14 +155,15 @@ namespace IsaacCodeSamples
                     string currentNode = unvisited.Where(pair => pair.Value.Contains(min)).FirstOrDefault().Key;
                     Console.WriteLine($"\nCurrent node >>> {currentNode}"); // Testing
 
-                    // Get the current node's dictionary of neighbours
+                    // Get the current node's list of neighbours
                     Dictionary<string, int> neighbours = graph[currentNode];
 
-                    // Repeat for each node in the neighbours dictionary
+                    // Repeat for each node in the neighbours list
                     foreach (KeyValuePair<string, int> kvp in neighbours) {
+                        // Get the neighbour node
                         string node = kvp.Key;
 
-                        // Check if the node has already been visited
+                        // Check if the neighbour node has already been visited
                         if (visited.ContainsKey(node) == false) {
                             // Calculate the new cost
                             int cost = (int)unvisited[currentNode][Cost] + neighbours[node];
@@ -164,10 +181,10 @@ namespace IsaacCodeSamples
                             }
                         }
                     }
-                    // Add the current node to the visited dictionary
+                    // Add the current node to the visited list
                     visited[currentNode] = unvisited[currentNode];
 
-                    // Remove the current node from the unvisited dictionary
+                    // Remove the current node from the unvisited list
                     unvisited.Remove(currentNode);
 
                     // Testing
@@ -176,6 +193,7 @@ namespace IsaacCodeSamples
                     DisplayList(visited);
                 }
             }
+            // Return the final visited list
             return visited;
         }
 
