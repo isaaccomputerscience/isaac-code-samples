@@ -38,7 +38,9 @@ namespace IsaacCodeSamples
         public static void Main()
         {
             // Instantiate a new player object
-            Player player1 = new Player("Leona");
+            Console.WriteLine("Enter your name: ");
+            string playerName = Console.ReadLine();
+            Player gamePlayer = new Player(playerName);
         }
     }
     
