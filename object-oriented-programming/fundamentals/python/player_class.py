@@ -12,4 +12,5 @@ class Player:
 # (i.e. not called by another program)
 if __name__ == '__main__':
     # Instantiate an example Player object
-    player1 = Player("Leona")
+    player_name = input("Enter your name ")
+    game_player = Player("Leona")
