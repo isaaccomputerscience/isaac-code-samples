@@ -1,6 +1,6 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-
+# BETA VERSION
 
 from player_class import Player
 from deck_class import Deck
@@ -23,7 +23,8 @@ class BlackJack:
         player_hand = self.__player.get_hand()
         player_cards = player_hand.get_cards()
         for card in player_cards:
-            print(f"  {card}")
+            description = card.get_description()
+            print(description)
         player_hand_value = player_hand.get_value()
         print(f"Your hand value {player_hand_value}")
 
@@ -35,11 +36,13 @@ class BlackJack:
         dealer_cards = dealer_hand.get_cards()
         if self.__state == 0: # Player is playing
             first_card = dealer_cards[0]
-            print(f"  {first_card}")
+            description = first_card.get_description()
+            print(description)
             print("  **hidden card**") 
         else:
             for card in dealer_cards:
-                print(f"  {card}")
+                description = card.get_description()
+                print(description)
             dealer_hand_value = dealer_hand.get_value()            
             print(f"Dealer hand value {dealer_hand_value}")
             
