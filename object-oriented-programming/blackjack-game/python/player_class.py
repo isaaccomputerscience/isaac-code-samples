@@ -1,6 +1,5 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-# BETA VERSION
 
 from hand_class import Hand
 
@@ -12,15 +11,19 @@ class Player:
         self.__hand = Hand()
 
     def get_name(self):
+        """Returns the player's name"""
         return self.__name
 
     def get_hand(self):
+        """Returns the player's hand"""
         return self.__hand
 
     def get_score(self):
+        """Returns the player's score"""
         return self.__score
 
     def set_score(self, new_score):
+        """Sets the player's score"""
         self.__score = new_score
     
 
@@ -28,4 +31,6 @@ class Player:
 # (i.e. not called by another program)
 
 if __name__ == '__main__':    
-    player1 = Player("Leona") # Instantiate an example Player object
+    game_player = Player("Leona") # Instantiate a Player object
+    name = game_player.get_name()
+    print(name)
