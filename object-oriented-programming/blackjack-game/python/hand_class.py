@@ -41,4 +41,4 @@ class Hand:
 # (i.e. not called by another program)
 
 if __name__ == '__main__':    
-    player_hand = Hand() # Instantiate an example Hand object
+    player_hand = Hand()  # Test instantiation
