@@ -18,6 +18,7 @@ class BlackJack:
 
 
     def show_player_hand(self):
+        """Displays the player's hand"""
         print("\nYour hand....")
         player_hand = self.__player.get_hand()
         player_cards = player_hand.get_cards()
@@ -27,7 +28,8 @@ class BlackJack:
         print(f"Your hand value {player_hand_value}")
 
 
-    def show_dealer_hand(self):        
+    def show_dealer_hand(self):
+        """Displays the dealer's hand"""
         print("\nDealer hand....")
         dealer_hand = self.__dealer.get_hand()
         dealer_cards = dealer_hand.get_cards()
@@ -43,6 +45,7 @@ class BlackJack:
             
 
     def deal_first_cards(self):
+        """Deals first two cards to player and dealer"""
         print("\nDealing cards ...")
         for i in range (2):
             card = self.__deck.deal()
@@ -56,6 +59,7 @@ class BlackJack:
 
 
     def evaluate_hands(self):
+        """Evaluates each hand"""
         # Player
         player_hand = self.__player.get_hand()
         player_hand_value = player_hand.get_value()
@@ -91,6 +95,7 @@ class BlackJack:
 
                 
     def player_turn(self):
+        """Allows the player to take their turn"""
         input("\nPress enter to start playing")
         self.evaluate_hands()        
         while self.__state == 0: # Player's turn                    
@@ -108,6 +113,7 @@ class BlackJack:
                 
 
     def dealer_turn(self):
+        """Plays the dealer's turn"""
         input("\nDealer now playing - press enter to continue")
         self.show_dealer_hand()
         self.evaluate_hands()
@@ -122,6 +128,7 @@ class BlackJack:
 
 
     def show_scores(self):
+        """Displays the scores"""
         dealer_score = self.__dealer.get_score()
         player_score = self.__player.get_score()
         print(f"\nYour score is {player_score}")
@@ -129,6 +136,7 @@ class BlackJack:
 
             
     def play(self):
+        """Plays games of blackjack until the player or dealer scores 20 or more"""
         finished = False
         while not finished:
             self.deal_first_cards()
@@ -153,6 +161,7 @@ class BlackJack:
                     self.__deck.reset()
 
     def show_rules(self):
+        """Displays the rules of the game"""
         print("""
         This is a simplified version of the game of blackjack.            
 
