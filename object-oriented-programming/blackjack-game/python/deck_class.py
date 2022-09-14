@@ -40,5 +40,5 @@ class Deck:
 # (i.e. not called by another program)
 
 if __name__ == '__main__':       
-    my_deck = Deck() # Instantiate an example Deck object
+    my_deck = Deck()  # Test instantiation
 
