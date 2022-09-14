@@ -31,6 +31,6 @@ class PlayingCard:
 # (i.e. not called by another program)
 
 if __name__ == '__main__':        
-    my_card = PlayingCard("clubs", "2", 2) # Instantiate an example playing card
-    description = my_card.get_description()
+    my_card = PlayingCard("clubs", "2", 2)  # Test instantiation
+    description = my_card.get_description()  # Test method
     print(description)
