@@ -13,12 +13,8 @@ class Deck:
     """Defines a standard 52-card deck of cards"""
 
     def __init__(self):
-        self.__cards = []     
-        for i in range(4):
-            for j in range(13):
-                new_card = PlayingCard(SUITS[i], RANKS[j], VALUES[j])
-                self.__cards.append(new_card)
-        self.shuffle()
+        """Constructor"""
+        self.reset()
         
     
     def shuffle(self):
