@@ -1,6 +1,6 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-# BETA VERSION
+
 
 class PlayingCard:
     """Defines a standard playing card"""
@@ -31,6 +31,6 @@ class PlayingCard:
 # (i.e. not called by another program)
 
 if __name__ == '__main__':        
-    my_card = Card("clubs", "2", 2) # Instantiate an example Card object
+    my_card = PlayingCard("clubs", "2", 2) # Instantiate an example Card object
     description = my_card.get_description()
     print(description)
