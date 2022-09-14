@@ -22,19 +22,20 @@ class Deck:
         
     
     def shuffle(self):
-        # Shuffles cards
+        """Shuffles the cards"""
         random.shuffle(self.__cards)
     
 
     def deal(self):
-        # Removes and returns the first card in the deck        
+        """Removes and returns the first card in the deck"""
         return self.__cards.pop()
 
     def reset(self):
+        """Resets the deck"""
         self.__cards = []
         for i in range(4):
             for j in range(13):
-                new_card = Card(SUITS[i], RANKS[j], VALUES[j])
+                new_card = PlayingCard(SUITS[i], RANKS[j], VALUES[j])
                 self.__cards.append(new_card)
         self.shuffle()
 
