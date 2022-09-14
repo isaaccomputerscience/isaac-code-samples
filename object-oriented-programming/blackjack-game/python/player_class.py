@@ -31,6 +31,6 @@ class Player:
 # (i.e. not called by another program)
 
 if __name__ == '__main__':    
-    game_player = Player("Leona") # Instantiate a Player object
-    name = game_player.get_name()
+    game_player = Player("Leona")  # Test instantiation
+    name = game_player.get_name()  # Test method
     print(name)
