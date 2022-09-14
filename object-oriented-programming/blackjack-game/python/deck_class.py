@@ -1,8 +1,7 @@
 # Isaac Computer Science
 # Usage licensed under the Open Government Licence v3.0
-# BETA VERSION
 
-from card_class import Card
+from card_class import PlayingCard
 
 SUITS = ["Hearts", "Spades","Clubs", "Diamonds"]
 RANKS = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
@@ -17,7 +16,7 @@ class Deck:
         self.__cards = []     
         for i in range(4):
             for j in range(13):
-                new_card = Card(SUITS[i], RANKS[j], VALUES[j])
+                new_card = PlayingCard(SUITS[i], RANKS[j], VALUES[j])
                 self.__cards.append(new_card)
         self.shuffle()
         
@@ -45,3 +44,4 @@ class Deck:
 
 if __name__ == '__main__':       
     my_deck = Deck() # Instantiate an example Deck object
+
