@@ -17,7 +17,7 @@ using System.Collections.Generic;
 
 namespace IsaacCodeSamples
 {
-    class Pathfinding
+    class GraphTraversals
     {
         // The Main method is the entry point for all C# programs
         public static void Main()
