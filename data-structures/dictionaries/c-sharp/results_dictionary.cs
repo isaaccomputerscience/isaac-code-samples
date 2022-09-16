@@ -17,7 +17,6 @@ using System.Collections.Generic;
 
 namespace IsaacCodeSamples
 {
-
     class Dictionaries
     {
         // The Main method is the entry point for all C# programs
