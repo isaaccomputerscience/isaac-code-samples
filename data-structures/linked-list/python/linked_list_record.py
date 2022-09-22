@@ -47,7 +47,7 @@ def insert_in_order(my_list, data):
     if current is None:
         my_list.head = new_node
 
-    # Check if the new node data is less than the head data
+    # Check if the new node data is before the head data
     elif new_node.data < current.data:
         # Set the new node as the head of the list
         new_node.next = my_list.head
