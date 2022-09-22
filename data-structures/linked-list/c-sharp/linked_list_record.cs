@@ -70,9 +70,15 @@ namespace IsaacCodeSamples
             NodeRecord newNode = new NodeRecord();
             newNode.data = data;
 
-            // Update the pointers so the new node is the head
-            newNode.next = myList.head;
-            myList.head = newNode;
+            // Check if the head node exists
+            if (myList.head == null) {
+                myList.head = newNode;
+            }
+            else {
+                // Update the pointers so the new node is the head
+                newNode.next = myList.head;
+                myList.head = newNode;
+            }
         }
 
 
@@ -91,7 +97,7 @@ namespace IsaacCodeSamples
                 myList.head = newNode;
             }
 
-            // Check if the new node data is less than the head data
+            // Check if the new node data is before the head data
             else if (String.Compare(newNode.data, current.data) < 0) {
                 // Set the new node as the head of the list
                 newNode.next = myList.head;
@@ -121,7 +127,7 @@ namespace IsaacCodeSamples
 
             // Repeat until there are no more linked nodes
             while (current != null) {
-                Console.WriteLine($"{current.data}");
+                Console.WriteLine(current.data);
                 current = current.next;
             }
         }

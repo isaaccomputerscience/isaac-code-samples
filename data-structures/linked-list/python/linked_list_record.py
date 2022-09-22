@@ -24,9 +24,14 @@ def insert_at_front(my_list, data):
     new_node = NodeRecord()
     new_node.data = data
 
-    # Update the pointers so the new node is the head
-    new_node.next = my_list.head
-    my_list.head = new_node
+    # Check if the head node exists
+    if my_list.head is None:
+        my_list.head = new_node
+    else:
+        # Update the pointers so the new node is the head
+        new_node.next = my_list.head           
+        my_list.head = new_node
+
 
 def insert_in_order(my_list, data):
     """Insert a node into the correct position in an ordered list"""
@@ -68,7 +73,7 @@ def traverse(my_list):
 
     # Repeat until there are no more linked nodes
     while current is not None:
-        print(f"{current.data}")
+        print(current.data)
         current = current.next
 
 def delete(my_list, data):

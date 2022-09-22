@@ -33,7 +33,7 @@ class LinkedList():
         new_node = Node(data)
 
         # Check if the head node exists
-        if self.head == None:
+        if self.head is None:
             self.head = new_node
         else:
             # Update the pointers so the new node is the head
@@ -53,7 +53,7 @@ class LinkedList():
         if current is None:
             self.head = new_node
 
-        # Check if the new node data is less than the head data
+        # Check if the new node data is before the head data
         elif new_node.get_data() < current.get_data():
             # Set the new node as the head of the list
             new_node.set_next(self.head)
@@ -79,7 +79,7 @@ class LinkedList():
 
         # Repeat until there are no more linked nodes
         while current is not None:
-            print(f"{current.get_data()}")
+            print(current.get_data())
             current = current.get_next()
 
     def delete(self, data):

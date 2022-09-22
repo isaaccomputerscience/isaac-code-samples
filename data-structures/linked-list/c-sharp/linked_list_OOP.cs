@@ -82,7 +82,7 @@ namespace IsaacCodeSamples
                 head = newNode;
             }
 
-            // Check if the new node data is less than the head data
+            // Check if the new node data is before the head data
             else if (String.Compare(newNode.GetData(), current.GetData()) < 0) {
                 // Set the new node as the head of the list
                 newNode.SetNext(head);
@@ -112,7 +112,7 @@ namespace IsaacCodeSamples
 
             // Repeat until there are no more linked nodes
             while (current != null) {
-                Console.WriteLine($"{current.GetData()}");
+                Console.WriteLine(current.GetData());
                 current = current.GetNext();
             }
         }
