@@ -1,0 +1,28 @@
+<!--  Isaac Computer Science
+Usage licensed under the Open Government Licence v3.0
+-->
+
+<html>
+
+<script type="text/javascript">
+
+function sum_to(given_number){
+    // Calculates the sum of all integers from 1 to the given number
+
+    let total = 0;
+    for (let i = 1; i < given_number + 1; i++){
+        total = total + i;
+    }
+    return total;
+}
+
+
+// Test the sum_to function
+let num = 5;
+let result = sum_to(num);
+document.write("The sum of all integers from 1 to " + num + " is " + result);
+
+
+</script>
+
+</html>
