@@ -8,7 +8,7 @@ import time
 
 
 class BlackJack:
-    """A simple version of the game of BlackJack"""
+    """A simplified version of the game of BlackJack"""
 
     def __init__(self, player_name):
         self.__deck = Deck()
