@@ -26,7 +26,7 @@ class BlackJack:
             description = card.get_description()
             print(description)
         player_hand_value = player_hand.get_value()
-        print(f"Your hand value {player_hand_value}")
+        print(f"Your hand value: {player_hand_value}")
 
 
     def show_dealer_hand(self):
@@ -44,7 +44,7 @@ class BlackJack:
                 description = card.get_description()
                 print(description)
             dealer_hand_value = dealer_hand.get_value()            
-            print(f"Dealer hand value {dealer_hand_value}")
+            print(f"Dealer hand value: {dealer_hand_value}")
             
 
     def deal_first_cards(self):
