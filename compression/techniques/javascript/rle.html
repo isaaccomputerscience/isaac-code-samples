@@ -13,15 +13,20 @@ function rle(text_string) {
     let current_token = text_string[0];
     let compressed = current_token;
     let counter = 1;
-    for i in range (1, len(text_string)):
-        next_token = text_string[i]
-        if next_token != current_token:
-            compressed = compressed + str(counter) + next_token
-            counter = 1
-        else:
-            counter = counter + 1
-        current_token = next_token
-    compressed = compressed + str(counter)
+    for (let i = 1; i < text_string.length; i++){
+        next_token = text_string[i];
+        if (next_token != current_token){
+            compressed = compressed + counter + next_token;
+            counter = 1;
+        } else {
+            counter = counter + 1;
+        }
+
+        current_token = next_token;
+    }
+
+    compressed = compressed + counter;
+
     return compressed
 }
 
@@ -29,30 +34,30 @@ function run_tests(){
     // Sample test data
     
     // Normal data
-    text = "aaaabbbccdddeee"
-    print(text)
-    print(rle(text))
+    let text = "aaaabbbccdddeee";
+    document.write(text + "<br>");
+    document.write(rle(text) + "<p>");
     
-    text = "Bobby"
-    print(text)
-    print(rle(text))
+    text = "Bobby";
+    document.write(text + "<br>");
+    document.write(rle(text) + "<p>");
     
     // Boundary data
-    text = "a"
-    print(text)
-    print(rle(text))
+    text = "a";
+    document.write(text + "<br>");
+    document.write(rle(text) + "<p>");
     
-    text = "aaaaaa"
-    print(text)
-    print(rle(text))
+    text = "aaaaaa";
+    document.write(text + "<br>");
+    document.write(rle(text) + "<p>");
     
-    text = "aaaae"
-    print(text)
-    print(rle(text))
+    text = "aaaae";
+    document.write(text + "<br>");
+    document.write(rle(text) + "<p>");
     
-    text = "aeeeee"
-    print(text)
-    print(rle(text))
+    text = "aeeeee";
+    document.write(text + "<br>");
+    document.write(rle(text) + "<p>");
 }
 
     
