@@ -12,7 +12,7 @@ class Deck:
         # Generate a deck of cards
         suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
         ranks = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
-        values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+        values = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
         
             
         for i in range(4):
