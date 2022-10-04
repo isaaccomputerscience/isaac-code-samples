@@ -42,7 +42,7 @@ namespace IsaacCodeSamples
         private PlayingCard[] cards = new PlayingCard[52]; // Declare an array of 52 elements
         private string[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
         private string[] ranks = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
-        private int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
+        private int[] values = { 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
 
         // Constructor method
         public Deck()
