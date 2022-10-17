@@ -1,0 +1,42 @@
+<!--  Isaac Computer Science
+    Usage licensed under the Open Government Licence v 3.0
+-->
+    
+<html>
+    
+<script type="text/javascript">
+    
+// First example
+
+function conv(a){
+    let b = a / 9.81 * 3.711;
+    return b;
+}
+
+
+// Second example
+
+const GRAVITY_ON_EARTH = 9.81;
+const GRAVITY_ON_MARS = 3.711;
+
+
+function calculate_weight_on_mars(weight_on_earth){
+   let weight_on_mars = weight_on_earth / GRAVITY_ON_EARTH * GRAVITY_ON_MARS;
+   return weight_on_mars;
+}
+
+
+function main(){
+    weight = 35.7
+    document.write(conv(weight));
+    document.write("<br>");
+    document.write(calculate_weight_on_mars(weight)); 
+}
+
+
+
+main();
+        
+</script>
+  
+</html> 
