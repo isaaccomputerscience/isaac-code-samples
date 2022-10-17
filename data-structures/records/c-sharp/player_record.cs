@@ -19,7 +19,7 @@ namespace IsaacCodeSamples
     // Use a class to represent a player as a record
     class PlayerRecord
     {
-        public int playerId;
+        public int playerNumber;
         public string firstName;
         public string lastName;
         public DateTime dateOfBirth;
@@ -37,11 +37,11 @@ namespace IsaacCodeSamples
             PlayerRecord player1 = new PlayerRecord();
 
             // Store the details of the player
-            player1.playerId = 1;
-            player1.firstName = "Kiera";
-            player1.lastName = "Welsh";
-            player1.dateOfBirth = new DateTime(1998, 8, 4);
-            player1.position = "Midfielder";
+            player1.playerNumber = 1;
+            player1.firstName = "Maria";
+            player1.lastName = "Oarps";
+            player1.dateOfBirth = new DateTime(1994, 7, 3);
+            player1.position = "Goalkeeper";
             player1.injured = false;
 
             // Display the player's name and position

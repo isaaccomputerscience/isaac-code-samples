@@ -19,7 +19,7 @@ namespace IsaacCodeSamples
     // Use a class to represent a player as a record
     class PlayerRecord
     {
-        public int playerId;
+        public int playerNumber;
         public string firstName;
         public string lastName;
         public DateTime dateOfBirth;
@@ -51,7 +51,7 @@ namespace IsaacCodeSamples
             
             PlayerRecord player4 = CreatePlayer(4, "Kiera", "Welsh", 
                 4, 8, 1998, "Midfielder", false);
-            firstTeam[3] = player4;
+            firstTeam[3]mon = player4;
             
             // Display information about each player
             DisplayPlayers(firstTeam);
@@ -67,7 +67,7 @@ namespace IsaacCodeSamples
             PlayerRecord player = new PlayerRecord();
 
             // Store the details of the player
-            player.playerId = pId;
+            player.playerNumber = pId;
             player.firstName = fName;
             player.lastName = lName;
             player.dateOfBirth = new DateTime(dobYear, dobMonth, dobDay);
@@ -89,7 +89,7 @@ namespace IsaacCodeSamples
                 // Check if the player record exists
                 if (player != null) {
                     // Display the player's number, name and position
-                    Console.WriteLine($"\nNumber: {player.playerId}");
+                    Console.WriteLine($"\nNumber: {player.playerNumber}");
                     Console.WriteLine($"Name: {player.firstName} {player.lastName}");
                     Console.WriteLine($"Position: {player.position}");
                 }

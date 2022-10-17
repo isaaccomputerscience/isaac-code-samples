@@ -2,11 +2,14 @@
 # Usage licensed under the Open Government Licence v3.0
 
 
+import datetime
+
+
 class PlayerRecord():
     """Use a class to represent a player as a record"""
     
     def __init__ (self):
-        self.player_id = None
+        self.player_number = None
         self.first_name = None
         self.last_name = None
         self.date_of_birth = None
@@ -21,11 +24,11 @@ def main():
     player1 = PlayerRecord()
 
     # Store the details of the player
-    player1.player_id = 1
-    player1.first_name = "Kiera"
-    player1.last_name = "Welsh"
-    player1.date_of_birth = "04/08/1998"
-    player1.position = "Midfielder"
+    player1.player_number = 1
+    player1.first_name = "Maria"
+    player1.last_name = "Oarps"
+    player1.date_of_birth = datetime.datetime(1994, 7, 3)
+    player1.position = "Goalkeeper"
     player1.injured = False
 
     # Display the player's name and position
