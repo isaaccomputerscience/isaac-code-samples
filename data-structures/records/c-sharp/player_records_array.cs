@@ -60,8 +60,7 @@ namespace IsaacCodeSamples
 
         // Create a new player record with the given data
         public static PlayerRecord CreatePlayer(int pId, string fName, 
-            string lName, int dobDay, int dobMonth, int dobYear, 
-            string pos, bool inj)
+            string lName, int day, int month, int year, string pos, bool inj)
         {
             // Create a new player record
             PlayerRecord player = new PlayerRecord();
@@ -70,7 +69,7 @@ namespace IsaacCodeSamples
             player.playerNumber = pId;
             player.firstName = fName;
             player.lastName = lName;
-            player.dateOfBirth = new DateTime(dobYear, dobMonth, dobDay);
+            player.dateOfBirth = new DateTime(year, month, day);
             player.position = pos;
             player.injured = inj;
 
