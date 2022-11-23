@@ -1,6 +1,7 @@
 /*
-Isaac Computer Science
-Usage licensed under the Open Government Licence v3.0
+Raspberry Pi Foundation
+Developed to be used alongside Isaac Computer Science, part of the National Centre for Computing Education
+Usage licensed under CC BY-SA 4
 Note: This file is designed to be copied out and compiled on your machine.
 In order for it to compile properly you need to ensure that the project name is the same as the "namespace" in this file.
 To run this file you need to:

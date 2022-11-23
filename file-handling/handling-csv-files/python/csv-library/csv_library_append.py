@@ -1,11 +1,14 @@
-# Isaac Computer Science
-# Usage licensed under the Open Government Licence v3.0
+# Raspberry Pi Foundation
+# Developed to be used alongside Isaac Computer Science,
+# part of the National Centre for Computing Education
+# Usage licensed under CC BY-SA 4
 
 import csv  
 
 def append_record(new_record):
     """Append a record to a CSV file"""
-    # Initialise the filename
+    # Initialise the filename
+
     filename = "movies_extra.csv";
     
     # Open the file in append mode using the with command

@@ -1,5 +1,7 @@
-# Isaac Computer Science
-# Usage licensed under the Open Government Licence v3.0
+# Raspberry Pi Foundation
+# Developed to be used alongside Isaac Computer Science,
+# part of the National Centre for Computing Education
+# Usage licensed under CC BY-SA 4
 
 def gcd(x, y):
     """Euclidian algorithm to find and return the greatest common denominator of two numbers"""

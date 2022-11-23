@@ -1,5 +1,7 @@
-# Isaac Computer Science
-# Usage licensed under the Open Government Licence v3.0
+# Raspberry Pi Foundation
+# Developed to be used alongside Isaac Computer Science,
+# part of the National Centre for Computing Education
+# Usage licensed under CC BY-SA 4
 
 def sum_to_n_iterative(n):
     """Calculates and returns the sum of all natural numbers from 1 to n inclusive"""

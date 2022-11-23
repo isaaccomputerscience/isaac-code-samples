@@ -1,5 +1,7 @@
-# Isaac Computer Science
-# Usage licensed under the Open Government Licence v3.0
+# Raspberry Pi Foundation
+# Developed to be used alongside Isaac Computer Science,
+# part of the National Centre for Computing Education
+# Usage licensed under CC BY-SA 4
 
 def message_alert(new_messages):
     """Example of type conversion for string concatenation"""    

@@ -1,5 +1,7 @@
-# Isaac Computer Science
-# Usage licensed under the Open Government Licence v3.0
+# Raspberry Pi Foundation
+# Developed to be used alongside Isaac Computer Science,
+# part of the National Centre for Computing Education
+# Usage licensed under CC BY-SA 4
 
 
 # First example
@@ -18,7 +20,8 @@ def calculate_weight_on_mars(weight_on_earth):
 
 
 def main():
-    """Execute both subroutines and output the results"""
+    """Execute both subroutines and output the results
+"""
 
     weight = 35.7
     print(conv(weight))

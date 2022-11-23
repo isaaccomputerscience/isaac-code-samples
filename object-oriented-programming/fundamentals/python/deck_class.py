@@ -1,5 +1,7 @@
-# Isaac Computer Science
-# Usage licensed under the Open Government Licence v3.0
+# Raspberry Pi Foundation
+# Developed to be used alongside Isaac Computer Science,
+# part of the National Centre for Computing Education
+# Usage licensed under CC BY-SA 4
 # Make sure the file card_class.py is in the same folder as this file
 
 from card_class import PlayingCard
