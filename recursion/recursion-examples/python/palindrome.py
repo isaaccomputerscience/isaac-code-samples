@@ -7,9 +7,11 @@ def palindrome(word):
     """Recursively determines whether a word is a palindrome. Returns a Boolean."""
     length = len(word)
     if length == 0 or length == 1:
+        # Empty strings and single letters are palindromes!
         return True
-    elif word[0] == word[length - 1]:
-        new_word = word[1 : length - 1]
+    elif word[0] == word[-1]:
+        new_word = word[1: -1]
+        print(new_word)
         return palindrome(new_word)
     else:
         return False
@@ -20,4 +22,4 @@ def palindrome(word):
 if __name__ == '__main__':
     test_word = 'kayak'
     is_palindrome = palindrome(test_word)
-    print (f"{test_word}: {is_palindrome}")
+    print(f"{test_word}: {is_palindrome}")
