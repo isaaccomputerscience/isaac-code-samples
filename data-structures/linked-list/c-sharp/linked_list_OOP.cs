@@ -51,6 +51,16 @@ namespace IsaacCodeSamples
     {
         private Node head; // Do not intialise yet as the linked list is empty
 
+        public Node GetHead()
+        {
+            return head;
+        }
+
+        public void SetHead(Node newHead)
+        {
+            head = newHead;
+        }
+
         // Insert a node to the front of the list
         public void InsertAtFront(string data)
         {
@@ -59,12 +69,12 @@ namespace IsaacCodeSamples
 
             // Check if the head node exists
             if (head == null) {
-                head = newNode;
+                SetHead(newNode);
             }
             else {
                 // Update the pointers so the new node is the head
                 newNode.SetNext(head);
-                head = newNode;
+                SetHead(newNode);
             }
         }
 
@@ -76,18 +86,18 @@ namespace IsaacCodeSamples
             Node newNode = new Node(data);
 
             // Start at the head of the list
-            Node current = head;
+            Node current = GetHead();
 
             // Check if there are no nodes in the list
             if (current == null) {
-                head = newNode;
+                SetHead(newNode);
             }
 
             // Check if the new node data is before the head data
             else if (String.Compare(newNode.GetData(), current.GetData()) < 0) {
                 // Set the new node as the head of the list
                 newNode.SetNext(head);
-                head = newNode;
+                SetHead(newNode);
             }
 
             // Otherwise find where the new node should be positioned
@@ -109,7 +119,7 @@ namespace IsaacCodeSamples
         public void Traverse() 
         {
             // Set the current node as the head
-            Node current = head;
+            Node current = GetHead();
 
             // Repeat until there are no more linked nodes
             while (current != null) {
@@ -123,12 +133,12 @@ namespace IsaacCodeSamples
         public void Delete(string data)
         {
             // Start at the head of the list
-            Node current = head;
+            Node current = GetHead();
 
             // Check if the head node is to be deleted
             if (current.GetData() == data) {
                 // Update the head pointer
-                head = current.GetNext();
+                SetHead(current.GetNext());
             }
             else {
                 // Repeat until the node has been found

@@ -27,6 +27,12 @@ class LinkedList():
     def __init__(self):
         """Constructor method"""
         self.head = None # Initialise to None as the linked list is empty
+    
+    def get_head(self):
+        return self.head
+
+    def set_head(self, new_head):
+        self.head = new_head
 
     def insert_at_front(self, data):
         """Insert a node to the front of the list"""
@@ -35,12 +41,12 @@ class LinkedList():
         new_node = Node(data)
 
         # Check if the head node exists
-        if self.head is None:
-            self.head = new_node
+        if self.get_head() is None:
+            self.set_head(new_node)
         else:
             # Update the pointers so the new node is the head
-            new_node.set_next(self.head)            
-            self.head = new_node
+            new_node.set_next(self.get_head())            
+            self.set_head(new_node)
             
     def insert_in_order(self, data):
         """Insert a node into the correct position in an ordered list"""
@@ -49,17 +55,17 @@ class LinkedList():
         new_node = Node(data)
 
         # Start at the head of the list
-        current = self.head
+        current = self.get_head()
         
         # Check if there are no nodes in the list
         if current is None:
-            self.head = new_node
+            self.set_head(new_node)
 
         # Check if the new node data is before the head data
         elif new_node.get_data() < current.get_data():
             # Set the new node as the head of the list
-            new_node.set_next(self.head)
-            self.head = new_node
+            new_node.set_next(self.get_head())
+            self.set_head(new_node)
 
         # Otherwise find where the new node should be positioned
         else:
@@ -77,7 +83,7 @@ class LinkedList():
         """Traverse the list and output the data from each node"""
         
         # Set the current node as the head
-        current = self.head
+        current = self.get_head()
 
         # Repeat until there are no more linked nodes
         while current is not None:
@@ -88,12 +94,12 @@ class LinkedList():
         """Delete a node. This assumes that the node does exist in the list"""
         
         # Start at the head of the list
-        current = self.head
+        current = self.get_head()
 
         # Check if the head node is to be deleted
         if current.get_data() == data:
             # Update the head pointer
-            self.head = current.get_next()
+            self.set_head(current.get_next())
         else:
             # Repeat until the node has been found
             while current.get_next().get_data() != data:
