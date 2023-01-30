@@ -13,9 +13,9 @@ COST = 0
 PREVIOUS = 1
 
 
-def display_graph(graph: dict) -> None:
+def display_graph(graph):
     """Display each node with it's neighbours and costs"""
-
+    
     # Repeat for each node in the graph
     for node, neighbours in graph.items():
         print(f"Node: {node}")
@@ -23,11 +23,11 @@ def display_graph(graph: dict) -> None:
 
         # Repeat for each neighbour node (n_node) in the neighbours list
         for n_node in neighbours:
-            print(f"{n_node}:{neighbours[n_node]}", end=" ")
+            print(f"{n_node}:{neighbours[n_node]}", end = " ")
         print("\n")
-
-
-def display_list(adjacency_list: dict) -> None:
+        
+        
+def display_list(adjacency_list):
     """Display a list of nodes with their closest neighbour and cost"""
 
     print("   (cost, previous)")
@@ -38,9 +38,9 @@ def display_list(adjacency_list: dict) -> None:
     print()
 
 
-def display_shortest_paths(visited: dict, start_node: str) -> None:
+def display_shortest_paths(visited, start_node):
     """Display the shortest path from the start node to other nodes"""
-
+    
     print("\nShortest paths:")
 
     # Repeat for each node in the visited list
@@ -56,16 +56,16 @@ def display_shortest_paths(visited: dict, start_node: str) -> None:
                 # Add the previous node to the start of the path
                 previous_node = visited[current_node][PREVIOUS]
                 path = previous_node + path
-
+                
                 # Update the current node to be the previous node
                 current_node = visited[current_node][PREVIOUS]
-
+                
             # Testing
             print(f"Path for {node} with cost {visited[node][COST]}: ", end="")
             print(path)
 
 
-def dijkstras_shortest_path(graph: dict, start_node: str) -> dict:
+def dijkstras_shortest_path(graph, start_node):
     """Apply Dijkstra's shortest path algorithm on a graph stored as a dictionary"""
 
     # Declare the visited and unvisited lists as dictionaries
@@ -77,24 +77,24 @@ def dijkstras_shortest_path(graph: dict, start_node: str) -> dict:
         # Initialise the node's distance to sys.maxsize (for infinity)
         # and the previous node to None
         unvisited[node] = [sys.maxsize, None]
-
+        
     # Set the cost of the start node to 0
     unvisited[start_node][COST] = 0
 
     # Testing
     print("--- Initialised state of unvisited list ---")
     display_list(unvisited)
-
+   
     # Repeat until there are no more nodes in the unvisited list
     finished = False
-    while not finished:
+    while finished == False:
         # Check if there are no more nodes left to evaluate
         if len(unvisited) == 0:
             finished = True
         else:
             # Get the unvisited node with the lowest cost
-            current_node = min(unvisited, key=unvisited.get)
-            print(f"\nCurrent node >>> {current_node}")  # Testing
+            current_node = min(unvisited, key = unvisited.get)
+            print(f"\nCurrent node >>> {current_node}") # Testing
 
             # Get the current node's list of neighbours
             neighbours = graph[current_node]
@@ -113,8 +113,7 @@ def dijkstras_shortest_path(graph: dict, start_node: str) -> dict:
                         unvisited[node][PREVIOUS] = current_node
 
                         # Testing
-                        print(
-                            f"Updated unvisited list with min distances from node {current_node}")
+                        print(f"Updated unvisited list with min distances from node {current_node}")
                         print("--- Unvisited list ---")
                         display_list(unvisited)
 
@@ -138,13 +137,13 @@ def main():
 
     # Use a dictionary to represent the graph as an adjacency list
     # and the cost of each neighbour
-    test_graph = {"A": {"B": 8, "C": 5},
-                  "C": {"A": 5, "D": 6, "E": 9},
-                  "B": {"A": 8, "D": 1},
-                  "D": {"C": 6, "B": 1, "E": 2},
-                  "E": {"C": 9, "D": 2}
-                  }
-
+    test_graph = {"A": {"B":8, "C":5},
+             "C": {"A":5, "D":6, "E":9},
+             "B": {"A":8, "D":1},
+             "D": {"C":6, "B":1, "E":2},
+             "E": {"C":9, "D":2}
+             }
+    
     print("### Dijkstra's shortest path algorithm ###")
     print("\nDisplay graph: \n")
     display_graph(test_graph)

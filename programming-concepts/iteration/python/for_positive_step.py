@@ -4,8 +4,7 @@
 # Usage licensed under CC BY-SA 4
 
 def main():
-    # Step size 3.
-    for i in range(3, 31, 3):
+    for i in range(3,31,3):
         print(i)
 
 

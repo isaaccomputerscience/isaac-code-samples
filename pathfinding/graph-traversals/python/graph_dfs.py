@@ -4,18 +4,19 @@
 # Usage licensed under CC BY-SA 4
 
 
-def depth_first_search(graph: dict, start_node: str, target_node: str) -> bool:
+def depth_first_search(graph, start_node, target_node):
     """A breadth-first search performed on a graph stored as a dictionary"""
 
     # Initialisation
     stack = [start_node]
     discovered = [start_node]
     neighbours = []
+    found = False
 
     # Repeat while there are items in the stack
-    # and the target node has not been found
-    while len(stack) > 0:
-
+    # and the target node has not been found 
+    while len(stack) != 0 and found == False:
+        
         # Pop the top item from the stack to be the current node
         current_node = stack.pop()
 
@@ -23,8 +24,7 @@ def depth_first_search(graph: dict, start_node: str, target_node: str) -> bool:
         neighbours = graph[current_node]
 
         # Testing
-        print(f"\nCurrent Node: {current_node}")
-        print(f"Stack: {stack}")
+        print(f"\nStack: {stack}")
         print(f"Discovered: {discovered}")
         print(f"Neighbours: {neighbours}")
 
@@ -34,21 +34,21 @@ def depth_first_search(graph: dict, start_node: str, target_node: str) -> bool:
             if node not in discovered:
                 # Check if the target node has been found
                 if node == target_node:
-                    return True
+                    found = True
                 else:
-                    # Push the node onto the stack
+                    # Push the node onto the stack 
                     # and add it to the discovered list
                     stack.append(node)
                     discovered.append(node)
 
                     # Testing
-                    print(f"\nDiscovered neighbour: {node}")
-                    print(f"Stack: {stack}")
+                    print(f"\nStack: {stack}")
                     print(f"Discovered: {discovered}")
                     print(f"Neighbours: {neighbours}")
+                    
+    return found
 
-    # Target node was not found
-    return False
+
 
 
 def main():
@@ -67,7 +67,7 @@ def main():
         "7": ["6", "8", "9"],
         "8": ["5", "7"],
         "9": ["1", "3", "7"]
-    }
+        }
 
     print("### Graph traversal - depth-first search (DFS) ###")
 
@@ -77,9 +77,9 @@ def main():
     found = depth_first_search(test_graph, start, item_to_find)
 
     # Output the search result
-    print(f"\nStarting at {start}: The target node is {item_to_find}")
-
-    if found:
+    print(f"\nThe target node is {item_to_find}")
+    
+    if found == True:
         print(f"{item_to_find} was found in the graph")
     else:
         print(f"{item_to_find} was NOT found in the graph")
