@@ -11,7 +11,7 @@ import string
 """
 
 
-def caesar_cipher_shift(plaintext: str, key: int) -> str:
+def caesar_cipher_shift(plaintext, key):
     # This shift will only work on lowercase letters!
     alphabet = string.ascii_lowercase
     ciphertext = ""

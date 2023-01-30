@@ -11,7 +11,7 @@
 """
 
 
-def vernam(plaintext: str, key: str) -> str:
+def vernam(plaintext, key):
     # Vernam cipher key should be the same length or longer than the plain text.
     if len(plaintext) > len(key):
         print("Key is not long enough!")
