@@ -4,10 +4,8 @@
 # Usage licensed under CC BY-SA 4
 
 def main():
-    # Iterate through a string letter by letter
-    word = "Letters"
-    for letter in word:
-        print(letter)
+    for i in range(10,0,-2):
+        print(i)
 
 
 # This code will run if this file is executed directly
